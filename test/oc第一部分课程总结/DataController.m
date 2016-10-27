@@ -185,7 +185,6 @@ static DataController* myInstence = nil;
          
          //添加steps
          stepsModelBuf = targetModelBuf.stepsModel;
-         
          for (NSInteger j =0 ; j < stepsModelBuf.count; j++) {
              [self pushStepForCell:stepsModelBuf[j] in:stepsBuf];
          }

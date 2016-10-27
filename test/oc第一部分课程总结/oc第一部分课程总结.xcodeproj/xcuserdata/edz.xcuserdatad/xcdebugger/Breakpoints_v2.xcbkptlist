@@ -463,8 +463,8 @@
                   symbolName = "-[Home2ViewController viewResouceDelegate]"
                   moduleName = "oc&#x7b2c;&#x4e00;&#x90e8;&#x5206;&#x8bfe;&#x7a0b;&#x603b;&#x7ed3;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edz/Documents/study/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2ViewController.h"
-                  timestampString = "499265224.060051"
+                  urlString = "file:///Users/edz/GiftApp/test/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2ViewController.h"
+                  timestampString = "499273247.440259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -478,8 +478,8 @@
                   symbolName = "-[Home2ViewController setViewResouceDelegate:]"
                   moduleName = "oc&#x7b2c;&#x4e00;&#x90e8;&#x5206;&#x8bfe;&#x7a0b;&#x603b;&#x7ed3;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edz/Documents/study/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2ViewController.h"
-                  timestampString = "499265224.062151"
+                  urlString = "file:///Users/edz/GiftApp/test/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2ViewController.h"
+                  timestampString = "499273247.442337"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "40"
@@ -559,8 +559,8 @@
                   symbolName = "-[Home2TableViewCell cellIamge]"
                   moduleName = "oc&#x7b2c;&#x4e00;&#x90e8;&#x5206;&#x8bfe;&#x7a0b;&#x603b;&#x7ed3;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edz/Documents/study/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2TableViewCell.h"
-                  timestampString = "499265224.066207"
+                  urlString = "file:///Users/edz/GiftApp/test/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2TableViewCell.h"
+                  timestampString = "499273247.447408"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -574,8 +574,8 @@
                   symbolName = "-[Home2TableViewCell setCellIamge:]"
                   moduleName = "oc&#x7b2c;&#x4e00;&#x90e8;&#x5206;&#x8bfe;&#x7a0b;&#x603b;&#x7ed3;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edz/Documents/study/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2TableViewCell.h"
-                  timestampString = "499265224.068813"
+                  urlString = "file:///Users/edz/GiftApp/test/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/Home2TableViewCell.h"
+                  timestampString = "499273247.45026"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -1018,11 +1018,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataController.m"
-            timestampString = "499229862.53981"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "-initCellMaster"
             landmarkType = "7">
          </BreakpointContent>
@@ -1178,11 +1178,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataController.m"
-            timestampString = "499229862.53981"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-initCellMaster"
             landmarkType = "7">
          </BreakpointContent>
@@ -1194,11 +1194,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataController.m"
-            timestampString = "499229862.53981"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "@implementation DataController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1226,11 +1226,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataController.m"
-            timestampString = "499229862.53981"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "-initCellMaster"
             landmarkType = "7">
          </BreakpointContent>
@@ -1322,11 +1322,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "footerTestViewController.m"
-            timestampString = "499265157.408999"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "-bodyTableViewCell:PressForOpenSonsteps:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1338,11 +1338,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "footerTestViewController.m"
-            timestampString = "499265157.408999"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "-bodyTableViewCell:PressForOpenSonsteps:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1370,7 +1370,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataController.m"
-            timestampString = "499233155.795621"
+            timestampString = "499273177.805204"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "-pushStepForCell:in:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataController.m"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "205"
@@ -1386,27 +1402,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DataController.m"
-            timestampString = "499233155.795621"
+            timestampString = "499273177.805204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
-            landmarkName = "-pushStepForCell:in:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DataController.m"
-            timestampString = "499230517.026669"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "-initCellMaster"
             landmarkType = "7">
          </BreakpointContent>
@@ -1465,8 +1465,8 @@
                   symbolName = "-[footerTestViewController targetFooterView]"
                   moduleName = "oc&#x7b2c;&#x4e00;&#x90e8;&#x5206;&#x8bfe;&#x7a0b;&#x603b;&#x7ed3;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edz/Documents/study/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/footerTestViewController.h"
-                  timestampString = "499265224.082041"
+                  urlString = "file:///Users/edz/GiftApp/test/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/footerTestViewController.h"
+                  timestampString = "499273247.467065"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -1480,8 +1480,8 @@
                   symbolName = "-[footerTestViewController setTargetFooterView:]"
                   moduleName = "oc&#x7b2c;&#x4e00;&#x90e8;&#x5206;&#x8bfe;&#x7a0b;&#x603b;&#x7ed3;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/edz/Documents/study/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/footerTestViewController.h"
-                  timestampString = "499265224.083853"
+                  urlString = "file:///Users/edz/GiftApp/test/oc%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/footerTestViewController.h"
+                  timestampString = "499273247.469731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -1498,59 +1498,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "footerTestViewController.m"
-            timestampString = "499265017.857712"
+            timestampString = "499273229.930952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "footerTestViewController.m"
-            timestampString = "499265149.915632"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "footerTestViewController.m"
-            timestampString = "499265217.584973"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "footerTestViewController.m"
-            timestampString = "499265903.089326"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>

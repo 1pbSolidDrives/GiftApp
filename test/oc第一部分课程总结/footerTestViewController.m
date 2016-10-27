@@ -42,7 +42,7 @@ static NSString* cellIdentify = @"cell";
     NSMutableArray* stepsModel = dataBuf.stepCellMaster[section];
     NSMutableArray* giftsModel = dataBuf.giftMaster[section];
 
-    NSInteger rows = stepsModel.count + giftsModel.count;
+    NSInteger rows = stepsModel.count;
     
     
     return rows;
@@ -99,34 +99,26 @@ static NSString* cellIdentify = @"cell";
 //设置单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = nil;
+
+
+
+    //初始化stepcell
+    BodyTableViewCell *stepCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
+    if (stepCell == nil) {
+        stepCell = [[[NSBundle mainBundle] loadNibNamed:@"BodyTableViewCell" owner:nil options:nil] firstObject];
+    }
     DataController* dataBuf = [DataController getInstence] ;
 
-     if (indexPath.row == 0) {
-        //初始化giftcell 第一个版本只有一个giftcell
-         //疑问 如果 不同类型的cell 用了同一个id会怎么样？
-         GiftCellTableViewCell* giftCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
-         if(giftCell == nil){
-             giftCell = [[[NSBundle mainBundle]loadNibNamed:@"GiftCellTableViewCell" owner:nil options:nil]firstObject];
-         }
-         cell = giftCell;
-    }
-    else{
-        //初始化stepcell
-        BodyTableViewCell *stepCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
-        if (stepCell == nil) {
-            stepCell = [[[NSBundle mainBundle] loadNibNamed:@"BodyTableViewCell" owner:nil options:nil] firstObject];
-        }
-        
-        NSMutableArray* stepCellMaster = dataBuf.stepCellMaster;
-        StepModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row - 1];// 由于是跟gift分开着的 所以要减一
-        stepCell.tag = indexPath.row;
-        stepCell.delegate = self;
-        stepCell.myIndexPath = indexPath;
-        
-        [stepCell initAllView:stepBuf];
-     
-        cell = (UITableViewCell *)stepCell;
-    }
+    NSMutableArray* stepCellMaster = dataBuf.stepCellMaster;
+    StepModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row];// 由于是跟gift分开着的 所以要减一
+    stepCell.tag = indexPath.row;
+    stepCell.delegate = self;
+    stepCell.myIndexPath = indexPath;
+    
+    [stepCell initAllView:stepBuf];
+ 
+    cell = (UITableViewCell *)stepCell;
+    
 
     return cell;
 }
