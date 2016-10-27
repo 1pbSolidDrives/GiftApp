@@ -1,0 +1,36 @@
+﻿<html>
+    <header>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+            function secondClick(){
+                alert(message);
+                return message;
+            }
+            function getCN(EN) {
+                var ch = setEN(EN);
+                document.getElementById(EN).setvalu(ch);
+            }
+
+
+        </script>
+    </header>
+
+    <body>
+        <h2> 这里是第一种方式 </h2>
+        <br/>
+        <br/>
+        <button id = "button",type="button" onclick="getCN()">Click Me!</button>
+
+    </body>
+    <body>
+        <h2> 这里是第二种方式 </h2>
+        <br/>
+        <br/>
+        <button type="button" onclick="secondClick()" >Click Me!</button>
+        
+    </body>
+    <body>
+        <textarea id = "textArea" typt = "value" row = "10" cols = "50" value = getCN(id)>
+        </textarea>
+    </body>
+</html>
