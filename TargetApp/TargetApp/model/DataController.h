@@ -7,19 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TargetModel.h"
+#import "TargetModle.h"
 @interface DataController : NSObject
 {
- 
+    //装所有plist数据的容器
+    NSMutableArray* _dataMaster;
     //plist的路径
     NSString* _plistPath;
     
     
 }
-//装所有plist数据的容器
-
-@property(nonatomic,strong)NSMutableArray* dataMaster;
-
 //装所有model的容器
 @property(nonatomic,strong)NSMutableArray* targetMaster;
 //模仿queue的一个容器 用于cell的显示
@@ -27,20 +24,20 @@
  通过递归 将每个打开标记位的step都放到数组里
  用的时候从头便利就可以
  */
-//home headerFooter用的model集合
+
 @property(nonatomic,strong)NSMutableArray* headerFooterMaster;
-//home cell用的model集合
+
 @property(nonatomic,strong)NSMutableArray* stepCellMaster;
 @property(nonatomic,strong)NSMutableArray* giftMaster;
 
 +(DataController*)getInstence;
 
 
-//下面的所有set 都是重置
+//下面的所有set 都是重置 
 //表头的数据
 -(NSMutableDictionary*)getTargetDictionaryForHeaderFooter:(NSInteger)tag;
 -(Boolean)setTargetDictionary:(NSMutableDictionary*)newDictionary ForHeaderFooterInTag:(NSInteger)tag;
-
+ 
 //步骤的数据
 -(NSMutableArray*)getStepsArrayFor:(NSInteger)tag fromFather:(NSMutableArray*)father;
 -(Boolean)setStepsArray:(NSMutableArray*)newArray For:(NSInteger)tag inFather:(NSMutableArray*)father;
@@ -49,6 +46,8 @@
 -(NSMutableArray*)getGiftsArrayFor:(NSInteger)tag;
 //设置礼物的数组 不是添加 是重置
 -(Boolean)setGiftsArray:(NSMutableArray*)newArray ForTag:(NSInteger)tag;
+
+
 
 //将plist里的东西读到modle中
 

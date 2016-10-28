@@ -338,6 +338,7 @@
 		0016A2CC1DBDF6A400765AA9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				00639DAF1DC33BB50082798C /* home */,
 				006627D01DC21104002970B1 /* gift */,
 				006627CA1DC1DF2E002970B1 /* settings */,
 				00A798F01DBE0507008FE3C6 /* target */,
@@ -446,6 +447,15 @@
 			name = "New Group";
 			sourceTree = "<group>";
 		};
+		00639DAF1DC33BB50082798C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				005DE5751DC0829C007DB452 /* footerTestViewController.h */,
+				005DE5761DC0829C007DB452 /* footerTestViewController.m */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
 		006627CA1DC1DF2E002970B1 /* settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -484,8 +494,6 @@
 				005DE5701DC07344007DB452 /* FooterView.h */,
 				005DE5711DC07344007DB452 /* FooterView.m */,
 				005DE5731DC07363007DB452 /* FooterView.xib */,
-				005DE5751DC0829C007DB452 /* footerTestViewController.h */,
-				005DE5761DC0829C007DB452 /* footerTestViewController.m */,
 			);
 			name = target;
 			sourceTree = "<group>";

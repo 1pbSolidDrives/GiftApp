@@ -7,20 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00174A841DC306D700CA982E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A831DC306D700CA982E /* main.m */; };
-		00174A871DC306D700CA982E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A861DC306D700CA982E /* AppDelegate.m */; };
-		00174A8A1DC306D700CA982E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A891DC306D700CA982E /* ViewController.m */; };
 		00174A8D1DC306D700CA982E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00174A8B1DC306D700CA982E /* Main.storyboard */; };
 		00174A8F1DC306D700CA982E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00174A8E1DC306D700CA982E /* Assets.xcassets */; };
 		00174A921DC306D700CA982E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00174A901DC306D700CA982E /* LaunchScreen.storyboard */; };
 		00174A9D1DC306D700CA982E /* TargetAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A9C1DC306D700CA982E /* TargetAppTests.m */; };
 		00174AA81DC306D700CA982E /* TargetAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174AA71DC306D700CA982E /* TargetAppUITests.m */; };
-		00C751371DC31F1A00CB3DAA /* targetApp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00C751361DC31F1A00CB3DAA /* targetApp.plist */; };
-		00C7513B1DC31F4F00CB3DAA /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C7513A1DC31F4F00CB3DAA /* TargetModel.m */; };
-		00C7513E1DC31F5D00CB3DAA /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C7513D1DC31F5D00CB3DAA /* HeaderModel.m */; };
-		00C751411DC31F6800CB3DAA /* GiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751401DC31F6800CB3DAA /* GiftModel.m */; };
-		00C751441DC31F7400CB3DAA /* StepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751431DC31F7400CB3DAA /* StepModel.m */; };
-		00C751471DC3206600CB3DAA /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751461DC3206600CB3DAA /* DataController.m */; };
+		00639DAE1DC33A630082798C /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00639DAD1DC33A630082798C /* Property List.plist */; };
+		00C751801DC332B300CB3DAA /* targetApp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00C7515F1DC332B300CB3DAA /* targetApp.plist */; };
+		00C7518F1DC332B300CB3DAA /* TestDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C7517B1DC332B300CB3DAA /* TestDataViewController.xib */; };
+		00C751AA1DC3356E00CB3DAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A861DC306D700CA982E /* AppDelegate.m */; };
+		00C751AC1DC3356E00CB3DAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A891DC306D700CA982E /* ViewController.m */; };
+		00C751B11DC335B000CB3DAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A831DC306D700CA982E /* main.m */; };
+		00C751DA1DC3381500CB3DAA /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751B81DC3381500CB3DAA /* DataController.m */; };
+		00C751DB1DC3381500CB3DAA /* GiftModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751BA1DC3381500CB3DAA /* GiftModle.m */; };
+		00C751DC1DC3381500CB3DAA /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751BC1DC3381500CB3DAA /* HeaderModel.m */; };
+		00C751DD1DC3381500CB3DAA /* StepModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751BE1DC3381500CB3DAA /* StepModle.m */; };
+		00C751DF1DC3381500CB3DAA /* TargetModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751C11DC3381500CB3DAA /* TargetModle.m */; };
+		00C751E21DC3381500CB3DAA /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C751C61DC3381500CB3DAA /* flag.png */; };
+		00C751E31DC3381500CB3DAA /* GiftCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751CA1DC3381500CB3DAA /* GiftCellTableViewCell.m */; };
+		00C751E41DC3381500CB3DAA /* GiftCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C751CB1DC3381500CB3DAA /* GiftCellTableViewCell.xib */; };
+		00C751E51DC3381500CB3DAA /* GiftSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751CD1DC3381500CB3DAA /* GiftSettingViewController.m */; };
+		00C751E61DC3381500CB3DAA /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C751CE1DC3381500CB3DAA /* GiftSettingViewController.xib */; };
+		00C751E71DC3381500CB3DAA /* BodyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751D11DC3381500CB3DAA /* BodyTableViewCell.m */; };
+		00C751E81DC3381500CB3DAA /* BodyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C751D21DC3381500CB3DAA /* BodyTableViewCell.xib */; };
+		00C751E91DC3381500CB3DAA /* footerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751D41DC3381500CB3DAA /* footerTestViewController.m */; };
+		00C751EA1DC3381500CB3DAA /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751D61DC3381500CB3DAA /* FooterView.m */; };
+		00C751EB1DC3381500CB3DAA /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00C751D71DC3381500CB3DAA /* FooterView.xib */; };
+		00C751EC1DC3381500CB3DAA /* TargetHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751D91DC3381500CB3DAA /* TargetHeaderFooterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,17 +70,36 @@
 		00174AA31DC306D700CA982E /* TargetAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TargetAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00174AA71DC306D700CA982E /* TargetAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetAppUITests.m; sourceTree = "<group>"; };
 		00174AA91DC306D700CA982E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00C751361DC31F1A00CB3DAA /* targetApp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = targetApp.plist; sourceTree = "<group>"; };
-		00C751391DC31F4F00CB3DAA /* TargetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetModel.h; sourceTree = "<group>"; };
-		00C7513A1DC31F4F00CB3DAA /* TargetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetModel.m; sourceTree = "<group>"; };
-		00C7513C1DC31F5D00CB3DAA /* HeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderModel.h; sourceTree = "<group>"; };
-		00C7513D1DC31F5D00CB3DAA /* HeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderModel.m; sourceTree = "<group>"; };
-		00C7513F1DC31F6800CB3DAA /* GiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftModel.h; sourceTree = "<group>"; };
-		00C751401DC31F6800CB3DAA /* GiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftModel.m; sourceTree = "<group>"; };
-		00C751421DC31F7400CB3DAA /* StepModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepModel.h; sourceTree = "<group>"; };
-		00C751431DC31F7400CB3DAA /* StepModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepModel.m; sourceTree = "<group>"; };
-		00C751451DC3206600CB3DAA /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
-		00C751461DC3206600CB3DAA /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		00639DAD1DC33A630082798C /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		00C7515F1DC332B300CB3DAA /* targetApp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = targetApp.plist; path = /Users/edz/GiftApp/TargetApp/TargetApp/model/targetApp.plist; sourceTree = "<absolute>"; };
+		00C7517B1DC332B300CB3DAA /* TestDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestDataViewController.xib; path = /Users/edz/GiftApp/TargetApp/TargetApp/view/target/TestDataViewController.xib; sourceTree = "<absolute>"; };
+		00C751B71DC3381500CB3DAA /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		00C751B81DC3381500CB3DAA /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		00C751B91DC3381500CB3DAA /* GiftModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftModle.h; sourceTree = "<group>"; };
+		00C751BA1DC3381500CB3DAA /* GiftModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftModle.m; sourceTree = "<group>"; };
+		00C751BB1DC3381500CB3DAA /* HeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderModel.h; sourceTree = "<group>"; };
+		00C751BC1DC3381500CB3DAA /* HeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderModel.m; sourceTree = "<group>"; };
+		00C751BD1DC3381500CB3DAA /* StepModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepModle.h; sourceTree = "<group>"; };
+		00C751BE1DC3381500CB3DAA /* StepModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepModle.m; sourceTree = "<group>"; };
+		00C751C01DC3381500CB3DAA /* TargetModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetModle.h; sourceTree = "<group>"; };
+		00C751C11DC3381500CB3DAA /* TargetModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetModle.m; sourceTree = "<group>"; };
+		00C751C61DC3381500CB3DAA /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		00C751C91DC3381500CB3DAA /* GiftCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCellTableViewCell.h; sourceTree = "<group>"; };
+		00C751CA1DC3381500CB3DAA /* GiftCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCellTableViewCell.m; sourceTree = "<group>"; };
+		00C751CB1DC3381500CB3DAA /* GiftCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftCellTableViewCell.xib; sourceTree = "<group>"; };
+		00C751CC1DC3381500CB3DAA /* GiftSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftSettingViewController.h; sourceTree = "<group>"; };
+		00C751CD1DC3381500CB3DAA /* GiftSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftSettingViewController.m; sourceTree = "<group>"; };
+		00C751CE1DC3381500CB3DAA /* GiftSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftSettingViewController.xib; sourceTree = "<group>"; };
+		00C751D01DC3381500CB3DAA /* BodyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyTableViewCell.h; sourceTree = "<group>"; };
+		00C751D11DC3381500CB3DAA /* BodyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyTableViewCell.m; sourceTree = "<group>"; };
+		00C751D21DC3381500CB3DAA /* BodyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BodyTableViewCell.xib; sourceTree = "<group>"; };
+		00C751D31DC3381500CB3DAA /* footerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = footerTestViewController.h; sourceTree = "<group>"; };
+		00C751D41DC3381500CB3DAA /* footerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = footerTestViewController.m; sourceTree = "<group>"; };
+		00C751D51DC3381500CB3DAA /* FooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FooterView.h; sourceTree = "<group>"; };
+		00C751D61DC3381500CB3DAA /* FooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FooterView.m; sourceTree = "<group>"; };
+		00C751D71DC3381500CB3DAA /* FooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		00C751D81DC3381500CB3DAA /* TargetHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetHeaderFooterView.h; sourceTree = "<group>"; };
+		00C751D91DC3381500CB3DAA /* TargetHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetHeaderFooterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +150,9 @@
 		00174A811DC306D700CA982E /* TargetApp */ = {
 			isa = PBXGroup;
 			children = (
-				00C751381DC31F3200CB3DAA /* model */,
-				00C751351DC31EE300CB3DAA /* data */,
+				00C751B61DC3381500CB3DAA /* model */,
+				00C751C51DC3381500CB3DAA /* resource */,
+				00C751C71DC3381500CB3DAA /* view */,
 				00174A851DC306D700CA982E /* AppDelegate.h */,
 				00174A861DC306D700CA982E /* AppDelegate.m */,
 				00174A881DC306D700CA982E /* ViewController.h */,
@@ -159,29 +192,77 @@
 			path = TargetAppUITests;
 			sourceTree = "<group>";
 		};
-		00C751351DC31EE300CB3DAA /* data */ = {
+		00C751B61DC3381500CB3DAA /* model */ = {
 			isa = PBXGroup;
 			children = (
-				00C751361DC31F1A00CB3DAA /* targetApp.plist */,
-				00C751451DC3206600CB3DAA /* DataController.h */,
-				00C751461DC3206600CB3DAA /* DataController.m */,
+				00C751B71DC3381500CB3DAA /* DataController.h */,
+				00C751B81DC3381500CB3DAA /* DataController.m */,
+				00C751B91DC3381500CB3DAA /* GiftModle.h */,
+				00C751BA1DC3381500CB3DAA /* GiftModle.m */,
+				00C751BB1DC3381500CB3DAA /* HeaderModel.h */,
+				00C751BC1DC3381500CB3DAA /* HeaderModel.m */,
+				00C751BD1DC3381500CB3DAA /* StepModle.h */,
+				00C751BE1DC3381500CB3DAA /* StepModle.m */,
+				00C751C01DC3381500CB3DAA /* TargetModle.h */,
+				00C751C11DC3381500CB3DAA /* TargetModle.m */,
+				00639DAD1DC33A630082798C /* Property List.plist */,
 			);
-			name = data;
+			path = model;
 			sourceTree = "<group>";
 		};
-		00C751381DC31F3200CB3DAA /* model */ = {
+		00C751C51DC3381500CB3DAA /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				00C751391DC31F4F00CB3DAA /* TargetModel.h */,
-				00C7513A1DC31F4F00CB3DAA /* TargetModel.m */,
-				00C7513C1DC31F5D00CB3DAA /* HeaderModel.h */,
-				00C7513D1DC31F5D00CB3DAA /* HeaderModel.m */,
-				00C7513F1DC31F6800CB3DAA /* GiftModel.h */,
-				00C751401DC31F6800CB3DAA /* GiftModel.m */,
-				00C751421DC31F7400CB3DAA /* StepModel.h */,
-				00C751431DC31F7400CB3DAA /* StepModel.m */,
+				00C751C61DC3381500CB3DAA /* flag.png */,
 			);
-			name = model;
+			path = resource;
+			sourceTree = "<group>";
+		};
+		00C751C71DC3381500CB3DAA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				00C751ED1DC3388B00CB3DAA /* viewtest */,
+				00C751C81DC3381500CB3DAA /* gift */,
+				00C751CF1DC3381500CB3DAA /* target */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		00C751C81DC3381500CB3DAA /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				00C751C91DC3381500CB3DAA /* GiftCellTableViewCell.h */,
+				00C751CA1DC3381500CB3DAA /* GiftCellTableViewCell.m */,
+				00C751CB1DC3381500CB3DAA /* GiftCellTableViewCell.xib */,
+				00C751CC1DC3381500CB3DAA /* GiftSettingViewController.h */,
+				00C751CD1DC3381500CB3DAA /* GiftSettingViewController.m */,
+				00C751CE1DC3381500CB3DAA /* GiftSettingViewController.xib */,
+			);
+			path = gift;
+			sourceTree = "<group>";
+		};
+		00C751CF1DC3381500CB3DAA /* target */ = {
+			isa = PBXGroup;
+			children = (
+				00C751D01DC3381500CB3DAA /* BodyTableViewCell.h */,
+				00C751D11DC3381500CB3DAA /* BodyTableViewCell.m */,
+				00C751D21DC3381500CB3DAA /* BodyTableViewCell.xib */,
+				00C751D31DC3381500CB3DAA /* footerTestViewController.h */,
+				00C751D41DC3381500CB3DAA /* footerTestViewController.m */,
+				00C751D51DC3381500CB3DAA /* FooterView.h */,
+				00C751D61DC3381500CB3DAA /* FooterView.m */,
+				00C751D71DC3381500CB3DAA /* FooterView.xib */,
+				00C751D81DC3381500CB3DAA /* TargetHeaderFooterView.h */,
+				00C751D91DC3381500CB3DAA /* TargetHeaderFooterView.m */,
+			);
+			path = target;
+			sourceTree = "<group>";
+		};
+		00C751ED1DC3388B00CB3DAA /* viewtest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewtest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,10 +371,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C751E21DC3381500CB3DAA /* flag.png in Resources */,
+				00C751EB1DC3381500CB3DAA /* FooterView.xib in Resources */,
+				00C751E61DC3381500CB3DAA /* GiftSettingViewController.xib in Resources */,
+				00C7518F1DC332B300CB3DAA /* TestDataViewController.xib in Resources */,
 				00174A921DC306D700CA982E /* LaunchScreen.storyboard in Resources */,
-				00C751371DC31F1A00CB3DAA /* targetApp.plist in Resources */,
+				00639DAE1DC33A630082798C /* Property List.plist in Resources */,
+				00C751801DC332B300CB3DAA /* targetApp.plist in Resources */,
 				00174A8F1DC306D700CA982E /* Assets.xcassets in Resources */,
 				00174A8D1DC306D700CA982E /* Main.storyboard in Resources */,
+				00C751E41DC3381500CB3DAA /* GiftCellTableViewCell.xib in Resources */,
+				00C751E81DC3381500CB3DAA /* BodyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,14 +406,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C7513B1DC31F4F00CB3DAA /* TargetModel.m in Sources */,
-				00C751471DC3206600CB3DAA /* DataController.m in Sources */,
-				00174A8A1DC306D700CA982E /* ViewController.m in Sources */,
-				00C7513E1DC31F5D00CB3DAA /* HeaderModel.m in Sources */,
-				00C751411DC31F6800CB3DAA /* GiftModel.m in Sources */,
-				00C751441DC31F7400CB3DAA /* StepModel.m in Sources */,
-				00174A871DC306D700CA982E /* AppDelegate.m in Sources */,
-				00174A841DC306D700CA982E /* main.m in Sources */,
+				00C751E91DC3381500CB3DAA /* footerTestViewController.m in Sources */,
+				00C751EA1DC3381500CB3DAA /* FooterView.m in Sources */,
+				00C751DF1DC3381500CB3DAA /* TargetModle.m in Sources */,
+				00C751E51DC3381500CB3DAA /* GiftSettingViewController.m in Sources */,
+				00C751DB1DC3381500CB3DAA /* GiftModle.m in Sources */,
+				00C751E71DC3381500CB3DAA /* BodyTableViewCell.m in Sources */,
+				00C751EC1DC3381500CB3DAA /* TargetHeaderFooterView.m in Sources */,
+				00C751B11DC335B000CB3DAA /* main.m in Sources */,
+				00C751E31DC3381500CB3DAA /* GiftCellTableViewCell.m in Sources */,
+				00C751DC1DC3381500CB3DAA /* HeaderModel.m in Sources */,
+				00C751DA1DC3381500CB3DAA /* DataController.m in Sources */,
+				00C751DD1DC3381500CB3DAA /* StepModle.m in Sources */,
+				00C751AA1DC3356E00CB3DAA /* AppDelegate.m in Sources */,
+				00C751AC1DC3356E00CB3DAA /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +570,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TargetApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TargetApp.TargetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -487,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TargetApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TargetApp.TargetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

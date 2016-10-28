@@ -7,7 +7,7 @@
 //
 
 #import "DataController.h"
-#define PLISTNAME @"targetApp"
+#define PLISTNAME @"Property List"
 
 @implementation DataController
 
@@ -29,18 +29,18 @@ static DataController* myInstence = nil;
     return self;
 }
 
-//初始化所有数据
+//读取所有数据
 -(void)initAllData{
-    _targetMaster       = [[NSMutableArray alloc]init];
-    _stepCellMaster     = [[NSMutableArray alloc]init];
+    _targetMaster = [[NSMutableArray alloc]init];
+    _stepCellMaster = [[NSMutableArray alloc]init];
     _headerFooterMaster = [[NSMutableArray alloc]init];
-    _giftMaster         = [[NSMutableArray alloc]init];
-    _plistPath          = [[NSBundle mainBundle] pathForResource:PLISTNAME ofType:@"plist"];
-    _dataMaster         = [NSMutableArray arrayWithContentsOfFile:_plistPath];
+    _giftMaster = [[NSMutableArray alloc]init];
+    _plistPath = [[NSBundle mainBundle] pathForResource:PLISTNAME ofType:@"plist"];
+    _dataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
     //NSLog(@"初始化数据----- plist = %@",_dataMaster);
-    
+
 }
-//更新数据 进plist
+//更新数据
 -(Boolean)upDataAllData{
     if ([_dataMaster writeToFile:_plistPath atomically:YES]) {
         NSLog(@"属性列表添加数据成功！");
@@ -51,7 +51,7 @@ static DataController* myInstence = nil;
     }
 }
 
-//获取表头的数据
+//表头的数据
 -(NSMutableDictionary*)getTargetDictionaryForHeaderFooter:(NSInteger)tag{
     [self initAllData];
     NSMutableDictionary* dicBuf =_dataMaster[tag][@"headerFooter"];
@@ -66,77 +66,6 @@ static DataController* myInstence = nil;
     return dicBuf;
 }
 
-//初始化target 把plist读取的数据直接写入到model中 让他自己对自己做数据修改 修改了也就修改了最外边的master
--(void)initTarget{
-    
-    TargetModel* sigleTarget = nil;
-    
-    for (NSInteger i=0; i<_dataMaster.count; i++) {
-        sigleTarget = [[TargetModel alloc]init:_dataMaster[i]];
-        NSLog(@"%@", _dataMaster[i]);
-        [_targetMaster addObject:sigleTarget];
-    }
-    //初始化cell 用的顺序cell
-    [self initCellMaster];
-}
-
-//这个东西直接就可以发送给tableView 他只要逐行显示就可以了
--(void)initCellMaster{
-    
-    //每次更新之前删除所有数据
-    [_headerFooterMaster removeAllObjects];
-    [_stepCellMaster removeAllObjects];
-    [_giftMaster removeAllObjects];
-    
-    TargetModel* targetModelBuf = nil;
-    HeaderModel* headerModelBuf = nil;
-    NSMutableArray* stepsModelBuf = nil;
-    
-    NSMutableArray* giftBuf = nil;
-    NSMutableArray* targetBuf = [[NSMutableArray alloc]init];
-    for (NSInteger i =0; i< _targetMaster.count; i++) {
-        
-        NSMutableArray* stepsBuf = [[NSMutableArray alloc]init];
-        
-        
-        targetModelBuf = _targetMaster[i];
-        
-        //添加target
-        headerModelBuf = targetModelBuf.headerModel;
-        [_headerFooterMaster addObject:headerModelBuf];
-        
-        //添加steps
-        stepsModelBuf = targetModelBuf.stepsModel;
-        
-        for (NSInteger j =0 ; j < stepsModelBuf.count; j++) {
-            [self pushStepForCell:stepsModelBuf[j] in:stepsBuf];
-        }
-        [_stepCellMaster addObject:stepsBuf];
-        
-        //添加gift
-        giftBuf = targetModelBuf.giftsModel;
-        [targetBuf addObject:giftBuf];
-        [_giftMaster addObject:giftBuf];
-    }
-}
-
-
-
--(void)pushStepForCell:(StepModel*)singleStep in:(NSMutableArray*)cellBuf{
-    //遍历每个节点 如果可以显示就显示
-    if (singleStep.isShow == YES) {
-        [cellBuf addObject:singleStep];
-        for (NSInteger i =0 ; i < singleStep.stepModles.count; i++) {
-            [self pushStepForCell:singleStep.stepModles[i] in:cellBuf];
-        }
-    }else{
-        //什么也不做
-    }
-}
-
-
-//-------------------------------------------------------
-//设置表头数据  可以弃置不用的方法 因为设置数据都在model自己那里就完成了
 -(Boolean)setTargetDictionary:(NSMutableDictionary*)newDictionary ForHeaderFooterInTag:(NSInteger)tag{
     //[self initAllData];//可能不会那么频繁的刷新
     [_dataMaster[tag] setObject:newDictionary forKey:@"headerFooter"];
@@ -167,7 +96,7 @@ static DataController* myInstence = nil;
         NSLog(@"getStepsArrayFor --- error！ 可能是 获取的东西有问题了！！快去检查下你的 tag 或者father");
 
     } @finally {
-
+        
     }
     return stepDic;
 }
@@ -176,7 +105,7 @@ static DataController* myInstence = nil;
 
 //设置新的步骤信息
 -(Boolean)setStepsArray:(NSMutableArray*)newArray For:(NSInteger)tag inFather:(NSMutableArray*)father{
-
+    
     if (father ==nil) {
         NSMutableDictionary* dicBuf =_dataMaster[tag];
         [dicBuf setObject:newArray forKey:@"steps"];
@@ -184,7 +113,7 @@ static DataController* myInstence = nil;
     else{
         [father[tag] setObject:newArray forKey:@"steps"];
     }
-
+    
     if ([self upDataAllData]) {
         return YES;
     }
@@ -201,9 +130,9 @@ static DataController* myInstence = nil;
         NSLog(@"%@", giftsDic[0]);
     } @catch (NSException *exception) {
         NSLog(@"getGiftsArrayFor --- error！ 可能是 获取的东西有问题了！！快去检查下你的 tag");
-
+        
     } @finally {
-
+        
     }
     return giftsDic;
 }
@@ -216,6 +145,78 @@ static DataController* myInstence = nil;
     }
     return NO;
 }
+
+-(void)initTarget{
+    
+    TargetModle* sigleTarget = nil;
+
+    for (NSInteger i=0; i<_dataMaster.count; i++) {
+        sigleTarget = [[TargetModle alloc]init:_dataMaster[i]];
+        NSLog(@"%@", _dataMaster[i]);
+        [_targetMaster addObject:sigleTarget];
+    }
+    //初始化cell 用的顺序cell
+    [self initCellMaster];
+}
+
+//这个东西直接就可以发送给tableView 他只要逐行显示就可以了
+-(void)initCellMaster{
+
+    //每次更新之前删除所有数据
+    [_headerFooterMaster removeAllObjects];
+    [_stepCellMaster removeAllObjects];
+    [_giftMaster removeAllObjects];
+    
+    TargetModle* targetModelBuf = nil;
+    HeaderModel* headerModelBuf = nil;
+    NSMutableArray* stepsModelBuf = nil;
+
+    NSMutableArray* giftBuf = nil;
+//    NSMutableArray* targetBuf = [[NSMutableArray alloc]init];
+     for (NSInteger i =0; i< _targetMaster.count; i++) {
+         
+         NSMutableArray* cellBuf = [[NSMutableArray alloc]init];
+         targetModelBuf = _targetMaster[i];
+
+         //添加target
+         headerModelBuf = targetModelBuf.headerModel;
+         [_headerFooterMaster addObject:headerModelBuf];
+         
+         //添加gift
+         giftBuf = targetModelBuf.giftsModel;
+         
+         for (NSInteger k=0 ; k<giftBuf.count; k++) {
+             [cellBuf addObject:giftBuf[k]];
+             [_giftMaster addObject:giftBuf[k]];
+         }
+         
+         //[_stepCellMaster addObject:targetBuf];
+         //添加steps
+         stepsModelBuf = targetModelBuf.stepsModel;
+         for (NSInteger j =0 ; j < stepsModelBuf.count; j++) {
+             [self pushStepForCell:stepsModelBuf[j] in:cellBuf];
+         }
+         [_stepCellMaster addObject:cellBuf];
+         
+
+    }
+}
+
+
+
+-(void)pushStepForCell:(StepModle*)singleStep in:(NSMutableArray*)cellBuf{
+    //遍历每个节点 如果可以显示就显示
+    if (singleStep.isShow == YES) {
+        [cellBuf addObject:singleStep];
+        for (NSInteger i =0 ; i < singleStep.stepModles.count; i++) {
+            [self pushStepForCell:singleStep.stepModles[i] in:cellBuf];
+        }
+    }else{
+        //什么也不做
+    }
+}
+
+
 @end
 
 
