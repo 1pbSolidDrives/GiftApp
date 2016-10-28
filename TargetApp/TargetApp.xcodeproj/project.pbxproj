@@ -15,6 +15,12 @@
 		00174A921DC306D700CA982E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00174A901DC306D700CA982E /* LaunchScreen.storyboard */; };
 		00174A9D1DC306D700CA982E /* TargetAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A9C1DC306D700CA982E /* TargetAppTests.m */; };
 		00174AA81DC306D700CA982E /* TargetAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174AA71DC306D700CA982E /* TargetAppUITests.m */; };
+		00C751371DC31F1A00CB3DAA /* targetApp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00C751361DC31F1A00CB3DAA /* targetApp.plist */; };
+		00C7513B1DC31F4F00CB3DAA /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C7513A1DC31F4F00CB3DAA /* TargetModel.m */; };
+		00C7513E1DC31F5D00CB3DAA /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C7513D1DC31F5D00CB3DAA /* HeaderModel.m */; };
+		00C751411DC31F6800CB3DAA /* GiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751401DC31F6800CB3DAA /* GiftModel.m */; };
+		00C751441DC31F7400CB3DAA /* StepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751431DC31F7400CB3DAA /* StepModel.m */; };
+		00C751471DC3206600CB3DAA /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C751461DC3206600CB3DAA /* DataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,17 @@
 		00174AA31DC306D700CA982E /* TargetAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TargetAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00174AA71DC306D700CA982E /* TargetAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TargetAppUITests.m; sourceTree = "<group>"; };
 		00174AA91DC306D700CA982E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00C751361DC31F1A00CB3DAA /* targetApp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = targetApp.plist; sourceTree = "<group>"; };
+		00C751391DC31F4F00CB3DAA /* TargetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetModel.h; sourceTree = "<group>"; };
+		00C7513A1DC31F4F00CB3DAA /* TargetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetModel.m; sourceTree = "<group>"; };
+		00C7513C1DC31F5D00CB3DAA /* HeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderModel.h; sourceTree = "<group>"; };
+		00C7513D1DC31F5D00CB3DAA /* HeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderModel.m; sourceTree = "<group>"; };
+		00C7513F1DC31F6800CB3DAA /* GiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftModel.h; sourceTree = "<group>"; };
+		00C751401DC31F6800CB3DAA /* GiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftModel.m; sourceTree = "<group>"; };
+		00C751421DC31F7400CB3DAA /* StepModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepModel.h; sourceTree = "<group>"; };
+		00C751431DC31F7400CB3DAA /* StepModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepModel.m; sourceTree = "<group>"; };
+		00C751451DC3206600CB3DAA /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		00C751461DC3206600CB3DAA /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +118,8 @@
 		00174A811DC306D700CA982E /* TargetApp */ = {
 			isa = PBXGroup;
 			children = (
+				00C751381DC31F3200CB3DAA /* model */,
+				00C751351DC31EE300CB3DAA /* data */,
 				00174A851DC306D700CA982E /* AppDelegate.h */,
 				00174A861DC306D700CA982E /* AppDelegate.m */,
 				00174A881DC306D700CA982E /* ViewController.h */,
@@ -138,6 +157,31 @@
 				00174AA91DC306D700CA982E /* Info.plist */,
 			);
 			path = TargetAppUITests;
+			sourceTree = "<group>";
+		};
+		00C751351DC31EE300CB3DAA /* data */ = {
+			isa = PBXGroup;
+			children = (
+				00C751361DC31F1A00CB3DAA /* targetApp.plist */,
+				00C751451DC3206600CB3DAA /* DataController.h */,
+				00C751461DC3206600CB3DAA /* DataController.m */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		00C751381DC31F3200CB3DAA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				00C751391DC31F4F00CB3DAA /* TargetModel.h */,
+				00C7513A1DC31F4F00CB3DAA /* TargetModel.m */,
+				00C7513C1DC31F5D00CB3DAA /* HeaderModel.h */,
+				00C7513D1DC31F5D00CB3DAA /* HeaderModel.m */,
+				00C7513F1DC31F6800CB3DAA /* GiftModel.h */,
+				00C751401DC31F6800CB3DAA /* GiftModel.m */,
+				00C751421DC31F7400CB3DAA /* StepModel.h */,
+				00C751431DC31F7400CB3DAA /* StepModel.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00174A921DC306D700CA982E /* LaunchScreen.storyboard in Resources */,
+				00C751371DC31F1A00CB3DAA /* targetApp.plist in Resources */,
 				00174A8F1DC306D700CA982E /* Assets.xcassets in Resources */,
 				00174A8D1DC306D700CA982E /* Main.storyboard in Resources */,
 			);
@@ -273,7 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C7513B1DC31F4F00CB3DAA /* TargetModel.m in Sources */,
+				00C751471DC3206600CB3DAA /* DataController.m in Sources */,
 				00174A8A1DC306D700CA982E /* ViewController.m in Sources */,
+				00C7513E1DC31F5D00CB3DAA /* HeaderModel.m in Sources */,
+				00C751411DC31F6800CB3DAA /* GiftModel.m in Sources */,
+				00C751441DC31F7400CB3DAA /* StepModel.m in Sources */,
 				00174A871DC306D700CA982E /* AppDelegate.m in Sources */,
 				00174A841DC306D700CA982E /* main.m in Sources */,
 			);
@@ -507,6 +557,7 @@
 				00174AAE1DC306D700CA982E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00174AAF1DC306D700CA982E /* Build configuration list for PBXNativeTarget "TargetAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +566,7 @@
 				00174AB11DC306D700CA982E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00174AB21DC306D700CA982E /* Build configuration list for PBXNativeTarget "TargetAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +575,7 @@
 				00174AB41DC306D700CA982E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
