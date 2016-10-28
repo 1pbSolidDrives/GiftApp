@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "HeaderModel.h"
-#import "TargetModle.h"
-#import "StepModle.h"
-#import "GiftModle.h"
-@interface TargetModle : NSObject
+#import "TargetModel.h"
+#import "StepModel.h"
+#import "GiftModel.h"
+@interface TargetModel : NSObject
 
--(TargetModle*)init:(NSMutableDictionary*)data;
+-(TargetModel*)init:(NSMutableDictionary*)data;
 -(void)upData;//这个节点似乎并不需要刷新？ 也需要
 
 @property(nonatomic,strong)HeaderModel* headerModel;

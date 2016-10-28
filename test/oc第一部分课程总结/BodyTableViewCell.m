@@ -48,7 +48,7 @@
 
 
 //显示子节点
--(void)initAllView:(StepModle *)myself{
+-(void)initAllView:(StepModel *)myself{
     _myselfModel = myself;
     
     _StepText.text = [NSString stringWithFormat:@"%ld,%@", _myselfModel.SpaceNum,_myselfModel.stepName ];
@@ -56,12 +56,12 @@
 
 -(void)updataMeAndMySon{
     //点击事件只会修改是否显示
-    NSMutableArray* stepsBuf = _myselfModel.stepModles;
+    NSMutableArray* stepsBuf = _myselfModel.stepModels;
     
     //如果我有子节点
     if (stepsBuf.count > 0) {
         
-        StepModle* step = stepsBuf[0];
+        StepModel* step = stepsBuf[0];
         //我显示 并且 打开
         if (step.isShow == YES && _myselfModel.isOpen == YES) {
             //我的子节点 不显示 我关闭
@@ -79,10 +79,10 @@
 }
 
 -(void)setAllSonOpenClose:(Boolean)bools{
-    NSMutableArray* stepsBuf = _myselfModel.stepModles;
+    NSMutableArray* stepsBuf = _myselfModel.stepModels;
     if (stepsBuf.count!=0) {
         for (NSInteger i =0 ; i<stepsBuf.count; i++) {
-            StepModle* step = stepsBuf[i];
+            StepModel* step = stepsBuf[i];
             NSLog(@"%@",step);
             step.isOpen = bools;
         }
@@ -91,10 +91,10 @@
 }
 
 -(void)setAllSonShowRoNot:(Boolean)bools{
-    NSMutableArray* stepsBuf = _myselfModel.stepModles;
+    NSMutableArray* stepsBuf = _myselfModel.stepModels;
     if (stepsBuf.count!=0) {
         for (NSInteger i =0 ; i<stepsBuf.count; i++) {
-            StepModle* step = stepsBuf[i];
+            StepModel* step = stepsBuf[i];
             NSLog(@"%@",step);
             step.isShow = bools;
             step.SpaceNum = _myselfModel.SpaceNum + 1;

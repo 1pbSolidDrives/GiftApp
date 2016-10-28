@@ -6,11 +6,11 @@
 //  Copyright © 2016年 edz. All rights reserved.
 //
 
-#import "TargetModle.h"
+#import "TargetModel.h"
 
-@implementation TargetModle
+@implementation TargetModel
 
--(TargetModle*)init:(NSMutableDictionary *)data{
+-(TargetModel*)init:(NSMutableDictionary *)data{
     self = [super init];
     if (self) {
         _giftsModel = [[NSMutableArray alloc]init];
@@ -32,9 +32,9 @@
 }
 
 -(void)initSteps{
-     StepModle* sigleStep = nil;
+     StepModel* sigleStep = nil;
     for (NSInteger i = 0 ; i<_stepData.count; i++) {
-        sigleStep = [[StepModle alloc]init:_stepData[i]];
+        sigleStep = [[StepModel alloc]init:_stepData[i]];
         sigleStep.isOpen = NO;
         sigleStep.isRoot = YES;
         sigleStep.isShow = YES;
@@ -43,9 +43,9 @@
     }
 }
 -(void)initGift{
-     GiftModle* singleGift = nil;
+     GiftModel* singleGift = nil;
     for (NSInteger i =0; i<_giftData.count; i++) {
-        singleGift = [[GiftModle alloc]init:_giftData[i]];
+        singleGift = [[GiftModel alloc]init:_giftData[i]];
         [_giftsModel addObject:singleGift];
     }
 }

@@ -13,10 +13,10 @@
 		0016A2C21DBDD11500765AA9 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 0016A2C11DBDD11500765AA9 /* gift.png */; };
 		0016A2C81DBDE98F00765AA9 /* NestingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016A2C71DBDE98F00765AA9 /* NestingViewController.m */; };
 		0016A2CF1DBDF6CE00765AA9 /* targetApp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0016A2CE1DBDF6CE00765AA9 /* targetApp.plist */; };
-		0016DC541DBEF28E00270F4E /* StepModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC531DBEF28E00270F4E /* StepModle.m */; };
+		0016DC541DBEF28E00270F4E /* StepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC531DBEF28E00270F4E /* StepModel.m */; };
 		0016DC571DBEFA5100270F4E /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC561DBEFA5100270F4E /* HeaderModel.m */; };
-		0016DC5A1DBEFA6A00270F4E /* GiftModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC591DBEFA6A00270F4E /* GiftModle.m */; };
-		0016DC5D1DBEFA7600270F4E /* TargetModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC5C1DBEFA7600270F4E /* TargetModle.m */; };
+		0016DC5A1DBEFA6A00270F4E /* GiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC591DBEFA6A00270F4E /* GiftModel.m */; };
+		0016DC5D1DBEFA7600270F4E /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC5C1DBEFA7600270F4E /* TargetModel.m */; };
 		00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A721DC2F0A000CA982E /* GiftSettingViewController.m */; };
 		00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */; };
 		004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AE0D61DB8F5C300362D28 /* TableViewController.m */; };
@@ -55,6 +55,8 @@
 		005DE5721DC07344007DB452 /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 005DE5711DC07344007DB452 /* FooterView.m */; };
 		005DE5741DC07363007DB452 /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005DE5731DC07363007DB452 /* FooterView.xib */; };
 		005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005DE5761DC0829C007DB452 /* footerTestViewController.m */; };
+		00639DB31DC33E0E0082798C /* GiftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DB11DC33E0E0082798C /* GiftDetailViewController.m */; };
+		00639DB41DC33E0E0082798C /* GiftDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */; };
 		006627CE1DC1DF4C002970B1 /* TargetSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */; };
 		006627CF1DC1DF4C002970B1 /* TargetSetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */; };
 		006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627D21DC21129002970B1 /* GiftCellTableViewCell.m */; };
@@ -125,14 +127,14 @@
 		0016A2C61DBDE98F00765AA9 /* NestingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestingViewController.h; sourceTree = "<group>"; };
 		0016A2C71DBDE98F00765AA9 /* NestingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestingViewController.m; sourceTree = "<group>"; };
 		0016A2CE1DBDF6CE00765AA9 /* targetApp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = targetApp.plist; sourceTree = "<group>"; };
-		0016DC521DBEF28E00270F4E /* StepModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepModle.h; sourceTree = "<group>"; };
-		0016DC531DBEF28E00270F4E /* StepModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepModle.m; sourceTree = "<group>"; };
+		0016DC521DBEF28E00270F4E /* StepModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepModel.h; sourceTree = "<group>"; };
+		0016DC531DBEF28E00270F4E /* StepModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepModel.m; sourceTree = "<group>"; };
 		0016DC551DBEFA5100270F4E /* HeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderModel.h; sourceTree = "<group>"; };
 		0016DC561DBEFA5100270F4E /* HeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderModel.m; sourceTree = "<group>"; };
-		0016DC581DBEFA6A00270F4E /* GiftModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftModle.h; sourceTree = "<group>"; };
-		0016DC591DBEFA6A00270F4E /* GiftModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftModle.m; sourceTree = "<group>"; };
-		0016DC5B1DBEFA7600270F4E /* TargetModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetModle.h; sourceTree = "<group>"; };
-		0016DC5C1DBEFA7600270F4E /* TargetModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetModle.m; sourceTree = "<group>"; };
+		0016DC581DBEFA6A00270F4E /* GiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftModel.h; sourceTree = "<group>"; };
+		0016DC591DBEFA6A00270F4E /* GiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftModel.m; sourceTree = "<group>"; };
+		0016DC5B1DBEFA7600270F4E /* TargetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetModel.h; sourceTree = "<group>"; };
+		0016DC5C1DBEFA7600270F4E /* TargetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetModel.m; sourceTree = "<group>"; };
 		00174A711DC2F0A000CA982E /* GiftSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftSettingViewController.h; sourceTree = "<group>"; };
 		00174A721DC2F0A000CA982E /* GiftSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftSettingViewController.m; sourceTree = "<group>"; };
 		00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftSettingViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +190,9 @@
 		005DE5731DC07363007DB452 /* FooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 		005DE5751DC0829C007DB452 /* footerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = footerTestViewController.h; sourceTree = "<group>"; };
 		005DE5761DC0829C007DB452 /* footerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = footerTestViewController.m; sourceTree = "<group>"; };
+		00639DB01DC33E0E0082798C /* GiftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailViewController.h; sourceTree = "<group>"; };
+		00639DB11DC33E0E0082798C /* GiftDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailViewController.m; sourceTree = "<group>"; };
+		00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftDetailViewController.xib; sourceTree = "<group>"; };
 		006627CB1DC1DF4C002970B1 /* TargetSetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSetingViewController.h; sourceTree = "<group>"; };
 		006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSetingViewController.m; sourceTree = "<group>"; };
 		006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSetingViewController.xib; sourceTree = "<group>"; };
@@ -323,14 +328,14 @@
 				00A799141DBE0806008FE3C6 /* TestDataViewController.h */,
 				00A799151DBE0806008FE3C6 /* TestDataViewController.m */,
 				00A799161DBE0806008FE3C6 /* TestDataViewController.xib */,
-				0016DC521DBEF28E00270F4E /* StepModle.h */,
-				0016DC531DBEF28E00270F4E /* StepModle.m */,
+				0016DC521DBEF28E00270F4E /* StepModel.h */,
+				0016DC531DBEF28E00270F4E /* StepModel.m */,
 				0016DC551DBEFA5100270F4E /* HeaderModel.h */,
 				0016DC561DBEFA5100270F4E /* HeaderModel.m */,
-				0016DC581DBEFA6A00270F4E /* GiftModle.h */,
-				0016DC591DBEFA6A00270F4E /* GiftModle.m */,
-				0016DC5B1DBEFA7600270F4E /* TargetModle.h */,
-				0016DC5C1DBEFA7600270F4E /* TargetModle.m */,
+				0016DC581DBEFA6A00270F4E /* GiftModel.h */,
+				0016DC591DBEFA6A00270F4E /* GiftModel.m */,
+				0016DC5B1DBEFA7600270F4E /* TargetModel.h */,
+				0016DC5C1DBEFA7600270F4E /* TargetModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -478,6 +483,9 @@
 				00174A711DC2F0A000CA982E /* GiftSettingViewController.h */,
 				00174A721DC2F0A000CA982E /* GiftSettingViewController.m */,
 				00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */,
+				00639DB01DC33E0E0082798C /* GiftDetailViewController.h */,
+				00639DB11DC33E0E0082798C /* GiftDetailViewController.m */,
+				00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */,
 			);
 			name = gift;
 			sourceTree = "<group>";
@@ -762,6 +770,7 @@
 				0016A2C21DBDD11500765AA9 /* gift.png in Resources */,
 				005DE5741DC07363007DB452 /* FooterView.xib in Resources */,
 				004AE11B1DB9F13400362D28 /* Sun Zhengyi.png in Resources */,
+				00639DB41DC33E0E0082798C /* GiftDetailViewController.xib in Resources */,
 				00CCE6331DB5D78B003CB120 /* ViewC1.xib in Resources */,
 				006627D51DC21129002970B1 /* GiftCellTableViewCell.xib in Resources */,
 				004AE0D91DB8F5C300362D28 /* TableViewController.xib in Resources */,
@@ -813,7 +822,7 @@
 				006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */,
 				00CCE6031DB5D751003CB120 /* ViewController.m in Sources */,
 				00CCE68A1DB61DBB003CB120 /* DetailViewController.m in Sources */,
-				0016DC541DBEF28E00270F4E /* StepModle.m in Sources */,
+				0016DC541DBEF28E00270F4E /* StepModel.m in Sources */,
 				004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */,
 				00CCE6001DB5D751003CB120 /* AppDelegate.m in Sources */,
 				00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */,
@@ -825,13 +834,14 @@
 				00CCE67F1DB6041B003CB120 /* ViewController+MASAdditions.m in Sources */,
 				004AE0E01DB9E9C800362D28 /* LHY_FriendsListCell.m in Sources */,
 				00CCE6791DB6041B003CB120 /* MASLayoutConstraint.m in Sources */,
-				0016DC5D1DBEFA7600270F4E /* TargetModle.m in Sources */,
+				0016DC5D1DBEFA7600270F4E /* TargetModel.m in Sources */,
 				00CCE67C1DB6041B003CB120 /* NSArray+MASAdditions.m in Sources */,
 				00CCE67B1DB6041B003CB120 /* MASViewConstraint.m in Sources */,
 				00CCE67A1DB6041B003CB120 /* MASViewAttribute.m in Sources */,
 				005DE5611DBF72A6007DB452 /* BodyTableViewCell.m in Sources */,
 				0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */,
 				00CCE6901DB71159003CB120 /* oc与js交互.m in Sources */,
+				00639DB31DC33E0E0082798C /* GiftDetailViewController.m in Sources */,
 				00CCE67E1DB6041B003CB120 /* View+MASAdditions.m in Sources */,
 				00CCE6951DB71353003CB120 /* ocToJs.m in Sources */,
 				004AE13D1DBB249600362D28 /* HeaderFooterView.m in Sources */,
@@ -850,7 +860,7 @@
 				005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */,
 				004AE0E61DB9EFAE00362D28 /* LHY_HomeViewController.m in Sources */,
 				00CCE67D1DB6041B003CB120 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				0016DC5A1DBEFA6A00270F4E /* GiftModle.m in Sources */,
+				0016DC5A1DBEFA6A00270F4E /* GiftModel.m in Sources */,
 				004AE14B1DBB56D400362D28 /* Home2TableViewCell.m in Sources */,
 				004AE1351DBB17BD00362D28 /* TestTableViewCell.m in Sources */,
 				00A798F51DBE0584008FE3C6 /* TargetHeaderFooterView.m in Sources */,

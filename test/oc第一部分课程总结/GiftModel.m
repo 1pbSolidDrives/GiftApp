@@ -6,10 +6,10 @@
 //  Copyright © 2016年 edz. All rights reserved.
 //
 
-#import "GiftModle.h"
+#import "GiftModel.h"
 
-@implementation GiftModle
--(GiftModle *)init:(NSMutableDictionary *)giftData{
+@implementation GiftModel
+-(GiftModel *)init:(NSMutableDictionary *)giftData{
     self = [super init];
     if (self) {
         _fatherData = giftData;

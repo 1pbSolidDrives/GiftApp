@@ -22,7 +22,7 @@ static const NSInteger otherInfoButtonAct = 2;
     // Configure the view for the selected state
 }
 
--(void)initGiftCell:(GiftModle*)mySelfModel{
+-(void)initGiftCell:(GiftModel*)mySelfModel{
     //初始化数据
     _myModel = mySelfModel;
     //初始化视图

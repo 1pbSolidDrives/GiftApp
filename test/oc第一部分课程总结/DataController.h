@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TargetModle.h"
+#import "TargetModel.h"
 @interface DataController : NSObject
 {
     //装所有plist数据的容器

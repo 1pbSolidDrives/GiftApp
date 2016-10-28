@@ -24,9 +24,9 @@
 
 @property(strong,nonatomic) id<BodyTableViewCellProtocol> delegate;
 @property(strong,nonatomic) NSMutableArray* cellSon;//我内部保存的节点
-@property(strong,nonatomic) StepModle* myselfModel;
+@property(strong,nonatomic) StepModel* myselfModel;
 @property(strong,nonatomic) NSIndexPath *myIndexPath;
 
--(void)initAllView:(StepModle*)myself;
+-(void)initAllView:(StepModel*)myself;
 
 @end

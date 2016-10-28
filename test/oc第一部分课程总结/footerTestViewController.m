@@ -122,7 +122,7 @@ static NSInteger stepCellHeight = 56;
         if (giftCell == nil) {
             giftCell = [[[NSBundle mainBundle] loadNibNamed:@"GiftCellTableViewCell" owner:nil options:nil] firstObject];
         }
-        GiftModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
+        GiftModel* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
 
         [giftCell initGiftCell:stepBuf];
         cell = giftCell;
@@ -134,7 +134,7 @@ static NSInteger stepCellHeight = 56;
             stepCell = [[[NSBundle mainBundle] loadNibNamed:@"BodyTableViewCell" owner:nil options:nil] firstObject];
         }
         
-        StepModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
+        StepModel* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
         stepCell.tag = indexPath.row;
         stepCell.delegate = self;
         stepCell.myIndexPath = indexPath;

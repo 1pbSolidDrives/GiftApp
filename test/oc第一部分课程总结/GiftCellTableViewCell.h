@@ -25,10 +25,10 @@
 - (IBAction)buyButtonAct:(UIButton *)sender;
 - (IBAction)otherInfo:(id)sender;
 
-@property (nonatomic, strong)GiftModle* myModel;
+@property (nonatomic, strong)GiftModel* myModel;
 @property (nonatomic, strong)id<GiftCellTableViewCellProtocol> delegate;
 
--(void)initGiftCell:(GiftModle*)mySelfModel;
+-(void)initGiftCell:(GiftModel*)mySelfModel;
 
 
 @end

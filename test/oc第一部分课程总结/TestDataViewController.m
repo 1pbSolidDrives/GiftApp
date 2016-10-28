@@ -7,7 +7,7 @@
 //
 
 #import "TestDataViewController.h"
-#import "TargetModle.h"
+#import "TargetModel.h"
 @interface TestDataViewController ()
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright © 2016年 edz. All rights reserved.
 //
 
-#import "StepModle.h"
+#import "StepModel.h"
 
-@implementation StepModle
--(StepModle *)init:(NSMutableDictionary *)stepData{
+@implementation StepModel
+-(StepModel *)init:(NSMutableDictionary *)stepData{
     self = [super init];
     if (self) {
-        _stepModles = [[NSMutableArray alloc]init];
+        _stepModels = [[NSMutableArray alloc]init];
         NSLog(@"%@", stepData);
         _fatherData     = stepData;
         _stepIscomplet  = [stepData[@"stepIsComplet"] boolValue];
@@ -45,11 +45,11 @@
 }
 
 -(void)initAllStepModle{
-    StepModle* singleStep = nil;
+    StepModel* singleStep = nil;
     for (NSInteger i =0; i<_steps.count; i++) {
         //这个时候 steps 就已经添加了新的项了 所以不用再加add方法
-        singleStep = [[StepModle alloc]init:_steps[i]];
-        [_stepModles addObject:singleStep];
+        singleStep = [[StepModel alloc]init:_steps[i]];
+        [_stepModels addObject:singleStep];
     }
 }
 

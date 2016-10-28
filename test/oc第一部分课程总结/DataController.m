@@ -148,12 +148,12 @@ static DataController* myInstence = nil;
 
 -(void)initTarget{
     
-    TargetModle* sigleTarget = nil;
+    TargetModel* singleTarget = nil;
 
     for (NSInteger i=0; i<_dataMaster.count; i++) {
-        sigleTarget = [[TargetModle alloc]init:_dataMaster[i]];
+        singleTarget = [[TargetModel alloc]init:_dataMaster[i]];
         NSLog(@"%@", _dataMaster[i]);
-        [_targetMaster addObject:sigleTarget];
+        [_targetMaster addObject:singleTarget];
     }
     //初始化cell 用的顺序cell
     [self initCellMaster];
@@ -167,7 +167,7 @@ static DataController* myInstence = nil;
     [_stepCellMaster removeAllObjects];
     [_giftMaster removeAllObjects];
     
-    TargetModle* targetModelBuf = nil;
+    TargetModel* targetModelBuf = nil;
     HeaderModel* headerModelBuf = nil;
     NSMutableArray* stepsModelBuf = nil;
 
@@ -204,12 +204,12 @@ static DataController* myInstence = nil;
 
 
 
--(void)pushStepForCell:(StepModle*)singleStep in:(NSMutableArray*)cellBuf{
+-(void)pushStepForCell:(StepModel*)singleStep in:(NSMutableArray*)cellBuf{
     //遍历每个节点 如果可以显示就显示
     if (singleStep.isShow == YES) {
         [cellBuf addObject:singleStep];
-        for (NSInteger i =0 ; i < singleStep.stepModles.count; i++) {
-            [self pushStepForCell:singleStep.stepModles[i] in:cellBuf];
+        for (NSInteger i =0 ; i < singleStep.stepModels.count; i++) {
+            [self pushStepForCell:singleStep.stepModels[i] in:cellBuf];
         }
     }else{
         //什么也不做

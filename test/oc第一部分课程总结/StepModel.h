@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StepModle : NSObject
+@interface StepModel : NSObject
 
--(StepModle*)init:(NSMutableDictionary*)stepData;
+-(StepModel*)init:(NSMutableDictionary*)stepData;
 -(void)updataAll;
 
 @property(nonatomic) BOOL stepIscomplet;
@@ -28,7 +28,7 @@
 @property(nonatomic)NSInteger SpaceNum;//缩进数量
 
 
-@property(nonatomic,strong)NSMutableArray* stepModles;
+@property(nonatomic,strong)NSMutableArray* stepModels;
 
 @property(nonatomic,strong)NSMutableDictionary* fatherData;
 @end

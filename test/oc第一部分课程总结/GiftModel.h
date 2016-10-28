@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GiftModle : NSObject
+@interface GiftModel : NSObject
 
--(GiftModle*)init:(NSMutableDictionary*)giftData;
+-(GiftModel*)init:(NSMutableDictionary*)giftData;
 -(void)updataAll;
 
 @property(nonatomic,strong)NSString* giftName;
