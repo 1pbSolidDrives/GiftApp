@@ -158,6 +158,7 @@ static DataController* myInstence = nil;
     //初始化cell 用的顺序cell
     [self initCellMaster];
 }
+
 //这个东西直接就可以发送给tableView 他只要逐行显示就可以了
 -(void)initCellMaster{
 
@@ -171,29 +172,33 @@ static DataController* myInstence = nil;
     NSMutableArray* stepsModelBuf = nil;
 
     NSMutableArray* giftBuf = nil;
-    NSMutableArray* targetBuf = [[NSMutableArray alloc]init];
+//    NSMutableArray* targetBuf = [[NSMutableArray alloc]init];
      for (NSInteger i =0; i< _targetMaster.count; i++) {
          
-         NSMutableArray* stepsBuf = [[NSMutableArray alloc]init];
-
-         
+         NSMutableArray* cellBuf = [[NSMutableArray alloc]init];
          targetModelBuf = _targetMaster[i];
 
          //添加target
          headerModelBuf = targetModelBuf.headerModel;
          [_headerFooterMaster addObject:headerModelBuf];
          
+         //添加gift
+         giftBuf = targetModelBuf.giftsModel;
+         
+         for (NSInteger k=0 ; k<giftBuf.count; k++) {
+             [cellBuf addObject:giftBuf[k]];
+             [_giftMaster addObject:giftBuf[k]];
+         }
+         
+         //[_stepCellMaster addObject:targetBuf];
          //添加steps
          stepsModelBuf = targetModelBuf.stepsModel;
          for (NSInteger j =0 ; j < stepsModelBuf.count; j++) {
-             [self pushStepForCell:stepsModelBuf[j] in:stepsBuf];
+             [self pushStepForCell:stepsModelBuf[j] in:cellBuf];
          }
-         [_stepCellMaster addObject:stepsBuf];
+         [_stepCellMaster addObject:cellBuf];
          
-         //添加gift
-         giftBuf = targetModelBuf.giftsModel;
-         [targetBuf addObject:giftBuf];
-         [_giftMaster addObject:giftBuf];
+
     }
 }
 

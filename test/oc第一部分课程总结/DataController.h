@@ -26,6 +26,7 @@
  */
 
 @property(nonatomic,strong)NSMutableArray* headerFooterMaster;
+
 @property(nonatomic,strong)NSMutableArray* stepCellMaster;
 @property(nonatomic,strong)NSMutableArray* giftMaster;
 
@@ -45,6 +46,8 @@
 -(NSMutableArray*)getGiftsArrayFor:(NSInteger)tag;
 //设置礼物的数组 不是添加 是重置
 -(Boolean)setGiftsArray:(NSMutableArray*)newArray ForTag:(NSInteger)tag;
+
+
 
 //将plist里的东西读到modle中
 

@@ -12,6 +12,9 @@
 static NSString* headerFooterIdentify = @"targetHeaderFooter";
 static NSString* cellIdentify = @"cell";
 
+static NSInteger giftCellHeight = 102;
+static NSInteger stepCellHeight = 56;
+
 @interface footerTestViewController ()
 
 @end
@@ -40,8 +43,7 @@ static NSString* cellIdentify = @"cell";
     DataController* dataBuf = [DataController getInstence] ;
     
     NSMutableArray* stepsModel = dataBuf.stepCellMaster[section];
-    NSMutableArray* giftsModel = dataBuf.giftMaster[section];
-
+ 
     NSInteger rows = stepsModel.count;
     
     
@@ -55,10 +57,7 @@ static NSString* cellIdentify = @"cell";
     
     return dataBuf.stepCellMaster.count;
 }
-//设置组高
-//-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-//    return 50;
-//}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 107;
@@ -66,6 +65,19 @@ static NSString* cellIdentify = @"cell";
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    DataController* dataBuf = [DataController getInstence] ;
+    
+    //gift数量
+    NSInteger giftNum = dataBuf.giftMaster.count;
+    
+    if (giftNum >= indexPath.row +1) {
+       return  giftCellHeight;
+        
+    }
+    else{
+        return stepCellHeight;
+    }
     return 56;
 }
 //头部点击事件代理
@@ -99,27 +111,38 @@ static NSString* cellIdentify = @"cell";
 //设置单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = nil;
-
-
-
-    //初始化stepcell
-    BodyTableViewCell *stepCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
-    if (stepCell == nil) {
-        stepCell = [[[NSBundle mainBundle] loadNibNamed:@"BodyTableViewCell" owner:nil options:nil] firstObject];
-    }
     DataController* dataBuf = [DataController getInstence] ;
-
     NSMutableArray* stepCellMaster = dataBuf.stepCellMaster;
-    StepModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row];// 由于是跟gift分开着的 所以要减一
-    stepCell.tag = indexPath.row;
-    stepCell.delegate = self;
-    stepCell.myIndexPath = indexPath;
-    
-    [stepCell initAllView:stepBuf];
- 
-    cell = (UITableViewCell *)stepCell;
-    
 
+    //gift数量
+    NSInteger giftNum = dataBuf.giftMaster.count;
+    if (giftNum >= indexPath.row +1) {
+        //初始化giftcell 报错可能是因为 这个id的问题
+        GiftCellTableViewCell* giftCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
+        if (giftCell == nil) {
+            giftCell = [[[NSBundle mainBundle] loadNibNamed:@"GiftCellTableViewCell" owner:nil options:nil] firstObject];
+        }
+        GiftModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
+
+        [giftCell initGiftCell:stepBuf];
+        cell = giftCell;
+    }
+    else{
+        //初始化stepcell
+        BodyTableViewCell *stepCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
+        if (stepCell == nil) {
+            stepCell = [[[NSBundle mainBundle] loadNibNamed:@"BodyTableViewCell" owner:nil options:nil] firstObject];
+        }
+        
+        StepModle* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
+        stepCell.tag = indexPath.row;
+        stepCell.delegate = self;
+        stepCell.myIndexPath = indexPath;
+        
+        [stepCell initAllView:stepBuf];
+        
+        cell = (UITableViewCell *)stepCell;
+    }
     return cell;
 }
 

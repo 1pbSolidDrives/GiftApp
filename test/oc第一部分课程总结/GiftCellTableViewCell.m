@@ -33,7 +33,9 @@ static const NSInteger otherInfoButtonAct = 2;
     UIImage* giftImage = [UIImage imageNamed:_myModel.giftImage];
     _giftURLImage.image = giftImage;
     _whereBuy.text = @"京东";
-    _buyButton.titleLabel.text = @"6000";
+//    _buyButton.titleLabel.text = @"6000";
+    NSLog(@"%@",_buyButton.titleLabel.text);
+    [_buyButton setTitle:@"6000" forState:UIControlStateNormal];
 }
 
 

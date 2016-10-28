@@ -17,6 +17,8 @@
 		0016DC571DBEFA5100270F4E /* HeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC561DBEFA5100270F4E /* HeaderModel.m */; };
 		0016DC5A1DBEFA6A00270F4E /* GiftModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC591DBEFA6A00270F4E /* GiftModle.m */; };
 		0016DC5D1DBEFA7600270F4E /* TargetModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC5C1DBEFA7600270F4E /* TargetModle.m */; };
+		00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A721DC2F0A000CA982E /* GiftSettingViewController.m */; };
+		00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */; };
 		004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AE0D61DB8F5C300362D28 /* TableViewController.m */; };
 		004AE0D91DB8F5C300362D28 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004AE0D71DB8F5C300362D28 /* TableViewController.xib */; };
 		004AE0DB1DB91C1700362D28 /* 0111.png in Resources */ = {isa = PBXBuildFile; fileRef = 004AE0DA1DB91C1700362D28 /* 0111.png */; };
@@ -131,6 +133,9 @@
 		0016DC591DBEFA6A00270F4E /* GiftModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftModle.m; sourceTree = "<group>"; };
 		0016DC5B1DBEFA7600270F4E /* TargetModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetModle.h; sourceTree = "<group>"; };
 		0016DC5C1DBEFA7600270F4E /* TargetModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetModle.m; sourceTree = "<group>"; };
+		00174A711DC2F0A000CA982E /* GiftSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftSettingViewController.h; sourceTree = "<group>"; };
+		00174A721DC2F0A000CA982E /* GiftSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftSettingViewController.m; sourceTree = "<group>"; };
+		00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftSettingViewController.xib; sourceTree = "<group>"; };
 		004AE0D51DB8F5C300362D28 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		004AE0D61DB8F5C300362D28 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		004AE0D71DB8F5C300362D28 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
@@ -460,6 +465,9 @@
 				006627D11DC21129002970B1 /* GiftCellTableViewCell.h */,
 				006627D21DC21129002970B1 /* GiftCellTableViewCell.m */,
 				006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */,
+				00174A711DC2F0A000CA982E /* GiftSettingViewController.h */,
+				00174A721DC2F0A000CA982E /* GiftSettingViewController.m */,
+				00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */,
 			);
 			name = gift;
 			sourceTree = "<group>";
@@ -738,6 +746,7 @@
 				004AE0DB1DB91C1700362D28 /* 0111.png in Resources */,
 				004AE1181DB9F13400362D28 /* icon.png in Resources */,
 				004AE11C1DB9F13400362D28 /* Tim Cook.png in Resources */,
+				00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */,
 				004AE1161DB9F13400362D28 /* Bill Gates.png in Resources */,
 				004AE1361DBB17BD00362D28 /* TestTableViewCell.xib in Resources */,
 				006627CF1DC1DF4C002970B1 /* TargetSetingViewController.xib in Resources */,
@@ -820,6 +829,7 @@
 				004AE13D1DBB249600362D28 /* HeaderFooterView.m in Sources */,
 				00CCE6321DB5D78B003CB120 /* ViewC1.m in Sources */,
 				004AE0E31DB9ED6C00362D28 /* LHY_HeaderView.m in Sources */,
+				00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */,
 				00CCE5FD1DB5D751003CB120 /* main.m in Sources */,
 				005DE56C1DBF8578007DB452 /* TestView.m in Sources */,
 				004AE1241DBA0B8700362D28 /* HeaderView.m in Sources */,
