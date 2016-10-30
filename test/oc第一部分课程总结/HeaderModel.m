@@ -13,21 +13,38 @@
 -(HeaderModel*)init:(NSMutableDictionary*)headerData{
     self = [super init];
     if (self) {
+        _myDataPlist = headerData;
+        
         _completeness = headerData[@"completeness"];
         _targetDetails = headerData[@"targetDetails"];
         _targetHeaderName = headerData[@"targetHeaderName"];
         _targetHeaderImagePath = headerData[@"targetHeaderImagePath"];
-        
     }
     
     return self;
 }
 
--(void)updataAll{
-    [_fatherData setObject:_completeness forKey:@"completeness"];
-    [_fatherData setObject:_targetDetails forKey:@"targetDetails"];
-    [_fatherData setObject:_targetHeaderName forKey:@"targetHeaderName"];
-    [_fatherData setObject:_targetHeaderImagePath forKey:@"targetHeaderImagePath"];
-
+-(void)upDataMySelf{
+    @try {
+        [_myDataPlist setObject:_completeness forKey:@"completeness"];
+        [_myDataPlist setObject:_targetDetails forKey:@"targetDetails"];
+        [_myDataPlist setObject:_targetHeaderName forKey:@"targetHeaderName"];
+        [_myDataPlist setObject:_targetHeaderImagePath forKey:@"targetHeaderImagePath"];
+    } @catch (NSException *exception) {
+        NSLog(@"HeaderModel upDataMySelf error!!!  %@",exception);
+    } @finally {
+        
+    }
 }
+
+-(Boolean)upDataAll{
+    [self upDataMySelf];
+    if (_delegate&& [_delegate conformsToProtocol:@protocol(HeaderModelProtocol)]) {
+        return [_delegate headerModelProtocolUpData:self];
+    }
+    return NO;
+}
+
+
+
 @end

@@ -50,6 +50,32 @@ static DataController* myInstence = nil;
         return NO;
     }
 }
+//更新taget
+
+-(Boolean)targetModelUpData:(TargetModel *)sender{
+    @try {
+        [_dataMaster replaceObjectAtIndex:sender.myName withObject:sender.mySelfDataPlist];
+        NSLog(@"targetModelUpData %li 成功",sender.myName);
+//        NSMutableDictionary *targetbuf =_dataMaster[sender.myName];
+//        
+//        NSString* name2 = targetbuf[@"steps"][0][@"stepName"];
+//        
+//        NSMutableArray* steps2 =targetbuf[@"steps"];
+//        NSMutableDictionary* step = steps2[0];
+//        NSMutableDictionary *targetbuf2= sender.mySelfDataPlist;
+//        NSLog(@"!!!!!!!%@",targetbuf2);
+//        NSString* name3 = step[@"setpName"];
+
+        [self upDataAllData];
+        return YES;
+    } @catch (NSException *exception) {
+        NSLog(@"targetModelUpData %li 失败",sender.myName);
+        return NO;
+    } @finally {
+        
+    }
+   
+}
 
 //表头的数据
 -(NSMutableDictionary*)getTargetDictionaryForHeaderFooter:(NSInteger)tag{
@@ -151,8 +177,9 @@ static DataController* myInstence = nil;
     TargetModel* singleTarget = nil;
 
     for (NSInteger i=0; i<_dataMaster.count; i++) {
-        singleTarget = [[TargetModel alloc]init:_dataMaster[i]];
+        singleTarget = [[TargetModel alloc]init:_dataMaster[i] myName:i];
         NSLog(@"%@", _dataMaster[i]);
+        singleTarget.delegate = self;
         [_targetMaster addObject:singleTarget];
     }
     //初始化cell 用的顺序cell

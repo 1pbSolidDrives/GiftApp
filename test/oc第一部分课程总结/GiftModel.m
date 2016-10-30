@@ -12,7 +12,7 @@
 -(GiftModel *)init:(NSMutableDictionary *)giftData{
     self = [super init];
     if (self) {
-        _fatherData = giftData;
+        _myDataPlist = giftData;
         _giftName   = giftData[@"giftName"];
         _giftImage  = giftData[@"giftImage"];
         _giftUrl    = giftData[@"giftUrl"];
@@ -22,12 +22,15 @@
     
     return self;
 }
--(void)updataAll{
-    [_fatherData setObject:_giftName forKey:@"giftName"];
-    [_fatherData setObject:_giftImage forKey:@"giftImage"];
-    [_fatherData setObject:_giftUrl forKey:@"giftUrl"];
-    [_fatherData setObject:_stepPath forKey:@"setpPath"];
-
-    
+-(Boolean)updataAll{
+    [_myDataPlist setObject:_giftName forKey:@"giftName"];
+    [_myDataPlist setObject:_giftImage forKey:@"giftImage"];
+    [_myDataPlist setObject:_giftUrl forKey:@"giftUrl"];
+    [_myDataPlist setObject:_stepPath forKey:@"setpPath"];
+    if (_delegate && [_delegate conformsToProtocol:@protocol(GiftModelProtocol)]) {
+        Boolean result = [_delegate giftModelProtocolUpData:self];
+        return result;
+    }
+    return NO;
 }
 @end

@@ -204,23 +204,6 @@
 					<integer>0</integer>
 				</array>
 			</dict>
-			<dict>
-				<key>giftName</key>
-				<string>iphone7</string>
-				<key>giftImage</key>
-				<string>gift.png</string>
-				<key>giftUrl</key>
-				<dict>
-					<key>taoBao</key>
-					<string></string>
-					<key>jingDong</key>
-					<string></string>
-				</dict>
-				<key>setpPath</key>
-				<array>
-					<integer>0</integer>
-				</array>
-			</dict>
 		</array>
 	</dict>
 </array>

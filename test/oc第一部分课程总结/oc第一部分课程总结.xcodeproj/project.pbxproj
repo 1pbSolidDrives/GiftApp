@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00161F221DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F201DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m */; };
+		00161F231DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F211DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib */; };
+		00161F271DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */; };
+		00161F281DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */; };
+		00161F2D1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F2C1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m */; };
+		00161F301DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F2F1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m */; };
+		00161F331DC451DF00AC0552 /* TargetSettingViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F321DC451DF00AC0552 /* TargetSettingViewHeaderView.xib */; };
+		00161F371DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F351DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m */; };
+		00161F381DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F361DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib */; };
+		00161F3E1DC455EE00AC0552 /* TargetSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F3D1DC455EE00AC0552 /* TargetSettingViewModel.m */; };
 		0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016A2BB1DBDA0A500765AA9 /* Home3TableViewCell.m */; };
 		0016A2BE1DBDA0A500765AA9 /* Home3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0016A2BC1DBDA0A500765AA9 /* Home3TableViewCell.xib */; };
 		0016A2C01DBDD0F500765AA9 /* gift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0016A2BF1DBDD0F500765AA9 /* gift.jpg */; };
@@ -57,6 +67,14 @@
 		005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005DE5761DC0829C007DB452 /* footerTestViewController.m */; };
 		00639DB31DC33E0E0082798C /* GiftDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DB11DC33E0E0082798C /* GiftDetailViewController.m */; };
 		00639DB41DC33E0E0082798C /* GiftDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */; };
+		00639DB91DC33EF20082798C /* GiftDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DB71DC33EF20082798C /* GiftDetailTableViewCell.m */; };
+		00639DBA1DC33EF20082798C /* GiftDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00639DB81DC33EF20082798C /* GiftDetailTableViewCell.xib */; };
+		00639DBD1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DBC1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m */; };
+		00639DC01DC3402D0082798C /* UITableViewHeaderFooterUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DBF1DC3402D0082798C /* UITableViewHeaderFooterUIView.m */; };
+		00639DC21DC340400082798C /* UITableViewHeaderFooterViewUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00639DC11DC340400082798C /* UITableViewHeaderFooterViewUIView.xib */; };
+		00639DCF1DC3460A0082798C /* GiftDetailHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DCE1DC3460A0082798C /* GiftDetailHeaderModel.m */; };
+		00639DD21DC3481D0082798C /* GiftDetailRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DD11DC3481D0082798C /* GiftDetailRootModel.m */; };
+		00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DD81DC34A600082798C /* GiftDetailMessage.m */; };
 		006627CE1DC1DF4C002970B1 /* TargetSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */; };
 		006627CF1DC1DF4C002970B1 /* TargetSetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */; };
 		006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627D21DC21129002970B1 /* GiftCellTableViewCell.m */; };
@@ -119,6 +137,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00161F1F1DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewTargetTableViewCell.h; sourceTree = "<group>"; };
+		00161F201DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewTargetTableViewCell.m; sourceTree = "<group>"; };
+		00161F211DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewTargetTableViewCell.xib; sourceTree = "<group>"; };
+		00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewAddGiftTableViewCell.h; sourceTree = "<group>"; };
+		00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewAddGiftTableViewCell.m; sourceTree = "<group>"; };
+		00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewAddGiftTableViewCell.xib; sourceTree = "<group>"; };
+		00161F2B1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewHeaderFooterView.h; sourceTree = "<group>"; };
+		00161F2C1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewHeaderFooterView.m; sourceTree = "<group>"; };
+		00161F2E1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewGiftHeaderView.h; sourceTree = "<group>"; };
+		00161F2F1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewGiftHeaderView.m; sourceTree = "<group>"; };
+		00161F321DC451DF00AC0552 /* TargetSettingViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewHeaderView.xib; sourceTree = "<group>"; };
+		00161F341DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewGiftAddGiftTableViewCell.h; sourceTree = "<group>"; };
+		00161F351DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewGiftAddGiftTableViewCell.m; sourceTree = "<group>"; };
+		00161F361DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewGiftAddGiftTableViewCell.xib; sourceTree = "<group>"; };
+		00161F3C1DC455EE00AC0552 /* TargetSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewModel.h; sourceTree = "<group>"; };
+		00161F3D1DC455EE00AC0552 /* TargetSettingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewModel.m; sourceTree = "<group>"; };
 		0016A2BA1DBDA0A500765AA9 /* Home3TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home3TableViewCell.h; sourceTree = "<group>"; };
 		0016A2BB1DBDA0A500765AA9 /* Home3TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home3TableViewCell.m; sourceTree = "<group>"; };
 		0016A2BC1DBDA0A500765AA9 /* Home3TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Home3TableViewCell.xib; sourceTree = "<group>"; };
@@ -193,6 +227,20 @@
 		00639DB01DC33E0E0082798C /* GiftDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailViewController.h; sourceTree = "<group>"; };
 		00639DB11DC33E0E0082798C /* GiftDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailViewController.m; sourceTree = "<group>"; };
 		00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftDetailViewController.xib; sourceTree = "<group>"; };
+		00639DB61DC33EF20082798C /* GiftDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailTableViewCell.h; sourceTree = "<group>"; };
+		00639DB71DC33EF20082798C /* GiftDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailTableViewCell.m; sourceTree = "<group>"; };
+		00639DB81DC33EF20082798C /* GiftDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftDetailTableViewCell.xib; sourceTree = "<group>"; };
+		00639DBB1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailUITableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		00639DBC1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailUITableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		00639DBE1DC3402D0082798C /* UITableViewHeaderFooterUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewHeaderFooterUIView.h; sourceTree = "<group>"; };
+		00639DBF1DC3402D0082798C /* UITableViewHeaderFooterUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewHeaderFooterUIView.m; sourceTree = "<group>"; };
+		00639DC11DC340400082798C /* UITableViewHeaderFooterViewUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITableViewHeaderFooterViewUIView.xib; sourceTree = "<group>"; };
+		00639DCD1DC3460A0082798C /* GiftDetailHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailHeaderModel.h; sourceTree = "<group>"; };
+		00639DCE1DC3460A0082798C /* GiftDetailHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailHeaderModel.m; sourceTree = "<group>"; };
+		00639DD01DC3481D0082798C /* GiftDetailRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailRootModel.h; sourceTree = "<group>"; };
+		00639DD11DC3481D0082798C /* GiftDetailRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailRootModel.m; sourceTree = "<group>"; };
+		00639DD71DC34A600082798C /* GiftDetailMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailMessage.h; sourceTree = "<group>"; };
+		00639DD81DC34A600082798C /* GiftDetailMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailMessage.m; sourceTree = "<group>"; };
 		006627CB1DC1DF4C002970B1 /* TargetSetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSetingViewController.h; sourceTree = "<group>"; };
 		006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSetingViewController.m; sourceTree = "<group>"; };
 		006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSetingViewController.xib; sourceTree = "<group>"; };
@@ -298,6 +346,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00161F161DC449EE00AC0552 /* target */ = {
+			isa = PBXGroup;
+			children = (
+				00161F181DC44A4900AC0552 /* tableView */,
+				006627CB1DC1DF4C002970B1 /* TargetSetingViewController.h */,
+				006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */,
+				006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */,
+			);
+			name = target;
+			sourceTree = "<group>";
+		};
+		00161F181DC44A4900AC0552 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				00161F2A1DC44E8F00AC0552 /* gift */,
+				00161F291DC44E8700AC0552 /* Target */,
+			);
+			name = tableView;
+			sourceTree = "<group>";
+		};
+		00161F291DC44E8700AC0552 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				00161F1F1DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.h */,
+				00161F201DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m */,
+				00161F211DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib */,
+			);
+			name = Target;
+			sourceTree = "<group>";
+		};
+		00161F2A1DC44E8F00AC0552 /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				00161F3B1DC4541900AC0552 /* AddCell */,
+				00161F3A1DC4540800AC0552 /* Cell */,
+				00161F391DC4540100AC0552 /* header */,
+			);
+			name = gift;
+			sourceTree = "<group>";
+		};
+		00161F391DC4540100AC0552 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				00161F2B1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.h */,
+				00161F2C1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m */,
+				00161F2E1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.h */,
+				00161F2F1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m */,
+				00161F321DC451DF00AC0552 /* TargetSettingViewHeaderView.xib */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		00161F3A1DC4540800AC0552 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */,
+				00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */,
+				00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		00161F3B1DC4541900AC0552 /* AddCell */ = {
+			isa = PBXGroup;
+			children = (
+				00161F341DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.h */,
+				00161F351DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m */,
+				00161F361DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib */,
+			);
+			name = AddCell;
+			sourceTree = "<group>";
+		};
 		0016A2C91DBDF13100765AA9 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,20 +442,14 @@
 		0016A2CB1DBDF69B00765AA9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				00639DC81DC341640082798C /* giftDetail */,
+				00639DC31DC341280082798C /* home */,
 				00A798D11DBDFBB9008FE3C6 /* DataController.h */,
 				00A798D21DBDFBB9008FE3C6 /* DataController.m */,
 				0016A2CE1DBDF6CE00765AA9 /* targetApp.plist */,
 				00A799141DBE0806008FE3C6 /* TestDataViewController.h */,
 				00A799151DBE0806008FE3C6 /* TestDataViewController.m */,
 				00A799161DBE0806008FE3C6 /* TestDataViewController.xib */,
-				0016DC521DBEF28E00270F4E /* StepModel.h */,
-				0016DC531DBEF28E00270F4E /* StepModel.m */,
-				0016DC551DBEFA5100270F4E /* HeaderModel.h */,
-				0016DC561DBEFA5100270F4E /* HeaderModel.m */,
-				0016DC581DBEFA6A00270F4E /* GiftModel.h */,
-				0016DC591DBEFA6A00270F4E /* GiftModel.m */,
-				0016DC5B1DBEFA7600270F4E /* TargetModel.h */,
-				0016DC5C1DBEFA7600270F4E /* TargetModel.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -343,6 +457,7 @@
 		0016A2CC1DBDF6A400765AA9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				00B2E62D1DC390510080C377 /* New Group */,
 				00639DAF1DC33BB50082798C /* home */,
 				006627D01DC21104002970B1 /* gift */,
 				006627CA1DC1DF2E002970B1 /* settings */,
@@ -455,21 +570,157 @@
 		00639DAF1DC33BB50082798C /* home */ = {
 			isa = PBXGroup;
 			children = (
+				00B2E6301DC3909D0080C377 /* header */,
+				00B2E62F1DC390700080C377 /* step */,
+				00B2E62E1DC390620080C377 /* gift */,
 				005DE5751DC0829C007DB452 /* footerTestViewController.h */,
 				005DE5761DC0829C007DB452 /* footerTestViewController.m */,
 			);
 			name = home;
 			sourceTree = "<group>";
 		};
+		00639DB51DC33E790082798C /* giftDetail */ = {
+			isa = PBXGroup;
+			children = (
+				00639DCB1DC3418B0082798C /* cell */,
+				00639DCA1DC3417C0082798C /* header */,
+				00639DB01DC33E0E0082798C /* GiftDetailViewController.h */,
+				00639DB11DC33E0E0082798C /* GiftDetailViewController.m */,
+				00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */,
+			);
+			name = giftDetail;
+			sourceTree = "<group>";
+		};
+		00639DC31DC341280082798C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				00639DC71DC3414D0082798C /* header */,
+				00639DC61DC341430082798C /* step */,
+				00639DC51DC3413A0082798C /* gift */,
+				00639DC41DC3412F0082798C /* target */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		00639DC41DC3412F0082798C /* target */ = {
+			isa = PBXGroup;
+			children = (
+				0016DC5B1DBEFA7600270F4E /* TargetModel.h */,
+				0016DC5C1DBEFA7600270F4E /* TargetModel.m */,
+			);
+			name = target;
+			sourceTree = "<group>";
+		};
+		00639DC51DC3413A0082798C /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				0016DC581DBEFA6A00270F4E /* GiftModel.h */,
+				0016DC591DBEFA6A00270F4E /* GiftModel.m */,
+			);
+			name = gift;
+			sourceTree = "<group>";
+		};
+		00639DC61DC341430082798C /* step */ = {
+			isa = PBXGroup;
+			children = (
+				0016DC521DBEF28E00270F4E /* StepModel.h */,
+				0016DC531DBEF28E00270F4E /* StepModel.m */,
+			);
+			name = step;
+			sourceTree = "<group>";
+		};
+		00639DC71DC3414D0082798C /* header */ = {
+			isa = PBXGroup;
+			children = (
+				0016DC551DBEFA5100270F4E /* HeaderModel.h */,
+				0016DC561DBEFA5100270F4E /* HeaderModel.m */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		00639DC81DC341640082798C /* giftDetail */ = {
+			isa = PBXGroup;
+			children = (
+				00639DDB1DC3533C0082798C /* tabelView */,
+			);
+			name = giftDetail;
+			sourceTree = "<group>";
+		};
+		00639DC91DC3416F0082798C /* header */ = {
+			isa = PBXGroup;
+			children = (
+				00639DCD1DC3460A0082798C /* GiftDetailHeaderModel.h */,
+				00639DCE1DC3460A0082798C /* GiftDetailHeaderModel.m */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		00639DCA1DC3417C0082798C /* header */ = {
+			isa = PBXGroup;
+			children = (
+				00639DBB1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.h */,
+				00639DBC1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m */,
+				00639DBE1DC3402D0082798C /* UITableViewHeaderFooterUIView.h */,
+				00639DBF1DC3402D0082798C /* UITableViewHeaderFooterUIView.m */,
+				00639DC11DC340400082798C /* UITableViewHeaderFooterViewUIView.xib */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		00639DCB1DC3418B0082798C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				00639DB61DC33EF20082798C /* GiftDetailTableViewCell.h */,
+				00639DB71DC33EF20082798C /* GiftDetailTableViewCell.m */,
+				00639DB81DC33EF20082798C /* GiftDetailTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		00639DD31DC348210082798C /* root */ = {
+			isa = PBXGroup;
+			children = (
+				00639DD01DC3481D0082798C /* GiftDetailRootModel.h */,
+				00639DD11DC3481D0082798C /* GiftDetailRootModel.m */,
+			);
+			name = root;
+			sourceTree = "<group>";
+		};
+		00639DD41DC34A240082798C /* detailMessage */ = {
+			isa = PBXGroup;
+			children = (
+				00639DD71DC34A600082798C /* GiftDetailMessage.h */,
+				00639DD81DC34A600082798C /* GiftDetailMessage.m */,
+			);
+			name = detailMessage;
+			sourceTree = "<group>";
+		};
+		00639DDB1DC3533C0082798C /* tabelView */ = {
+			isa = PBXGroup;
+			children = (
+				00639DD31DC348210082798C /* root */,
+				00639DC91DC3416F0082798C /* header */,
+				00639DD41DC34A240082798C /* detailMessage */,
+			);
+			name = tabelView;
+			sourceTree = "<group>";
+		};
+		00639E1D1DC356D20082798C /* homeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = homeView;
+			sourceTree = "<group>";
+		};
 		006627CA1DC1DF2E002970B1 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				00161F161DC449EE00AC0552 /* target */,
 				005DE5641DBF751D007DB452 /* TargetViewController.h */,
 				005DE5651DBF751D007DB452 /* TargetViewController.m */,
 				005DE5661DBF751D007DB452 /* TargetViewController.xib */,
-				006627CB1DC1DF4C002970B1 /* TargetSetingViewController.h */,
-				006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */,
-				006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */,
+				00161F3C1DC455EE00AC0552 /* TargetSettingViewModel.h */,
+				00161F3D1DC455EE00AC0552 /* TargetSettingViewModel.m */,
 			);
 			name = settings;
 			sourceTree = "<group>";
@@ -477,15 +728,11 @@
 		006627D01DC21104002970B1 /* gift */ = {
 			isa = PBXGroup;
 			children = (
-				006627D11DC21129002970B1 /* GiftCellTableViewCell.h */,
-				006627D21DC21129002970B1 /* GiftCellTableViewCell.m */,
-				006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */,
+				00639E1D1DC356D20082798C /* homeView */,
+				00639DB51DC33E790082798C /* giftDetail */,
 				00174A711DC2F0A000CA982E /* GiftSettingViewController.h */,
 				00174A721DC2F0A000CA982E /* GiftSettingViewController.m */,
 				00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */,
-				00639DB01DC33E0E0082798C /* GiftDetailViewController.h */,
-				00639DB11DC33E0E0082798C /* GiftDetailViewController.m */,
-				00639DB21DC33E0E0082798C /* GiftDetailViewController.xib */,
 			);
 			name = gift;
 			sourceTree = "<group>";
@@ -494,16 +741,47 @@
 			isa = PBXGroup;
 			children = (
 				004AE1101DB9F13400362D28 /* flag.png */,
-				00A798F31DBE0584008FE3C6 /* TargetHeaderFooterView.h */,
-				00A798F41DBE0584008FE3C6 /* TargetHeaderFooterView.m */,
+			);
+			name = target;
+			sourceTree = "<group>";
+		};
+		00B2E62D1DC390510080C377 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		00B2E62E1DC390620080C377 /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				006627D11DC21129002970B1 /* GiftCellTableViewCell.h */,
+				006627D21DC21129002970B1 /* GiftCellTableViewCell.m */,
+				006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */,
+			);
+			name = gift;
+			sourceTree = "<group>";
+		};
+		00B2E62F1DC390700080C377 /* step */ = {
+			isa = PBXGroup;
+			children = (
 				005DE55E1DBF72A6007DB452 /* BodyTableViewCell.h */,
 				005DE55F1DBF72A6007DB452 /* BodyTableViewCell.m */,
 				005DE5601DBF72A6007DB452 /* BodyTableViewCell.xib */,
+			);
+			name = step;
+			sourceTree = "<group>";
+		};
+		00B2E6301DC3909D0080C377 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				00A798F31DBE0584008FE3C6 /* TargetHeaderFooterView.h */,
+				00A798F41DBE0584008FE3C6 /* TargetHeaderFooterView.m */,
 				005DE5701DC07344007DB452 /* FooterView.h */,
 				005DE5711DC07344007DB452 /* FooterView.m */,
 				005DE5731DC07363007DB452 /* FooterView.xib */,
 			);
-			name = target;
+			name = header;
 			sourceTree = "<group>";
 		};
 		00CCE5EF1DB5D751003CB120 = {
@@ -755,11 +1033,14 @@
 			files = (
 				004AE0F01DB9EFDD00362D28 /* FriendsList.plist in Resources */,
 				004AE12F1DBA3FA300362D28 /* cell.xib in Resources */,
+				00161F331DC451DF00AC0552 /* TargetSettingViewHeaderView.xib in Resources */,
 				00A799181DBE0806008FE3C6 /* TestDataViewController.xib in Resources */,
 				00EDC2E11DB73F2900F700E6 /* myFirstJS.html in Resources */,
 				00CCE60B1DB5D751003CB120 /* LaunchScreen.storyboard in Resources */,
+				00639DBA1DC33EF20082798C /* GiftDetailTableViewCell.xib in Resources */,
 				004AE1311DBB05F200362D28 /* apple.jpg in Resources */,
 				004AE0DB1DB91C1700362D28 /* 0111.png in Resources */,
+				00161F281DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib in Resources */,
 				004AE1181DB9F13400362D28 /* icon.png in Resources */,
 				004AE11C1DB9F13400362D28 /* Tim Cook.png in Resources */,
 				00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */,
@@ -778,6 +1059,7 @@
 				004AE14C1DBB56D400362D28 /* Home2TableViewCell.xib in Resources */,
 				004AE1191DB9F13400362D28 /* Ma Yun.png in Resources */,
 				00CCE6841DB60E74003CB120 /* TableView.xib in Resources */,
+				00161F231DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib in Resources */,
 				00CCE6751DB6041B003CB120 /* Info.plist in Resources */,
 				006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */,
 				00CCE6961DB71353003CB120 /* ocToJs.xib in Resources */,
@@ -785,6 +1067,7 @@
 				004AE1171DB9F13400362D28 /* flag.png in Resources */,
 				004AE11A1DB9F13400362D28 /* Steve Jobs.png in Resources */,
 				0016A2C01DBDD0F500765AA9 /* gift.jpg in Resources */,
+				00639DC21DC340400082798C /* UITableViewHeaderFooterViewUIView.xib in Resources */,
 				00CCE6061DB5D751003CB120 /* Main.storyboard in Resources */,
 				00CCE68C1DB65B35003CB120 /* 01.png in Resources */,
 				005DE5621DBF72A6007DB452 /* BodyTableViewCell.xib in Resources */,
@@ -792,6 +1075,7 @@
 				0016A2BE1DBDA0A500765AA9 /* Home3TableViewCell.xib in Resources */,
 				00CCE6911DB71159003CB120 /* oc与js交互.xib in Resources */,
 				005DE56E1DBF858F007DB452 /* TestView.xib in Resources */,
+				00161F381DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib in Resources */,
 				005DE5681DBF751D007DB452 /* TargetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,18 +1101,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00161F271DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m in Sources */,
 				00CCE6781DB6041B003CB120 /* MASConstraintMaker.m in Sources */,
 				0016DC571DBEFA5100270F4E /* HeaderModel.m in Sources */,
 				006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */,
+				00161F221DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m in Sources */,
 				00CCE6031DB5D751003CB120 /* ViewController.m in Sources */,
 				00CCE68A1DB61DBB003CB120 /* DetailViewController.m in Sources */,
 				0016DC541DBEF28E00270F4E /* StepModel.m in Sources */,
 				004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */,
+				00161F3E1DC455EE00AC0552 /* TargetSettingViewModel.m in Sources */,
 				00CCE6001DB5D751003CB120 /* AppDelegate.m in Sources */,
 				00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */,
+				00161F301DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m in Sources */,
 				00CCE6831DB60E74003CB120 /* TableView.m in Sources */,
 				005DE5721DC07344007DB452 /* FooterView.m in Sources */,
 				004AE12A1DBA20B600362D28 /* TargetListCellTableViewCell.m in Sources */,
+				00639DC01DC3402D0082798C /* UITableViewHeaderFooterUIView.m in Sources */,
 				00A799171DBE0806008FE3C6 /* TestDataViewController.m in Sources */,
 				00CCE6771DB6041B003CB120 /* MASConstraint.m in Sources */,
 				00CCE67F1DB6041B003CB120 /* ViewController+MASAdditions.m in Sources */,
@@ -839,6 +1128,9 @@
 				00CCE67B1DB6041B003CB120 /* MASViewConstraint.m in Sources */,
 				00CCE67A1DB6041B003CB120 /* MASViewAttribute.m in Sources */,
 				005DE5611DBF72A6007DB452 /* BodyTableViewCell.m in Sources */,
+				00639DCF1DC3460A0082798C /* GiftDetailHeaderModel.m in Sources */,
+				00639DB91DC33EF20082798C /* GiftDetailTableViewCell.m in Sources */,
+				00161F2D1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m in Sources */,
 				0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */,
 				00CCE6901DB71159003CB120 /* oc与js交互.m in Sources */,
 				00639DB31DC33E0E0082798C /* GiftDetailViewController.m in Sources */,
@@ -860,7 +1152,11 @@
 				005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */,
 				004AE0E61DB9EFAE00362D28 /* LHY_HomeViewController.m in Sources */,
 				00CCE67D1DB6041B003CB120 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				00161F371DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m in Sources */,
+				00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */,
+				00639DBD1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m in Sources */,
 				0016DC5A1DBEFA6A00270F4E /* GiftModel.m in Sources */,
+				00639DD21DC3481D0082798C /* GiftDetailRootModel.m in Sources */,
 				004AE14B1DBB56D400362D28 /* Home2TableViewCell.m in Sources */,
 				004AE1351DBB17BD00362D28 /* TestTableViewCell.m in Sources */,
 				00A798F51DBE0584008FE3C6 /* TargetHeaderFooterView.m in Sources */,

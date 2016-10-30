@@ -16,38 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    TargetModel* targetBuf = [[DataController getInstence] targetMaster][0];
+    NSLog(@"%@",targetBuf);
     [self testModle];
-//    DataController* pDataController = [DataController getInstence];
-//    
-//    NSMutableDictionary* target = [pDataController getTargetDictionaryForHeaderFooter:0];
-//    NSLog(@"测试结果target = %@",target);
-//    [target setObject:@"sb" forKey:@"completeness"];
-//    [pDataController setTargetDictionary:target ForHeaderFooterInTag:0];
-//    target = [pDataController getTargetDictionaryForHeaderFooter:0];
-//
-//    NSMutableArray* data = [pDataController getStepsArrayFor:0 fromFather:nil];
-//    NSLog(@"测试结果------------data = %@",data);
-//
-//    NSMutableArray* data2 = [pDataController getStepsArrayFor:0 fromFather:data];
-//    NSLog(@"测试结果------------data2 = %@",data2);
-//
-//    NSMutableDictionary* target2 = data2[0];
-//    
-//    [pDataController setStepsArray:data2 For:0 inFather:data];
-//    
-//    NSMutableArray* gift = [pDataController getGiftsArrayFor:0];
-//
-//    
-//    
-//    NSLog(@"测试结果------------gift1 = %@",gift);
-//    NSString* sb=  gift[0][@"giftName"] ;
-//    sb = @"sb";
-//    //[gift[0] setObject:@"sb" forKey:@"giftName"];
-//    
-//    [pDataController setGiftsArray:gift ForTag:0];
-//    NSMutableArray* gift2 = [pDataController getGiftsArrayFor:0];
-//
-//    NSLog(@"测试结果------------gift2 = %@",gift2);
+
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -58,7 +30,7 @@
 }
 
 -(void)testModle{
-        DataController* pDataController = [DataController getInstence];
+    //DataController* pDataController = [DataController getInstence];
 
     //创建一个目标的流程是
 }

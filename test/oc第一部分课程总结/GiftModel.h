@@ -7,21 +7,36 @@
 //
 
 #import <Foundation/Foundation.h>
+@class GiftModel;
+
+@protocol GiftModelProtocol <NSObject>
+
+-(Boolean)giftModelProtocolUpData:(GiftModel*)mySelf;
+
+@end
 
 @interface GiftModel : NSObject
 
 -(GiftModel*)init:(NSMutableDictionary*)giftData;
--(void)updataAll;
+-(Boolean)updataAll;
+
+
+
+//model
 
 @property(nonatomic,strong)NSString* giftName;
 @property(nonatomic,strong)NSString* giftImage;
 @property(nonatomic,strong)NSMutableDictionary* giftUrl;
 @property(nonatomic,strong)NSMutableArray* stepPath;
-//修改的时候只要把新的东西写到这里就可以了
-@property(nonatomic,strong)NSMutableDictionary* fatherData;
-
 //所有商城的价格
+//存的是 商城array 数据是价格
 @property(nonatomic,strong)NSMutableDictionary* allShopSellNum;
 @property(nonatomic)Boolean canBuyThisGift;
- 
+//plist
+@property(nonatomic,strong)NSMutableDictionary* myDataPlist;
+@property(nonatomic)NSInteger giftNumInPlist;
+
+
+ //代理
+@property(nonatomic,strong)id<GiftModelProtocol>delegate;
 @end
