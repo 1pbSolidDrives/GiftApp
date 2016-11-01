@@ -7,7 +7,38 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TargetModel.h"
+
+
+
+
+#import "TargetViewDelegates.h"
+
+@class TargetViewController;
+
+@protocol TargetViewControllerProtocol <NSObject>
+
+-(void)TargetViewControllerProtocolSaveData;
+
+@end
 
 @interface TargetViewController : UIViewController
+<
+UITableViewDataSource,
+UITableViewDelegate
+>
 
+-(instancetype)init:(TargetModel *)targetModel;
+
+
+@property(nonatomic,strong) UITableView* tableView;
+@property(nonatomic,strong) TargetModel* targetModel;
+//cell 用的数据
+
+@property(nonatomic,strong)NSMutableArray* cellsModel;
+//代理
+
+@property(nonatomic,strong)TargetViewDelegates* delegatesMaster;
+
+@property(nonatomic,strong)id<TargetViewControllerProtocol> delegate;
 @end

@@ -28,9 +28,13 @@
 @property(nonatomic,strong)NSMutableArray* stepCellMaster;
 @property(nonatomic,strong)NSMutableArray* giftMaster;
 
+//是否开启每个子节点修改之后自动写入 默认开启
+@property(nonatomic)Boolean sonIsModifiedToWriteImmediately;
+
+
 +(DataController*)getInstence;
-
-
+//初始化一个空的target
+-(TargetModel *)getNewTarget;
 //下面的所有set 都是重置
 
 //targetmodel如果做了修改那么需要做的
@@ -54,6 +58,8 @@
 
 //相当于刷新modle
 -(void)initCellMaster;
+//settingView中的view指针
+
 
 @end
 

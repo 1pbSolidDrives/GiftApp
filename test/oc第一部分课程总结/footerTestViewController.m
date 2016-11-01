@@ -8,6 +8,8 @@
 
 #import "footerTestViewController.h"
 #import "Home2ViewController.H"
+#import "TargetViewController.h"
+#import "DataController.h"
 
 static NSString* headerFooterIdentify = @"targetHeaderFooter";
 static NSString* cellIdentify = @"cell";
@@ -26,22 +28,34 @@ static NSInteger stepCellHeight = 56;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self dataTest];
+    //[self dataTest];
     
-    //[self initMyself];
-    //[self initTableView];
+    [self initMyself];
+    [self initTableView];
     // Do any additional setup after loading the view.
 }
 
 
 -(void)initMyself{
     self.title = @"进度条";
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(selectLeftAction:)];
+    self.navigationItem.rightBarButtonItem = rightBar;
+}
+//添加target
+-(void)selectLeftAction:(UIBarButtonItem*)leftButton{
+    NSLog(@"切换页面啊");
+    TargetModel* newTarget = [[DataController getInstence]getNewTarget];
+    TargetViewController *fvc = [[TargetViewController alloc] init:newTarget];
+    //fvc.view.backgroundColor = [UIColor blueColor];
+    [self.navigationController pushViewController:fvc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 //设置行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     DataController* dataBuf = [DataController getInstence] ;
@@ -114,6 +128,7 @@ static NSInteger stepCellHeight = 56;
 
 //设置单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     UITableViewCell * cell = nil;
     DataController* dataBuf = [DataController getInstence] ;
     NSMutableArray* stepCellMaster = dataBuf.stepCellMaster;
@@ -155,9 +170,9 @@ static NSInteger stepCellHeight = 56;
 //切换到设置页面
 -(void)bodyTableViewCellPressForOpenSetView:(BodyTableViewCell *)sender{
     NSLog(@"切换页面啊");
-    Home2ViewController *fvc = [[Home2ViewController alloc] init];
-    fvc.view.backgroundColor = [UIColor blueColor];
-    [self.navigationController pushViewController:fvc animated:YES];
+//    TargetViewController *fvc = [[TargetViewController alloc] init];
+//    fvc.view.backgroundColor = [UIColor blueColor];
+//    [self.navigationController pushViewController:fvc animated:YES];
 }
 //点击打开子节点
 -(void)bodyTableViewCell:(BodyTableViewCell *)sender PressForOpenSonsteps:(NSInteger)tag{

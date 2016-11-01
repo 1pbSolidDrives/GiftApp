@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001220F01DC8465D00B961E8 /* TargetViewDelegates.m in Sources */ = {isa = PBXBuildFile; fileRef = 001220EF1DC8465D00B961E8 /* TargetViewDelegates.m */; };
 		00161F221DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F201DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m */; };
 		00161F231DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F211DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib */; };
 		00161F271DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */; };
 		00161F281DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */; };
-		00161F2D1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F2C1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m */; };
-		00161F301DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F2F1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m */; };
-		00161F331DC451DF00AC0552 /* TargetSettingViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F321DC451DF00AC0552 /* TargetSettingViewHeaderView.xib */; };
-		00161F371DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F351DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m */; };
-		00161F381DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00161F361DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib */; };
 		00161F3E1DC455EE00AC0552 /* TargetSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00161F3D1DC455EE00AC0552 /* TargetSettingViewModel.m */; };
 		0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016A2BB1DBDA0A500765AA9 /* Home3TableViewCell.m */; };
 		0016A2BE1DBDA0A500765AA9 /* Home3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0016A2BC1DBDA0A500765AA9 /* Home3TableViewCell.xib */; };
@@ -29,6 +25,8 @@
 		0016DC5D1DBEFA7600270F4E /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC5C1DBEFA7600270F4E /* TargetModel.m */; };
 		00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A721DC2F0A000CA982E /* GiftSettingViewController.m */; };
 		00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */; };
+		0033B7D31DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0033B7D11DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m */; };
+		0033B7D41DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0033B7D21DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib */; };
 		004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AE0D61DB8F5C300362D28 /* TableViewController.m */; };
 		004AE0D91DB8F5C300362D28 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004AE0D71DB8F5C300362D28 /* TableViewController.xib */; };
 		004AE0DB1DB91C1700362D28 /* 0111.png in Resources */ = {isa = PBXBuildFile; fileRef = 004AE0DA1DB91C1700362D28 /* 0111.png */; };
@@ -75,8 +73,6 @@
 		00639DCF1DC3460A0082798C /* GiftDetailHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DCE1DC3460A0082798C /* GiftDetailHeaderModel.m */; };
 		00639DD21DC3481D0082798C /* GiftDetailRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DD11DC3481D0082798C /* GiftDetailRootModel.m */; };
 		00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DD81DC34A600082798C /* GiftDetailMessage.m */; };
-		006627CE1DC1DF4C002970B1 /* TargetSetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */; };
-		006627CF1DC1DF4C002970B1 /* TargetSetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */; };
 		006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627D21DC21129002970B1 /* GiftCellTableViewCell.m */; };
 		006627D51DC21129002970B1 /* GiftCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */; };
 		006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 006C0DA81DBCB3C80007ACE5 /* Property List2.plist */; };
@@ -117,6 +113,10 @@
 		00CCE6961DB71353003CB120 /* ocToJs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00CCE6941DB71353003CB120 /* ocToJs.xib */; };
 		00EDC2DF1DB733AE00F700E6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EDC2DE1DB733AE00F700E6 /* JavaScriptCore.framework */; };
 		00EDC2E11DB73F2900F700E6 /* myFirstJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 00EDC2E01DB73F2900F700E6 /* myFirstJS.html */; };
+		00F1CC571DC881670072D87B /* DelegateSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CC551DC881670072D87B /* DelegateSViewController.m */; };
+		00F1CC581DC881670072D87B /* DelegateSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00F1CC561DC881670072D87B /* DelegateSViewController.xib */; };
+		00F1CC5B1DC881880072D87B /* delegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CC5A1DC881880072D87B /* delegateTest.m */; };
+		00F1CC5E1DC8819E0072D87B /* ScrollDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F1CC5D1DC8819E0072D87B /* ScrollDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,20 +137,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001220EE1DC8465D00B961E8 /* TargetViewDelegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetViewDelegates.h; sourceTree = "<group>"; };
+		001220EF1DC8465D00B961E8 /* TargetViewDelegates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetViewDelegates.m; sourceTree = "<group>"; };
 		00161F1F1DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewTargetTableViewCell.h; sourceTree = "<group>"; };
 		00161F201DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewTargetTableViewCell.m; sourceTree = "<group>"; };
 		00161F211DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewTargetTableViewCell.xib; sourceTree = "<group>"; };
 		00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewAddGiftTableViewCell.h; sourceTree = "<group>"; };
 		00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewAddGiftTableViewCell.m; sourceTree = "<group>"; };
 		00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewAddGiftTableViewCell.xib; sourceTree = "<group>"; };
-		00161F2B1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewHeaderFooterView.h; sourceTree = "<group>"; };
-		00161F2C1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewHeaderFooterView.m; sourceTree = "<group>"; };
-		00161F2E1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewGiftHeaderView.h; sourceTree = "<group>"; };
-		00161F2F1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewGiftHeaderView.m; sourceTree = "<group>"; };
-		00161F321DC451DF00AC0552 /* TargetSettingViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewHeaderView.xib; sourceTree = "<group>"; };
-		00161F341DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewGiftAddGiftTableViewCell.h; sourceTree = "<group>"; };
-		00161F351DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewGiftAddGiftTableViewCell.m; sourceTree = "<group>"; };
-		00161F361DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewGiftAddGiftTableViewCell.xib; sourceTree = "<group>"; };
 		00161F3C1DC455EE00AC0552 /* TargetSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewModel.h; sourceTree = "<group>"; };
 		00161F3D1DC455EE00AC0552 /* TargetSettingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewModel.m; sourceTree = "<group>"; };
 		0016A2BA1DBDA0A500765AA9 /* Home3TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home3TableViewCell.h; sourceTree = "<group>"; };
@@ -172,6 +166,9 @@
 		00174A711DC2F0A000CA982E /* GiftSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftSettingViewController.h; sourceTree = "<group>"; };
 		00174A721DC2F0A000CA982E /* GiftSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftSettingViewController.m; sourceTree = "<group>"; };
 		00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftSettingViewController.xib; sourceTree = "<group>"; };
+		0033B7D01DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewAddGiftButtonTableViewCell.h; sourceTree = "<group>"; };
+		0033B7D11DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewAddGiftButtonTableViewCell.m; sourceTree = "<group>"; };
+		0033B7D21DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewAddGiftButtonTableViewCell.xib; sourceTree = "<group>"; };
 		004AE0D51DB8F5C300362D28 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		004AE0D61DB8F5C300362D28 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		004AE0D71DB8F5C300362D28 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
@@ -241,9 +238,6 @@
 		00639DD11DC3481D0082798C /* GiftDetailRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailRootModel.m; sourceTree = "<group>"; };
 		00639DD71DC34A600082798C /* GiftDetailMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftDetailMessage.h; sourceTree = "<group>"; };
 		00639DD81DC34A600082798C /* GiftDetailMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftDetailMessage.m; sourceTree = "<group>"; };
-		006627CB1DC1DF4C002970B1 /* TargetSetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSetingViewController.h; sourceTree = "<group>"; };
-		006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSetingViewController.m; sourceTree = "<group>"; };
-		006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSetingViewController.xib; sourceTree = "<group>"; };
 		006627D11DC21129002970B1 /* GiftCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCellTableViewCell.h; sourceTree = "<group>"; };
 		006627D21DC21129002970B1 /* GiftCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCellTableViewCell.m; sourceTree = "<group>"; };
 		006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -318,6 +312,13 @@
 		00CCE6941DB71353003CB120 /* ocToJs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ocToJs.xib; path = "oc第一部分课程总结/ocToJs.xib"; sourceTree = "<group>"; };
 		00EDC2DE1DB733AE00F700E6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		00EDC2E01DB73F2900F700E6 /* myFirstJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = myFirstJS.html; sourceTree = "<group>"; };
+		00F1CC541DC881670072D87B /* DelegateSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DelegateSViewController.h; sourceTree = "<group>"; };
+		00F1CC551DC881670072D87B /* DelegateSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateSViewController.m; sourceTree = "<group>"; };
+		00F1CC561DC881670072D87B /* DelegateSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DelegateSViewController.xib; sourceTree = "<group>"; };
+		00F1CC591DC881880072D87B /* delegateTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delegateTest.h; sourceTree = "<group>"; };
+		00F1CC5A1DC881880072D87B /* delegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = delegateTest.m; sourceTree = "<group>"; };
+		00F1CC5C1DC8819E0072D87B /* ScrollDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollDelegate.h; sourceTree = "<group>"; };
+		00F1CC5D1DC8819E0072D87B /* ScrollDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,9 +351,6 @@
 			isa = PBXGroup;
 			children = (
 				00161F181DC44A4900AC0552 /* tableView */,
-				006627CB1DC1DF4C002970B1 /* TargetSetingViewController.h */,
-				006627CC1DC1DF4C002970B1 /* TargetSetingViewController.m */,
-				006627CD1DC1DF4C002970B1 /* TargetSetingViewController.xib */,
 			);
 			name = target;
 			sourceTree = "<group>";
@@ -360,8 +358,8 @@
 		00161F181DC44A4900AC0552 /* tableView */ = {
 			isa = PBXGroup;
 			children = (
+				00161F3A1DC4540800AC0552 /* Cell */,
 				00161F2A1DC44E8F00AC0552 /* gift */,
-				00161F291DC44E8700AC0552 /* Target */,
 			);
 			name = tableView;
 			sourceTree = "<group>";
@@ -380,30 +378,16 @@
 			isa = PBXGroup;
 			children = (
 				00161F3B1DC4541900AC0552 /* AddCell */,
-				00161F3A1DC4540800AC0552 /* Cell */,
-				00161F391DC4540100AC0552 /* header */,
 			);
 			name = gift;
-			sourceTree = "<group>";
-		};
-		00161F391DC4540100AC0552 /* header */ = {
-			isa = PBXGroup;
-			children = (
-				00161F2B1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.h */,
-				00161F2C1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m */,
-				00161F2E1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.h */,
-				00161F2F1DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m */,
-				00161F321DC451DF00AC0552 /* TargetSettingViewHeaderView.xib */,
-			);
-			name = header;
 			sourceTree = "<group>";
 		};
 		00161F3A1DC4540800AC0552 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */,
-				00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */,
-				00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */,
+				00161F291DC44E8700AC0552 /* Target */,
+				0033B7D51DC76D84002B5490 /* gift */,
+				0033B7D61DC77137002B5490 /* step */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -411,9 +395,9 @@
 		00161F3B1DC4541900AC0552 /* AddCell */ = {
 			isa = PBXGroup;
 			children = (
-				00161F341DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.h */,
-				00161F351DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m */,
-				00161F361DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib */,
+				0033B7D01DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.h */,
+				0033B7D11DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m */,
+				0033B7D21DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib */,
 			);
 			name = AddCell;
 			sourceTree = "<group>";
@@ -471,6 +455,23 @@
 			children = (
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		0033B7D51DC76D84002B5490 /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */,
+				00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */,
+				00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */,
+			);
+			name = gift;
+			sourceTree = "<group>";
+		};
+		0033B7D61DC77137002B5490 /* step */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = step;
 			sourceTree = "<group>";
 		};
 		004AE0CF1DB8F36E00362D28 /* tableView */ = {
@@ -715,12 +716,15 @@
 		006627CA1DC1DF2E002970B1 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				00F1CC521DC84A7E0072D87B /* 多重代理测试 */,
 				00161F161DC449EE00AC0552 /* target */,
 				005DE5641DBF751D007DB452 /* TargetViewController.h */,
 				005DE5651DBF751D007DB452 /* TargetViewController.m */,
 				005DE5661DBF751D007DB452 /* TargetViewController.xib */,
 				00161F3C1DC455EE00AC0552 /* TargetSettingViewModel.h */,
 				00161F3D1DC455EE00AC0552 /* TargetSettingViewModel.m */,
+				001220EE1DC8465D00B961E8 /* TargetViewDelegates.h */,
+				001220EF1DC8465D00B961E8 /* TargetViewDelegates.m */,
 			);
 			name = settings;
 			sourceTree = "<group>";
@@ -925,6 +929,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		00F1CC521DC84A7E0072D87B /* 多重代理测试 */ = {
+			isa = PBXGroup;
+			children = (
+				00F1CC541DC881670072D87B /* DelegateSViewController.h */,
+				00F1CC551DC881670072D87B /* DelegateSViewController.m */,
+				00F1CC561DC881670072D87B /* DelegateSViewController.xib */,
+				00F1CC591DC881880072D87B /* delegateTest.h */,
+				00F1CC5A1DC881880072D87B /* delegateTest.m */,
+				00F1CC5C1DC8819E0072D87B /* ScrollDelegate.h */,
+				00F1CC5D1DC8819E0072D87B /* ScrollDelegate.m */,
+			);
+			name = "多重代理测试";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1033,12 +1051,12 @@
 			files = (
 				004AE0F01DB9EFDD00362D28 /* FriendsList.plist in Resources */,
 				004AE12F1DBA3FA300362D28 /* cell.xib in Resources */,
-				00161F331DC451DF00AC0552 /* TargetSettingViewHeaderView.xib in Resources */,
 				00A799181DBE0806008FE3C6 /* TestDataViewController.xib in Resources */,
 				00EDC2E11DB73F2900F700E6 /* myFirstJS.html in Resources */,
 				00CCE60B1DB5D751003CB120 /* LaunchScreen.storyboard in Resources */,
 				00639DBA1DC33EF20082798C /* GiftDetailTableViewCell.xib in Resources */,
 				004AE1311DBB05F200362D28 /* apple.jpg in Resources */,
+				0033B7D41DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib in Resources */,
 				004AE0DB1DB91C1700362D28 /* 0111.png in Resources */,
 				00161F281DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib in Resources */,
 				004AE1181DB9F13400362D28 /* icon.png in Resources */,
@@ -1046,13 +1064,13 @@
 				00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */,
 				004AE1161DB9F13400362D28 /* Bill Gates.png in Resources */,
 				004AE1361DBB17BD00362D28 /* TestTableViewCell.xib in Resources */,
-				006627CF1DC1DF4C002970B1 /* TargetSetingViewController.xib in Resources */,
 				00CCE6081DB5D751003CB120 /* Assets.xcassets in Resources */,
 				0016A2C21DBDD11500765AA9 /* gift.png in Resources */,
 				005DE5741DC07363007DB452 /* FooterView.xib in Resources */,
 				004AE11B1DB9F13400362D28 /* Sun Zhengyi.png in Resources */,
 				00639DB41DC33E0E0082798C /* GiftDetailViewController.xib in Resources */,
 				00CCE6331DB5D78B003CB120 /* ViewC1.xib in Resources */,
+				00F1CC581DC881670072D87B /* DelegateSViewController.xib in Resources */,
 				006627D51DC21129002970B1 /* GiftCellTableViewCell.xib in Resources */,
 				004AE0D91DB8F5C300362D28 /* TableViewController.xib in Resources */,
 				0016A2CF1DBDF6CE00765AA9 /* targetApp.plist in Resources */,
@@ -1075,7 +1093,6 @@
 				0016A2BE1DBDA0A500765AA9 /* Home3TableViewCell.xib in Resources */,
 				00CCE6911DB71159003CB120 /* oc与js交互.xib in Resources */,
 				005DE56E1DBF858F007DB452 /* TestView.xib in Resources */,
-				00161F381DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.xib in Resources */,
 				005DE5681DBF751D007DB452 /* TargetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1111,9 +1128,10 @@
 				0016DC541DBEF28E00270F4E /* StepModel.m in Sources */,
 				004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */,
 				00161F3E1DC455EE00AC0552 /* TargetSettingViewModel.m in Sources */,
+				0033B7D31DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m in Sources */,
 				00CCE6001DB5D751003CB120 /* AppDelegate.m in Sources */,
 				00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */,
-				00161F301DC450DA00AC0552 /* TargetSettingViewGiftHeaderView.m in Sources */,
+				00F1CC5B1DC881880072D87B /* delegateTest.m in Sources */,
 				00CCE6831DB60E74003CB120 /* TableView.m in Sources */,
 				005DE5721DC07344007DB452 /* FooterView.m in Sources */,
 				004AE12A1DBA20B600362D28 /* TargetListCellTableViewCell.m in Sources */,
@@ -1125,12 +1143,12 @@
 				00CCE6791DB6041B003CB120 /* MASLayoutConstraint.m in Sources */,
 				0016DC5D1DBEFA7600270F4E /* TargetModel.m in Sources */,
 				00CCE67C1DB6041B003CB120 /* NSArray+MASAdditions.m in Sources */,
+				001220F01DC8465D00B961E8 /* TargetViewDelegates.m in Sources */,
 				00CCE67B1DB6041B003CB120 /* MASViewConstraint.m in Sources */,
 				00CCE67A1DB6041B003CB120 /* MASViewAttribute.m in Sources */,
 				005DE5611DBF72A6007DB452 /* BodyTableViewCell.m in Sources */,
 				00639DCF1DC3460A0082798C /* GiftDetailHeaderModel.m in Sources */,
 				00639DB91DC33EF20082798C /* GiftDetailTableViewCell.m in Sources */,
-				00161F2D1DC44FB100AC0552 /* TargetSettingViewHeaderFooterView.m in Sources */,
 				0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */,
 				00CCE6901DB71159003CB120 /* oc与js交互.m in Sources */,
 				00639DB31DC33E0E0082798C /* GiftDetailViewController.m in Sources */,
@@ -1138,6 +1156,7 @@
 				00CCE6951DB71353003CB120 /* ocToJs.m in Sources */,
 				004AE13D1DBB249600362D28 /* HeaderFooterView.m in Sources */,
 				00CCE6321DB5D78B003CB120 /* ViewC1.m in Sources */,
+				00F1CC571DC881670072D87B /* DelegateSViewController.m in Sources */,
 				004AE0E31DB9ED6C00362D28 /* LHY_HeaderView.m in Sources */,
 				00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */,
 				00CCE5FD1DB5D751003CB120 /* main.m in Sources */,
@@ -1150,9 +1169,9 @@
 				004AE13A1DBB1DE000362D28 /* Home2ViewController.m in Sources */,
 				00CCE6871DB61D55003CB120 /* TableViewTest2FormHierarch_Lee.m in Sources */,
 				005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */,
+				00F1CC5E1DC8819E0072D87B /* ScrollDelegate.m in Sources */,
 				004AE0E61DB9EFAE00362D28 /* LHY_HomeViewController.m in Sources */,
 				00CCE67D1DB6041B003CB120 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				00161F371DC452D700AC0552 /* TargetSettingViewGiftAddGiftTableViewCell.m in Sources */,
 				00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */,
 				00639DBD1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m in Sources */,
 				0016DC5A1DBEFA6A00270F4E /* GiftModel.m in Sources */,
@@ -1161,7 +1180,6 @@
 				004AE1351DBB17BD00362D28 /* TestTableViewCell.m in Sources */,
 				00A798F51DBE0584008FE3C6 /* TargetHeaderFooterView.m in Sources */,
 				004AE12D1DBA342D00362D28 /* HomeViewController.m in Sources */,
-				006627CE1DC1DF4C002970B1 /* TargetSetingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

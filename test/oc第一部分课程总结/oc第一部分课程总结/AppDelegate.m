@@ -23,6 +23,7 @@
 #import "TestDataViewController.h"
 #import "footerTestViewController.h"
 
+#import "DelegateSViewController.h"
 @interface AppDelegate ()
 
 @end

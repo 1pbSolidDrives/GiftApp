@@ -7,6 +7,8 @@
 //
 
 #import "HeaderModel.h"
+#import "TargetSettingViewTargetTableViewCell.h"
+
 
 @implementation HeaderModel
 
@@ -19,6 +21,7 @@
         _targetDetails = headerData[@"targetDetails"];
         _targetHeaderName = headerData[@"targetHeaderName"];
         _targetHeaderImagePath = headerData[@"targetHeaderImagePath"];
+        
     }
     
     return self;

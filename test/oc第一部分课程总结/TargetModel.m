@@ -7,6 +7,7 @@
 //
 
 #import "TargetModel.h"
+#import "DataController.h"
 
 @implementation TargetModel
 
@@ -61,6 +62,7 @@
 
 -(Boolean)upDataAll{
     [self upDataMySelf];
+
     if (_delegate &&[_delegate conformsToProtocol:@protocol(TargetModelProtocol)]) {
         if([_delegate targetModelUpData:self ])
         {
@@ -91,6 +93,7 @@
 //实现headerModel的协议
 -(Boolean)headerModelProtocolUpData:(HeaderModel *)myself{
     _headerData = myself.myDataPlist;
+
     if ([self upDataAll]) {
         NSLog(@"TargetModel %li HeaderModel 更新完成",_myName);
 
@@ -105,7 +108,9 @@
     @try {
         [_giftData replaceObjectAtIndex:mySelf.giftNumInPlist withObject:mySelf.myDataPlist];
         [_giftsModel replaceObjectAtIndex:mySelf.giftNumInPlist withObject:mySelf];
+        
 
+        
         if ([self upDataAll]) {
             NSLog(@"giftModelProtocolUpData GiftModel %li 更新成功",mySelf.giftNumInPlist);
             return YES;
@@ -123,6 +128,7 @@
         [_stepData replaceObjectAtIndex:sender.stepNumInPlist withObject:sender.myDataplist];
         [_stepsModel replaceObjectAtIndex:sender.stepNumInPlist withObject:sender];
         [_mySelfDataPlist setObject:_stepData forKey:@"steps"];
+        
         //NSMutableArray* stepBuf = _mySelfDataPlist[@"steps"];
 //        NSString* name3 = stepBuf[0][@"setpName"];
 //        //---------
@@ -131,6 +137,12 @@
 //        NSString* name2 = [(StepModel*)_stepsModel[sender.stepNumInPlist]stepName];
 //
 //        //---------
+        
+        if (![[DataController getInstence]sonIsModifiedToWriteImmediately]) {
+            NSLog(@"TargetModel %li upDataInFather 子节点自动更新没有开启 请手动写入",_myName);
+            
+            return NO;
+        }
         if ([self upDataAll]) {
             NSLog(@"stepModelProtocolUpData StepModel %li 更新成功",sender.stepNumInPlist);
             return YES;

@@ -13,7 +13,13 @@
 @end
 
 @implementation TargetSetingViewController
-
+//-(instancetype)init:(TargetModel *)targetModel{
+//    self = [super init];
+//    if (self !=nil) {
+//        _targetModel = targetModel;
+//    }
+//    return self;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -23,6 +29,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+//点击保存按钮之后
+
+
+
+//设置行数
 
 /*
 #pragma mark - Navigation

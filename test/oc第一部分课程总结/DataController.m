@@ -38,7 +38,7 @@ static DataController* myInstence = nil;
     _plistPath = [[NSBundle mainBundle] pathForResource:PLISTNAME ofType:@"plist"];
     _dataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
     //NSLog(@"初始化数据----- plist = %@",_dataMaster);
-
+    _sonIsModifiedToWriteImmediately = YES;
 }
 //更新数据
 -(Boolean)upDataAllData{
@@ -241,6 +241,86 @@ static DataController* myInstence = nil;
     }else{
         //什么也不做
     }
+}
+
+-(TargetModel *)getNewTarget{
+    NSMutableDictionary* newTargetData = [[NSMutableDictionary alloc]init];
+    NSMutableDictionary* header = [[NSMutableDictionary alloc]init];
+    NSMutableArray* steps = [[NSMutableArray alloc]init];
+    NSMutableArray* gifts = [[NSMutableArray alloc]init];
+
+    header = [self getNewHeader];
+
+    steps = [self getNewStep];
+    gifts = [self getNewGift];
+
+    [newTargetData setObject:header forKey:@"headerFooter"];
+    [newTargetData setObject:steps forKey:@"steps"];
+    [newTargetData setObject:gifts forKey:@"gifts"];
+
+    
+    //暂时先不加到plist的数据中
+    TargetModel* targetModel = [[TargetModel alloc]init:newTargetData myName:_dataMaster.count];
+    targetModel.delegate = self;
+    return targetModel;
+}
+
+-(NSMutableDictionary*)getNewHeader{
+    NSMutableDictionary* header = [[NSMutableDictionary alloc]init];
+
+    NSString* targetBeginTime = @"";
+    NSString* targetExpectTime = @"";
+    NSString* completeness = @"";
+    NSString* targetDetails = @"";
+    NSString* targetHeaderName = @"";
+    NSString* targetHeaderImagePath = @"";
+    [header setObject:targetBeginTime forKey:@"targetBeginTime"];
+    [header setObject:targetExpectTime forKey:@"targetExpectTime"];
+    [header setObject:completeness forKey:@"completeness"];
+    [header setObject:targetDetails forKey:@"targetDetails"];
+    [header setObject:targetHeaderName forKey:@"targetHeaderName"];
+    [header setObject:targetHeaderImagePath forKey:@"targetHeaderImagePath"];
+    return header;
+}
+-(NSMutableArray*)getNewStep{
+    NSMutableArray* steps = [[NSMutableArray alloc]init];
+    NSMutableDictionary* stepStep = [[NSMutableDictionary alloc]init];
+    NSMutableArray* stepStepStep = [[NSMutableArray alloc]init];
+
+    
+    NSNumber* stepIsComplet = [[NSNumber alloc]init];
+    NSString* stepDetails= @"";
+    NSString* setpName= @"";
+    NSString* stepImagePath= @"";
+    NSString* stepEndTime= @"";
+    NSString* stepBuildTime= @"";
+    NSMutableArray* giftPath =[[NSMutableArray alloc]init];
+    
+    [stepStep setValue:stepIsComplet forKey:@"stepIsComplet"];
+    [stepStep setValue:stepDetails forKey:@"stepDetails"];
+    [stepStep setValue:setpName forKey:@"setpName"];
+    [stepStep setValue:stepImagePath forKey:@"stepImagePath"];
+    [stepStep setValue:stepEndTime forKey:@"stepEndTime"];
+    [stepStep setValue:stepBuildTime forKey:@"stepBuildTime"];
+    [stepStep setValue:giftPath forKey:@"giftPath"];
+    [stepStep setValue:stepStepStep forKey:@"steps"];
+    [steps addObject:stepStep];
+    return steps;
+}
+-(NSMutableArray*)getNewGift{
+    NSMutableArray* gifts = [[NSMutableArray alloc]init];
+    NSMutableDictionary* gift = [[NSMutableDictionary alloc]init];
+    NSString* giftName= @"";
+    NSString* giftImage= @"";
+    NSMutableDictionary* giftUrl= [[NSMutableDictionary alloc]init];
+
+    NSMutableArray* setpPath= [[NSMutableArray alloc]init];
+    [gift setObject:giftName forKey:@"giftName"];
+    [gift setObject:giftImage forKey:@"giftImage"];
+    [gift setObject:giftUrl forKey:@"giftUrl"];
+    [gift setObject:setpPath forKey:@"setpPath"];
+    [gifts addObject:gift];
+    return gifts;
 }
 
 

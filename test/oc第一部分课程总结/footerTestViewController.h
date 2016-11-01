@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "TargetHeaderFooterView.h"
-#import "DataController.h"
 #import "BodyTableViewCell.h"
 #import "GiftCellTableViewCell.h"
 @interface footerTestViewController : UIViewController

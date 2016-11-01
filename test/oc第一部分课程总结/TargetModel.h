@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "DataController.h"
+
 #import "HeaderModel.h"
 #import "StepModel.h"
 #import "GiftModel.h"
+
+@class DataController;
 
 @class TargetModel;
 
@@ -19,7 +23,8 @@
 
 @end
 
-@interface TargetModel : NSObject<
+@interface TargetModel : NSObject
+<
 StepModelProtocol,
 HeaderModelProtocol,
 GiftModelProtocol

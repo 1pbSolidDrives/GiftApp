@@ -25,7 +25,6 @@
 
 //model
 @property(nonatomic,strong)NSString* completeness;
-
 @property(nonatomic,strong)NSString* targetDetails;
 @property(nonatomic,strong)NSString* targetHeaderName;
 @property(nonatomic,strong)NSString* targetHeaderImagePath;
@@ -34,4 +33,7 @@
 
  
 @property(nonatomic,strong)id<HeaderModelProtocol>delegate;
+
+
+
 @end

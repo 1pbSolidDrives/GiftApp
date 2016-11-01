@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeaderModel.h"
+#import "TargetViewController.h"
+
+@class TargetViewController;
 
 @interface TargetSettingViewTargetTableViewCell : UITableViewCell
+<TargetViewControllerProtocol>
+
 @property (weak, nonatomic) IBOutlet UITextField *targetName;
 @property (weak, nonatomic) IBOutlet UITextField *targetTime;
+@property (nonatomic,strong)HeaderModel* myData;
 
+
+-(void)initAllView:(HeaderModel*)myData;
 @end

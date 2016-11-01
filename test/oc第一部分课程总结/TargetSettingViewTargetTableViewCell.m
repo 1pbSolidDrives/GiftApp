@@ -8,7 +8,20 @@
 
 #import "TargetSettingViewTargetTableViewCell.h"
 
+
 @implementation TargetSettingViewTargetTableViewCell
+
+-(void)initAllView:(HeaderModel *)myData{
+    if (self) {
+        _myData = myData;
+        [self initViews];
+    }
+}
+
+-(void)initViews{
+    _targetName.text = [_myData targetHeaderName];
+    _targetTime.text = [_myData targetBeginTime];
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -18,7 +31,22 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
+    
     // Configure the view for the selected state
 }
 
+-(void)TargetViewControllerProtocolSaveData{
+    //获取文本
+    NSString* targetName = [_targetName text];
+    NSString* targetTime = [_targetTime text];
+    
+    
+    //写入model
+    
+    _myData.targetExpectTime = targetTime;
+    _myData.targetHeaderName = targetName;
+    
+    [_myData upDataAll];
+    NSLog(@"TargetSettingViewTargetTableViewCell 要保存啦！！");
+}
 @end
