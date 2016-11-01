@@ -28,7 +28,8 @@ UITableViewDataSource,
 UITableViewDelegate
 >
 
--(instancetype)init:(TargetModel *)targetModel;
+@property (nonatomic, strong) TargetModel *model;
+
 
 
 @property(nonatomic,strong) UITableView* tableView;

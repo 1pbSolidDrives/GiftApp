@@ -13,20 +13,21 @@
 #import "TargetSettingViewAddGiftTableViewCell.h"
 #import "TargetSettingViewTargetTableViewCell.h"
 
+#import "DataController.h"
 
 #define CELLID_TARGET @"Target"
 #define CELLID_GIFT @"Gift"
 #define CELLID_STEP @"step"
 
 //cell的顺序
-typedef enum : NSUInteger {
-    CELLTAYP_TARGET,
-    CELLTAYP_GIFT,
-    CELLTAYP_STEP,
-} CELLTAYP;
-//#define CELLTAYP_TARGET 0
-//#define CELLTAYP_GIFT 1
-//#define CELLTAYP_STEP 3
+//typedef enum : NSUInteger {
+//    CELLTAYP_TARGET,
+//    CELLTAYP_GIFT,
+//    CELLTAYP_STEP,
+//} CELLTAYP;
+#define CELLTAYP_TARGET 0
+#define CELLTAYP_GIFT 1
+#define CELLTAYP_STEP 2
 //cell数量
 #define CELLNUM_TARGET 1
 #define CELLNUM_GIFT [_cellsModel[CELLTAYP_GIFT]count]
@@ -45,17 +46,6 @@ typedef enum : NSUInteger {
 
 @implementation TargetViewController
 
--(TargetViewController*)init:(TargetModel *)targetModel{
-    self = [super init];
-    if (self != nil) {
-        _targetModel = targetModel;
-        _delegatesMaster = [[TargetViewDelegates alloc]init];
-        _delegate = (id)_delegatesMaster;
-        
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -65,6 +55,13 @@ typedef enum : NSUInteger {
     
     [self initTableView];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)setModel:(TargetModel *)model
+{
+    _targetModel = model;
+//    [self.tableView reloadData];
+    [self initStepData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,12 +76,17 @@ typedef enum : NSUInteger {
 //tabelView相关
 //行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
     switch (section) {
         case CELLTAYP_TARGET:
             return CELLNUM_TARGET;
             break;
         case CELLTAYP_GIFT:
-            return CELLNUM_GIFT;
+        {
+            NSMutableArray* mudels = _cellsModel[section];
+            NSInteger cellNum = mudels.count;
+            return cellNum;
+        }
             break;
         case CELLTAYP_STEP:
             return CELLNUM_STEP;
@@ -96,11 +98,12 @@ typedef enum : NSUInteger {
 }
 //组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 1;
 }
 //行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    switch (indexPath.section) {
+    NSInteger section =indexPath.section;
+    switch (section) {
         case CELLTAYP_TARGET:
             return CELLHIEGHT_TARGET;
             break;
@@ -122,10 +125,24 @@ typedef enum : NSUInteger {
 //
 //-----------------------------------------设置单元格
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewCell* cell = [self createCells:tableView cellForRowAtIndexPath:indexPath];
+    //根据当前的位置来
+    UITableViewCell* cell = nil;
+    switch (indexPath.section) {
+        case CELLTAYP_TARGET:
+            cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
+            break;
+        case CELLTAYP_GIFT:
+            cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
+            
+            break;
+        case CELLTAYP_STEP:
+            cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
+            break;
+        default:
+            break;
+    }
     return cell;
-}
+ }
 //-----------------------------------------设置表头
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -145,27 +162,8 @@ typedef enum : NSUInteger {
     return @"";
 }
 
--(UITableViewCell*)createCells:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //根据当前的位置来
-    UITableViewCell* cell = nil;
-    switch (indexPath.section) {
-        case CELLTAYP_TARGET:
-            cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
-            break;
-        case CELLTAYP_GIFT:
-            
-            break;
-        case CELLTAYP_STEP:
-            
-            break;
-        default:
-            break;
-    }
-    return cell;
-}
-
-
 -(UITableViewCell*)createTargetCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
     TargetSettingViewTargetTableViewCell* cell = nil;
     cell = [tableView dequeueReusableCellWithIdentifier:@"TargetCell"];
     if (cell == nil) {
@@ -173,8 +171,9 @@ typedef enum : NSUInteger {
         //不知道传cell可不可以 它应该还是在的 不存在就试试别的方法吧
 
         [cell initAllView:_cellsModel[CELLTAYP_TARGET]];
+        [_delegatesMaster addDelegateTargets:cell];
+
     }
-    [_delegatesMaster addDelegateTargets:cell];
     return cell;
 }
 
@@ -206,19 +205,17 @@ typedef enum : NSUInteger {
 //初始化stepcell用的model
 -(void)initStepData{
     NSMutableArray* cellBuf = [[NSMutableArray alloc]init];
-    TargetModel* targetModelBuf = nil;
-    HeaderModel* headerModelBuf = nil;
+    _cellsModel = [[NSMutableArray alloc]init];
+     HeaderModel* headerModelBuf = nil;
     //添加target
     headerModelBuf = _targetModel.headerModel;
     [_cellsModel addObject:headerModelBuf];
     
     //添加gift
-    NSMutableArray* giftBuf = nil;
-    giftBuf = targetModelBuf.giftsModel;
-    
-    for (NSInteger k=0 ; k<giftBuf.count; k++) {
-        [_cellsModel addObject:giftBuf[k]];
-     }
+    NSMutableArray* giftBuf = [[NSMutableArray alloc]init];
+    giftBuf = _targetModel.giftsModel;
+    [_cellsModel addObject:giftBuf];
+
     
     NSMutableArray* stepsModelBuf = nil;
     stepsModelBuf = _targetModel.stepsModel;
@@ -248,6 +245,74 @@ typedef enum : NSUInteger {
     NSLog(@"保存完毕");
     //这里手动将数据写入
     [_targetModel upDataAll];
+    //[self dataTest];
+}
+
+-(void)dataTest{
+    TargetModel* targetBuf = [[DataController getInstence]targetMaster][1];
+    //测试1 修改一个target项
+        HeaderModel* headermodel = [targetBuf headerModel];
+    //
+        NSString* targetName = [headermodel targetHeaderName];
+        NSLog(@"targetName %@",targetName);
+    //    headermodel.targetHeaderName = @"把数据部分调通";
+    //    NSLog(@"targetName %@",headermodel.targetHeaderName);
+    //    [headermodel upDataAll ];
+    //    TargetModel* targetBuf2 = [[DataController getInstence]targetMaster][0];
+    //    NSLog(@"targetBuf %@",[[targetBuf2 headerModel] targetHeaderName]);
+    //    NSLog(@"----------targetBuf %@",[[DataController getInstence] dataMaster][0][@"headerFooter"][@"targetHeaderName"]);
+    //    NSString* _plistPath = [[NSBundle mainBundle] pathForResource:@"targetApp" ofType:@"plist"];
+    //
+    //    NSMutableArray * DataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
+    //    NSLog(@"DataMaster %@",DataMaster[0][@"headerFooter"][@"targetHeaderName"]);
+    
+    
+    //测试2 修改一个step项
+    //    NSMutableArray* steps =[targetBuf stepsModel];
+    //    StepModel* step = steps[0];
+    //    NSString* name = [step stepName];
+    //    NSLog(@"step name %@",name);
+    //    step.stepName = @"处理model";
+    //    [step updataAll];
+    //    NSString* name2 = [[targetBuf stepsModel][0]stepName];
+    //    NSLog(@"step name %@",name2);
+    //    NSString* _plistPath = [[NSBundle mainBundle] pathForResource:@"targetApp" ofType:@"plist"];
+    //    NSMutableArray * DataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
+    //    NSMutableArray* steps2 = DataMaster[0][@"steps"];
+    //    NSString* name3 = steps2[0][@"setpName"];
+    //    NSLog(@"setpName %@",name3);
+    
+    //    //测试3 添加一个step项
+    //    StepModel* step = steps[0];
+    //    [targetBuf addStep:@"写完model" stepDetails:@"好好活着" stepImagePath:@"no.png" stepBuildTime:@"20161010" stepEndTime:@"20161111" giftPath:[[NSMutableArray alloc]init]];
+    //    NSMutableArray* steps =[targetBuf stepsModel];
+    //
+    //    //测试 4 删除一个step项
+    //    StepModel* step2 = steps[2];
+    //
+    //    [step2 deleteMe];
+    //    NSString* _plistPath = [[NSBundle mainBundle] pathForResource:@"targetApp" ofType:@"plist"];
+    //    NSMutableArray * DataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
+    //    NSMutableArray* steps2 = DataMaster[0][@"steps"];
+    //    NSMutableDictionary* steps3 = steps2[2];
+    //    NSString* name3 = steps3[@"setpName"];
+    //    NSLog(@"setpName %@",name3);
+    
+    //测试 5 修改一个gift
+    //    NSMutableArray* gifts =[targetBuf giftsModel];
+    //    GiftModel* gift = gifts[0];
+    //    NSLog(@"%@",gift.giftName);
+    //    gift.giftName = @"好好活着";
+    //    [gift updataAll];
+    //    //测试 6 添加一个Gift
+    //    [targetBuf addGift:@"好好活着" giftUrl:@"空" giftImage:@"sb.png" setpPath:[[NSMutableArray alloc]init]];
+    //
+    //    NSString* _plistPath = [[NSBundle mainBundle] pathForResource:@"targetApp" ofType:@"plist"];
+    //    NSMutableArray * DataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
+    //    NSMutableArray* gifts2 = DataMaster[0][@"gifts"];
+    //    NSString* giftName = gifts2[1][@"giftName"];
+    //    NSLog(@"%@",giftName);
+    
 }
 
 

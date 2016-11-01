@@ -54,7 +54,13 @@ static DataController* myInstence = nil;
 
 -(Boolean)targetModelUpData:(TargetModel *)sender{
     @try {
-        [_dataMaster replaceObjectAtIndex:sender.myName withObject:sender.mySelfDataPlist];
+        if ([_dataMaster containsObject:sender]) {
+            [_dataMaster replaceObjectAtIndex:sender.myName withObject:sender.mySelfDataPlist];
+        }else{
+            [_targetMaster addObject:sender];
+            [_dataMaster addObject:sender.mySelfDataPlist];
+        }
+        
         NSLog(@"targetModelUpData %li 成功",sender.myName);
 //        NSMutableDictionary *targetbuf =_dataMaster[sender.myName];
 //        
@@ -272,7 +278,7 @@ static DataController* myInstence = nil;
     NSString* targetExpectTime = @"";
     NSString* completeness = @"";
     NSString* targetDetails = @"";
-    NSString* targetHeaderName = @"";
+    NSString* targetHeaderName = @"sssss";
     NSString* targetHeaderImagePath = @"";
     [header setObject:targetBeginTime forKey:@"targetBeginTime"];
     [header setObject:targetExpectTime forKey:@"targetExpectTime"];

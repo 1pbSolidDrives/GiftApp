@@ -12,10 +12,8 @@
 @implementation TargetSettingViewTargetTableViewCell
 
 -(void)initAllView:(HeaderModel *)myData{
-    if (self) {
         _myData = myData;
         [self initViews];
-    }
 }
 
 -(void)initViews{
