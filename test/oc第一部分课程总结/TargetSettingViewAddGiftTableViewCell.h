@@ -7,10 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataController.h"
+
+@class TargetViewController;
+@class TargetSettingViewAddGiftTableViewCell;
+
+@protocol TargetSettingViewAddGiftTableViewCellUpdataProtocol <NSObject>
+
+-(void)targetSettingViewAddGiftTableViewCellUpdataProtocol:(TargetSettingViewAddGiftTableViewCell*)sender updataModelAndTabelView:(GiftModel*)myData;
+
+@end
 
 @interface TargetSettingViewAddGiftTableViewCell : UITableViewCell
+//shopListView
+@property(strong,nonatomic)NSMutableArray* shopListViews;
+@property(strong,nonatomic)GiftModel* myData;
+@property(strong,nonatomic)id<TargetSettingViewAddGiftTableViewCellUpdataProtocol>delegate;
 
-@property (weak, nonatomic) IBOutlet UITextField *shopName;
+@property (weak, nonatomic) IBOutlet UITextField *giftName;
 
-@property (weak, nonatomic) IBOutlet UITextField *shopURL;
+- (IBAction)addShopInfo:(id)sender;
+
+-(void)initAllView:(GiftModel*)giftData;
+
 @end

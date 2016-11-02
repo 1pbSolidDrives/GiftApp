@@ -7,13 +7,8 @@
 //
 
 #import "TargetViewController.h"
-#import "TargetSettingViewHeaderFooterView.h"
-#import "TargetListCellTableViewCell.h"
-#import "TargetSettingViewAddGiftButtonTableViewCell.h"
-#import "TargetSettingViewAddGiftTableViewCell.h"
 #import "TargetSettingViewTargetTableViewCell.h"
 
-#import "DataController.h"
 
 #define CELLID_TARGET @"Target"
 #define CELLID_GIFT @"Gift"
@@ -34,11 +29,12 @@
 #define CELLNUM_STEP [_cellsModel[CELLTAYP_STEP]count]
 //cell高度
 #define CELLHIEGHT_TARGET 100
-#define CELLHIEGHT_GIFT [_cellsModel[CELLTAYP_GIFT]count]*50
+#define CELLHIEGHT_GIFT [_cellsModel[CELLTAYP_GIFT]count]*100
 #define CELLHIEGHT_STEP [_cellsModel[CELLTAYP_STEP]count]*50
 
+#define CELLHIEGHT_GIFT_Father 132
 
-
+#define CELLHIEGHT_GIFT_SHOPLIST 160
 @interface TargetViewController ()
 
 
@@ -60,7 +56,6 @@
 - (void)setModel:(TargetModel *)model
 {
     _targetModel = model;
-//    [self.tableView reloadData];
     [self initStepData];
 }
 
@@ -83,8 +78,8 @@
             break;
         case CELLTAYP_GIFT:
         {
-            NSMutableArray* mudels = _cellsModel[section];
-            NSInteger cellNum = mudels.count;
+            NSMutableArray* models = _cellsModel[section];
+            NSInteger cellNum = models.count;
             return cellNum;
         }
             break;
@@ -98,7 +93,7 @@
 }
 //组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 //行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -108,7 +103,14 @@
             return CELLHIEGHT_TARGET;
             break;
         case CELLTAYP_GIFT:
-            return CELLHIEGHT_GIFT;
+        {
+            NSInteger height = 0;
+            GiftModel* gift = _cellsModel[indexPath.section][indexPath.row];
+            height = CELLHIEGHT_GIFT_Father + gift.giftUrl.count *CELLHIEGHT_GIFT_SHOPLIST;
+            
+            return height;
+        }
+
             break;
         case CELLTAYP_STEP:
             return CELLHIEGHT_STEP;
@@ -120,7 +122,7 @@
 }
 ////组高
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 20;
+    return 30;
 }
 //
 //-----------------------------------------设置单元格
@@ -132,11 +134,11 @@
             cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
             break;
         case CELLTAYP_GIFT:
-            cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
+            cell = [self createGiftCell:tableView cellForRowAtIndexPath:indexPath];
             
             break;
         case CELLTAYP_STEP:
-            cell = [self createTargetCell:tableView cellForRowAtIndexPath:indexPath];
+            cell = [self createStepCell:tableView cellForRowAtIndexPath:indexPath];
             break;
         default:
             break;
@@ -151,7 +153,7 @@
             return @"Target";
             break;
         case CELLTAYP_GIFT:
-            return @"Gift";
+            return @"";
             break;
         case CELLTAYP_STEP:
             return @"Step";
@@ -162,6 +164,8 @@
     return @"";
 }
 
+
+
 -(UITableViewCell*)createTargetCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     TargetSettingViewTargetTableViewCell* cell = nil;
@@ -170,15 +174,24 @@
         cell = [[[NSBundle mainBundle]loadNibNamed:@"TargetSettingViewTargetTableViewCell" owner:nil options:nil]firstObject];
         //不知道传cell可不可以 它应该还是在的 不存在就试试别的方法吧
 
-        [cell initAllView:_cellsModel[CELLTAYP_TARGET]];
+        [cell initAllView:_cellsModel[indexPath.section]];
         [_delegatesMaster addDelegateTargets:cell];
 
     }
     return cell;
 }
-
+//创建giftcell
 -(UITableViewCell*)createGiftCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell* cell = nil;
+    TargetSettingViewAddGiftTableViewCell* cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"GiftCell"];
+    
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"TargetSettingViewAddGiftTableViewCell" owner:nil options:nil]firstObject];
+        GiftModel* giftBuf = _cellsModel[indexPath.section][indexPath.row];
+        [cell initAllView:giftBuf];
+        cell.delegate = self;
+        [_delegatesMaster addDelegateTargets:cell];
+    }
     
     return cell;
 }
@@ -191,12 +204,15 @@
 //=----------------------初始化tableView
 -(void)initTableView{
     if (self.tableView == nil) {
+        NSInteger width =CGRectGetWidth(self.view.frame);
+        width = [UIScreen mainScreen].bounds.size.width;
+        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height-64) style:UITableViewStylePlain];
         
-        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds )-64) style:UITableViewStylePlain];
         self.automaticallyAdjustsScrollViewInsets = NO;
         self.tableView.dataSource       = self;
         self.tableView.delegate         = self;
         self.tableView.tableFooterView = [[UIView alloc]init];
+        
 
         [self.view addSubview:self.tableView];
     }
@@ -225,6 +241,8 @@
     [_cellsModel addObject:cellBuf];
 }
 
+
+
 -(void)pushStepForCell:(StepModel*)singleStep in:(NSMutableArray*)cellBuf{
     //遍历每个节点 如果可以显示就显示
     if (singleStep.isShow == YES) {
@@ -245,16 +263,23 @@
     NSLog(@"保存完毕");
     //这里手动将数据写入
     [_targetModel upDataAll];
-    //[self dataTest];
+    [self dataTest];
+}
+
+-(void)targetSettingViewAddGiftTableViewCellUpdataProtocol:(TargetSettingViewAddGiftTableViewCell *)sender updataModelAndTabelView:(GiftModel *)myData{
+    
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: 1  ] withRowAnimation:UITableViewRowAnimationNone];
+    
 }
 
 -(void)dataTest{
-    TargetModel* targetBuf = [[DataController getInstence]targetMaster][1];
+    NSMutableArray* targets =[[DataController getInstence]targetMaster];
+    TargetModel* targetBuf = targets[1];
     //测试1 修改一个target项
-        HeaderModel* headermodel = [targetBuf headerModel];
-    //
-        NSString* targetName = [headermodel targetHeaderName];
-        NSLog(@"targetName %@",targetName);
+    //        HeaderModel* headermodel = [targetBuf headerModel];
+    //    //
+    //        NSString* targetName = [headermodel targetHeaderName];
+    //        NSLog(@"targetName %@",targetName);
     //    headermodel.targetHeaderName = @"把数据部分调通";
     //    NSLog(@"targetName %@",headermodel.targetHeaderName);
     //    [headermodel upDataAll ];
@@ -299,9 +324,9 @@
     //    NSLog(@"setpName %@",name3);
     
     //测试 5 修改一个gift
-    //    NSMutableArray* gifts =[targetBuf giftsModel];
-    //    GiftModel* gift = gifts[0];
-    //    NSLog(@"%@",gift.giftName);
+    NSMutableArray* gifts =[targetBuf giftsModel];
+    GiftModel* gift = gifts[0];
+    NSLog(@"%@",gift.giftName);
     //    gift.giftName = @"好好活着";
     //    [gift updataAll];
     //    //测试 6 添加一个Gift
@@ -314,6 +339,5 @@
     //    NSLog(@"%@",giftName);
     
 }
-
 
 @end

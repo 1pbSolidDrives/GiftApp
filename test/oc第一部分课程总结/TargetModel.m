@@ -20,7 +20,9 @@
         _myName = myName;
         _headerData = data[@"headerFooter"];
         _stepData = data[@"steps"];
+        //------------------------
         _giftData = data[@"gifts"];
+        //------------------------
         NSLog(@"_headerData%@", _headerData);
         NSLog(@"_stepData%@", _stepData);
         NSLog(@"_giftData%@", _giftData);
@@ -68,10 +70,10 @@
         {
             return YES;
         }
-        NSLog(@"TargetModel %li upDataInFather 更新失败",_myName);
+        NSLog(@"TargetModel %li upDataInFather 更新失败",(long)_myName);
         return NO;
     }
-    NSLog(@"TargetModel %li 无人实现这个协议",_myName);
+    NSLog(@"TargetModel %li 无人实现这个协议",(long)_myName);
     return NO;
 
 }
@@ -93,13 +95,17 @@
 //实现headerModel的协议
 -(Boolean)headerModelProtocolUpData:(HeaderModel *)myself{
     _headerData = myself.myDataPlist;
-
+    
+    if (![[DataController getInstence]sonIsModifiedToWriteImmediately]) {
+        NSLog(@"TargetModel %li upDataInFather 子节点自动更新没有开启 请手动写入",(long)self.myName);
+        
+        return NO;
+    }
     if ([self upDataAll]) {
-        NSLog(@"TargetModel %li HeaderModel 更新完成",_myName);
-
+        NSLog(@"TargetModel %li HeaderModel 更新完成",(long)_myName);
         return  YES;
     }
-    NSLog(@"TargetModel %li HeaderModel 更新失败",_myName);
+    NSLog(@"TargetModel %li HeaderModel 更新失败",(long)_myName);
     return NO;
 }
 
@@ -108,15 +114,17 @@
     @try {
         [_giftData replaceObjectAtIndex:mySelf.giftNumInPlist withObject:mySelf.myDataPlist];
         [_giftsModel replaceObjectAtIndex:mySelf.giftNumInPlist withObject:mySelf];
-        
-
-        
+        if (![[DataController getInstence]sonIsModifiedToWriteImmediately]) {
+            NSLog(@"TargetModel %li upDataInFather 子节点自动更新没有开启 请手动写入",(long)self.myName);
+            
+            return NO;
+        }
         if ([self upDataAll]) {
-            NSLog(@"giftModelProtocolUpData GiftModel %li 更新成功",mySelf.giftNumInPlist);
+            NSLog(@"giftModelProtocolUpData GiftModel %li 更新成功",(long)mySelf.giftNumInPlist);
             return YES;
         }
     } @catch (NSException *exception) {
-        NSLog(@"giftModelProtocolUpData GiftModel %li 更新失败",mySelf.giftNumInPlist);
+        NSLog(@"giftModelProtocolUpData GiftModel %li 更新失败",(long)mySelf.giftNumInPlist);
         return NO;
     } @finally {
         
@@ -129,26 +137,17 @@
         [_stepsModel replaceObjectAtIndex:sender.stepNumInPlist withObject:sender];
         [_mySelfDataPlist setObject:_stepData forKey:@"steps"];
         
-        //NSMutableArray* stepBuf = _mySelfDataPlist[@"steps"];
-//        NSString* name3 = stepBuf[0][@"setpName"];
-//        //---------
-//        //测试1， step相关的 step中的新数据是否调价到了target中
-//        NSString* name1 = _stepData[sender.stepNumInPlist][@"setpName"];
-//        NSString* name2 = [(StepModel*)_stepsModel[sender.stepNumInPlist]stepName];
-//
-//        //---------
-        
         if (![[DataController getInstence]sonIsModifiedToWriteImmediately]) {
-            NSLog(@"TargetModel %li upDataInFather 子节点自动更新没有开启 请手动写入",_myName);
+            NSLog(@"TargetModel %li upDataInFather 子节点自动更新没有开启 请手动写入",(long)self.myName);
             
             return NO;
         }
         if ([self upDataAll]) {
-            NSLog(@"stepModelProtocolUpData StepModel %li 更新成功",sender.stepNumInPlist);
+            NSLog(@"stepModelProtocolUpData StepModel %ld 更新成功",(long)sender.stepNumInPlist);
             return YES;
         }
     } @catch (NSException *exception) {
-                NSLog(@"stepModelProtocolUpData StepModel %li 更新失败 %@",sender.stepNumInPlist,exception);
+                NSLog(@"stepModelProtocolUpData StepModel %li 更新失败 %@",(long)sender.stepNumInPlist,exception);
         return NO;
     } @finally {
         

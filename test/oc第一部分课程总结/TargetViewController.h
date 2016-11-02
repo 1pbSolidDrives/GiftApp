@@ -10,9 +10,9 @@
 #import "TargetModel.h"
 
 
-
-
 #import "TargetViewDelegates.h"
+
+#import "TargetSettingViewAddGiftTableViewCell.h"
 
 @class TargetViewController;
 
@@ -25,12 +25,11 @@
 @interface TargetViewController : UIViewController
 <
 UITableViewDataSource,
-UITableViewDelegate
+UITableViewDelegate,
+TargetSettingViewAddGiftTableViewCellUpdataProtocol
 >
 
 @property (nonatomic, strong) TargetModel *model;
-
-
 
 @property(nonatomic,strong) UITableView* tableView;
 @property(nonatomic,strong) TargetModel* targetModel;

@@ -60,22 +60,12 @@ static DataController* myInstence = nil;
             [_targetMaster addObject:sender];
             [_dataMaster addObject:sender.mySelfDataPlist];
         }
-        
-        NSLog(@"targetModelUpData %li 成功",sender.myName);
-//        NSMutableDictionary *targetbuf =_dataMaster[sender.myName];
-//        
-//        NSString* name2 = targetbuf[@"steps"][0][@"stepName"];
-//        
-//        NSMutableArray* steps2 =targetbuf[@"steps"];
-//        NSMutableDictionary* step = steps2[0];
-//        NSMutableDictionary *targetbuf2= sender.mySelfDataPlist;
-//        NSLog(@"!!!!!!!%@",targetbuf2);
-//        NSString* name3 = step[@"setpName"];
 
+        NSLog(@"targetModelUpData %li 成功",(long)sender.myName);
         [self upDataAllData];
         return YES;
     } @catch (NSException *exception) {
-        NSLog(@"targetModelUpData %li 失败",sender.myName);
+        NSLog(@"targetModelUpData %li 失败",(long)sender.myName);
         return NO;
     } @finally {
         
@@ -180,14 +170,20 @@ static DataController* myInstence = nil;
 
 -(void)initTarget{
     
-    TargetModel* singleTarget = nil;
 
     for (NSInteger i=0; i<_dataMaster.count; i++) {
+        TargetModel* singleTarget = nil;
         singleTarget = [[TargetModel alloc]init:_dataMaster[i] myName:i];
         NSLog(@"%@", _dataMaster[i]);
         singleTarget.delegate = self;
         [_targetMaster addObject:singleTarget];
     }
+    //测试证明 model中的数据并不是 plist数据的指针
+//    TargetModel* singleTarget = _targetMaster[0];
+//    HeaderModel* testHeaderModel = singleTarget.headerModel;
+//    testHeaderModel.targetHeaderName = @"TestSingle !!!!";
+//    
+//    NSString* masterName = _dataMaster[0][@"headerFooter"][@"targetHeaderName"];
     //初始化cell 用的顺序cell
     [self initCellMaster];
 }
@@ -268,6 +264,7 @@ static DataController* myInstence = nil;
     //暂时先不加到plist的数据中
     TargetModel* targetModel = [[TargetModel alloc]init:newTargetData myName:_dataMaster.count];
     targetModel.delegate = self;
+    
     return targetModel;
 }
 
@@ -316,16 +313,30 @@ static DataController* myInstence = nil;
 -(NSMutableArray*)getNewGift{
     NSMutableArray* gifts = [[NSMutableArray alloc]init];
     NSMutableDictionary* gift = [[NSMutableDictionary alloc]init];
-    NSString* giftName= @"";
+    NSString* giftName1= @"1";
+    NSString* giftName2= @"2";
     NSString* giftImage= @"";
-    NSMutableDictionary* giftUrl= [[NSMutableDictionary alloc]init];
+//-----------------------------------------------
+    NSMutableArray* giftUrl1= [[NSMutableArray alloc]init];
+    NSMutableArray* giftUrl2= [[NSMutableArray alloc]init];
+//-----------------------------------------------
 
     NSMutableArray* setpPath= [[NSMutableArray alloc]init];
-    [gift setObject:giftName forKey:@"giftName"];
+    
+    [gift setObject:giftName1 forKey:@"giftName"];
     [gift setObject:giftImage forKey:@"giftImage"];
-    [gift setObject:giftUrl forKey:@"giftUrl"];
+    [gift setObject:giftUrl1 forKey:@"giftUrl"];
     [gift setObject:setpPath forKey:@"setpPath"];
     [gifts addObject:gift];
+    //仅仅做测试用
+    NSMutableDictionary* gift2 = [[NSMutableDictionary alloc]init];
+ 
+    
+    [gift2 setObject:giftName2 forKey:@"giftName"];
+    [gift2 setObject:giftImage forKey:@"giftImage"];
+    [gift2 setObject:giftUrl2 forKey:@"giftUrl"];
+    [gift2 setObject:setpPath forKey:@"setpPath"];
+    [gifts addObject:gift2];
     return gifts;
 }
 

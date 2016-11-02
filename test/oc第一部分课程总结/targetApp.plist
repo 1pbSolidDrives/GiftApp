@@ -193,12 +193,37 @@
 				<key>giftImage</key>
 				<string>gift.png</string>
 				<key>giftUrl</key>
-				<dict>
-					<key>taoBao</key>
-					<string></string>
-					<key>jingDong</key>
-					<string></string>
-				</dict>
+				<array>
+					<dict>
+						<key>shopName</key>
+						<string>京东</string>
+						<key>url</key>
+						<string></string>
+						<key>price</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>setpPath</key>
+				<array>
+					<integer>0</integer>
+				</array>
+			</dict>
+			<dict>
+				<key>giftName</key>
+				<string>iphone7</string>
+				<key>giftImage</key>
+				<string>gift.png</string>
+				<key>giftUrl</key>
+				<array>
+					<dict>
+						<key>shopName</key>
+						<string>京东</string>
+						<key>url</key>
+						<string></string>
+						<key>price</key>
+						<string></string>
+					</dict>
+				</array>
 				<key>setpPath</key>
 				<array>
 					<integer>0</integer>

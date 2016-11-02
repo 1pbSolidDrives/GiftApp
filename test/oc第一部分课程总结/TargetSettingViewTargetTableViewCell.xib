@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,41 +19,49 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="targetName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laX-qn-VEB">
-                        <rect key="frame" x="5" y="13" width="91" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="targetName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laX-qn-VEB">
+                        <rect key="frame" x="8" y="17" width="91" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="targetTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-6H-KYp">
-                        <rect key="frame" x="5" y="57" width="84" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="targetTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-6H-KYp">
+                        <rect key="frame" x="11" y="60" width="84" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Xk-4K-har">
-                        <rect key="frame" x="128" y="8" width="184" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuA-uM-wyD">
+                        <rect key="frame" x="197" y="57" width="159" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuA-uM-wyD">
-                        <rect key="frame" x="128" y="52" width="184" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Xk-4K-har">
+                        <rect key="frame" x="197" y="12" width="159" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="K2F-6H-KYp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="2wq-N5-LRc"/>
+                    <constraint firstItem="4Xk-4K-har" firstAttribute="leading" secondItem="VuA-uM-wyD" secondAttribute="leading" id="A9V-1O-2a2"/>
+                    <constraint firstItem="4Xk-4K-har" firstAttribute="leading" secondItem="laX-qn-VEB" secondAttribute="trailing" constant="98" id="CaW-gk-brQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VuA-uM-wyD" secondAttribute="trailing" constant="11" id="FsB-Le-IpY"/>
+                    <constraint firstItem="VuA-uM-wyD" firstAttribute="baseline" secondItem="K2F-6H-KYp" secondAttribute="baseline" id="JVG-Dd-mho"/>
+                    <constraint firstItem="laX-qn-VEB" firstAttribute="centerX" secondItem="K2F-6H-KYp" secondAttribute="centerX" id="K2J-ym-Ht1"/>
+                    <constraint firstItem="4Xk-4K-har" firstAttribute="centerY" secondItem="laX-qn-VEB" secondAttribute="centerY" id="KX8-5g-Nlj"/>
+                    <constraint firstItem="4Xk-4K-har" firstAttribute="trailing" secondItem="VuA-uM-wyD" secondAttribute="trailing" id="Q55-kt-e1E"/>
+                    <constraint firstItem="VuA-uM-wyD" firstAttribute="top" secondItem="4Xk-4K-har" secondAttribute="bottom" constant="15" id="RHg-1j-WGT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="K2F-6H-KYp" secondAttribute="bottom" constant="10" id="caS-vx-HsS"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="targetName" destination="4Xk-4K-har" id="6dT-s1-Nxn"/>
                 <outlet property="targetTime" destination="VuA-uM-wyD" id="3ef-0R-Lx1"/>
             </connections>
-            <point key="canvasLocation" x="-59" y="-113.5"/>
+            <point key="canvasLocation" x="-59.5" y="-114"/>
         </tableViewCell>
     </objects>
 </document>

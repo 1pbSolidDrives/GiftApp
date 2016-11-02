@@ -25,8 +25,6 @@
 		0016DC5D1DBEFA7600270F4E /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC5C1DBEFA7600270F4E /* TargetModel.m */; };
 		00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A721DC2F0A000CA982E /* GiftSettingViewController.m */; };
 		00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */; };
-		0033B7D31DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0033B7D11DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m */; };
-		0033B7D41DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0033B7D21DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib */; };
 		004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AE0D61DB8F5C300362D28 /* TableViewController.m */; };
 		004AE0D91DB8F5C300362D28 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 004AE0D71DB8F5C300362D28 /* TableViewController.xib */; };
 		004AE0DB1DB91C1700362D28 /* 0111.png in Resources */ = {isa = PBXBuildFile; fileRef = 004AE0DA1DB91C1700362D28 /* 0111.png */; };
@@ -75,6 +73,11 @@
 		00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DD81DC34A600082798C /* GiftDetailMessage.m */; };
 		006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627D21DC21129002970B1 /* GiftCellTableViewCell.m */; };
 		006627D51DC21129002970B1 /* GiftCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */; };
+		006A13E01DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13DF1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m */; };
+		006A13E91DC980780053B54B /* SettingViewGiftHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13E81DC980780053B54B /* SettingViewGiftHeaderView.m */; };
+		006A13EB1DC980810053B54B /* SettingViewGiftHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */; };
+		006A13F31DC98CB40053B54B /* GiftShopListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13F21DC98CB40053B54B /* GiftShopListInfo.m */; };
+		006A13F51DC98CC90053B54B /* GiftShopListInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */; };
 		006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 006C0DA81DBCB3C80007ACE5 /* Property List2.plist */; };
 		0073E5851DBD1A9100D4A8F8 /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0073E5841DBD1A9100D4A8F8 /* DataTools.m */; };
 		00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A798D21DBDFBB9008FE3C6 /* DataController.m */; };
@@ -166,9 +169,6 @@
 		00174A711DC2F0A000CA982E /* GiftSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftSettingViewController.h; sourceTree = "<group>"; };
 		00174A721DC2F0A000CA982E /* GiftSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftSettingViewController.m; sourceTree = "<group>"; };
 		00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftSettingViewController.xib; sourceTree = "<group>"; };
-		0033B7D01DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewAddGiftButtonTableViewCell.h; sourceTree = "<group>"; };
-		0033B7D11DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewAddGiftButtonTableViewCell.m; sourceTree = "<group>"; };
-		0033B7D21DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewAddGiftButtonTableViewCell.xib; sourceTree = "<group>"; };
 		004AE0D51DB8F5C300362D28 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		004AE0D61DB8F5C300362D28 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		004AE0D71DB8F5C300362D28 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
@@ -241,6 +241,14 @@
 		006627D11DC21129002970B1 /* GiftCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCellTableViewCell.h; sourceTree = "<group>"; };
 		006627D21DC21129002970B1 /* GiftCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCellTableViewCell.m; sourceTree = "<group>"; };
 		006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftCellTableViewCell.xib; sourceTree = "<group>"; };
+		006A13DE1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewGiftHeaderFooterView.h; sourceTree = "<group>"; };
+		006A13DF1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewGiftHeaderFooterView.m; sourceTree = "<group>"; };
+		006A13E71DC980780053B54B /* SettingViewGiftHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewGiftHeaderView.h; sourceTree = "<group>"; };
+		006A13E81DC980780053B54B /* SettingViewGiftHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewGiftHeaderView.m; sourceTree = "<group>"; };
+		006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewGiftHeader.xib; sourceTree = "<group>"; };
+		006A13F11DC98CB40053B54B /* GiftShopListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftShopListInfo.h; sourceTree = "<group>"; };
+		006A13F21DC98CB40053B54B /* GiftShopListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftShopListInfo.m; sourceTree = "<group>"; };
+		006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftShopListInfo.xib; sourceTree = "<group>"; };
 		006C0DA81DBCB3C80007ACE5 /* Property List2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List2.plist"; sourceTree = "<group>"; };
 		0073E5831DBD1A9100D4A8F8 /* DataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTools.h; sourceTree = "<group>"; };
 		0073E5841DBD1A9100D4A8F8 /* DataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTools.m; sourceTree = "<group>"; };
@@ -395,9 +403,6 @@
 		00161F3B1DC4541900AC0552 /* AddCell */ = {
 			isa = PBXGroup;
 			children = (
-				0033B7D01DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.h */,
-				0033B7D11DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m */,
-				0033B7D21DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib */,
 			);
 			name = AddCell;
 			sourceTree = "<group>";
@@ -460,9 +465,8 @@
 		0033B7D51DC76D84002B5490 /* gift */ = {
 			isa = PBXGroup;
 			children = (
-				00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */,
-				00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */,
-				00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */,
+				006A13F71DC9E5DE0053B54B /* view */,
+				006A13F61DC9E5D10053B54B /* cell */,
 			);
 			name = gift;
 			sourceTree = "<group>";
@@ -739,6 +743,31 @@
 				00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */,
 			);
 			name = gift;
+			sourceTree = "<group>";
+		};
+		006A13F61DC9E5D10053B54B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				00161F241DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.h */,
+				00161F251DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m */,
+				00161F261DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		006A13F71DC9E5DE0053B54B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				006A13DE1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.h */,
+				006A13DF1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m */,
+				006A13E71DC980780053B54B /* SettingViewGiftHeaderView.h */,
+				006A13E81DC980780053B54B /* SettingViewGiftHeaderView.m */,
+				006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */,
+				006A13F11DC98CB40053B54B /* GiftShopListInfo.h */,
+				006A13F21DC98CB40053B54B /* GiftShopListInfo.m */,
+				006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		00A798F01DBE0507008FE3C6 /* target */ = {
@@ -1056,7 +1085,6 @@
 				00CCE60B1DB5D751003CB120 /* LaunchScreen.storyboard in Resources */,
 				00639DBA1DC33EF20082798C /* GiftDetailTableViewCell.xib in Resources */,
 				004AE1311DBB05F200362D28 /* apple.jpg in Resources */,
-				0033B7D41DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.xib in Resources */,
 				004AE0DB1DB91C1700362D28 /* 0111.png in Resources */,
 				00161F281DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.xib in Resources */,
 				004AE1181DB9F13400362D28 /* icon.png in Resources */,
@@ -1081,6 +1109,8 @@
 				00CCE6751DB6041B003CB120 /* Info.plist in Resources */,
 				006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */,
 				00CCE6961DB71353003CB120 /* ocToJs.xib in Resources */,
+				006A13F51DC98CC90053B54B /* GiftShopListInfo.xib in Resources */,
+				006A13EB1DC980810053B54B /* SettingViewGiftHeader.xib in Resources */,
 				004AE1211DBA069E00362D28 /* Property List.plist in Resources */,
 				004AE1171DB9F13400362D28 /* flag.png in Resources */,
 				004AE11A1DB9F13400362D28 /* Steve Jobs.png in Resources */,
@@ -1128,13 +1158,13 @@
 				0016DC541DBEF28E00270F4E /* StepModel.m in Sources */,
 				004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */,
 				00161F3E1DC455EE00AC0552 /* TargetSettingViewModel.m in Sources */,
-				0033B7D31DC75FC1002B5490 /* TargetSettingViewAddGiftButtonTableViewCell.m in Sources */,
 				00CCE6001DB5D751003CB120 /* AppDelegate.m in Sources */,
 				00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */,
 				00F1CC5B1DC881880072D87B /* delegateTest.m in Sources */,
 				00CCE6831DB60E74003CB120 /* TableView.m in Sources */,
 				005DE5721DC07344007DB452 /* FooterView.m in Sources */,
 				004AE12A1DBA20B600362D28 /* TargetListCellTableViewCell.m in Sources */,
+				006A13F31DC98CB40053B54B /* GiftShopListInfo.m in Sources */,
 				00639DC01DC3402D0082798C /* UITableViewHeaderFooterUIView.m in Sources */,
 				00A799171DBE0806008FE3C6 /* TestDataViewController.m in Sources */,
 				00CCE6771DB6041B003CB120 /* MASConstraint.m in Sources */,
@@ -1147,6 +1177,7 @@
 				00CCE67B1DB6041B003CB120 /* MASViewConstraint.m in Sources */,
 				00CCE67A1DB6041B003CB120 /* MASViewAttribute.m in Sources */,
 				005DE5611DBF72A6007DB452 /* BodyTableViewCell.m in Sources */,
+				006A13E91DC980780053B54B /* SettingViewGiftHeaderView.m in Sources */,
 				00639DCF1DC3460A0082798C /* GiftDetailHeaderModel.m in Sources */,
 				00639DB91DC33EF20082798C /* GiftDetailTableViewCell.m in Sources */,
 				0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */,
@@ -1168,6 +1199,7 @@
 				00CCE6761DB6041B003CB120 /* MASCompositeConstraint.m in Sources */,
 				004AE13A1DBB1DE000362D28 /* Home2ViewController.m in Sources */,
 				00CCE6871DB61D55003CB120 /* TableViewTest2FormHierarch_Lee.m in Sources */,
+				006A13E01DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m in Sources */,
 				005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */,
 				00F1CC5E1DC8819E0072D87B /* ScrollDelegate.m in Sources */,
 				004AE0E61DB9EFAE00362D28 /* LHY_HomeViewController.m in Sources */,

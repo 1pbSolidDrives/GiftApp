@@ -26,7 +26,7 @@
 
 @property(nonatomic,strong)NSString* giftName;
 @property(nonatomic,strong)NSString* giftImage;
-@property(nonatomic,strong)NSMutableDictionary* giftUrl;
+@property(nonatomic,strong)NSMutableArray* giftUrl;
 @property(nonatomic,strong)NSMutableArray* stepPath;
 //所有商城的价格
 //存的是 商城array 数据是价格
