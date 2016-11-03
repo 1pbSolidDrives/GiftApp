@@ -21,4 +21,10 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)addButtonAct:(UIButton *)sender {
+}
+- (IBAction)addChildButtonAct:(UIButton *)sender {
+}
+- (IBAction)addBrotherAct:(UIButton *)sender {
+}
 @end
