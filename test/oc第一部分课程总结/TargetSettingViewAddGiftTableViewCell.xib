@@ -40,6 +40,14 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M3-Z3-xVS">
+                        <rect key="frame" x="2" y="19" width="20" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button" image="删除的副本 2.png"/>
+                        <connections>
+                            <action selector="deleteMeButtonAct:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AmP-qA-VRB"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="UcD-jx-BcN" firstAttribute="leading" secondItem="UIf-Ub-QL1" secondAttribute="trailing" constant="21" id="3Oi-no-EBM"/>
@@ -53,9 +61,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="deleteMeButton" destination="3M3-Z3-xVS" id="et7-ax-S5w"/>
                 <outlet property="giftName" destination="UcD-jx-BcN" id="knw-Rx-hnt"/>
             </connections>
             <point key="canvasLocation" x="-390.5" y="-22"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="删除的副本 2.png" width="50" height="50"/>
+    </resources>
 </document>

@@ -35,6 +35,7 @@
 +(DataController*)getInstence;
 //初始化一个空的target
 -(TargetModel *)getNewTarget;
+-(GiftModel*)getNewGiftModel;
 //下面的所有set 都是重置
 
 //targetmodel如果做了修改那么需要做的

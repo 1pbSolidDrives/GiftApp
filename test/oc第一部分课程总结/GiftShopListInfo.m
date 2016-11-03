@@ -10,13 +10,16 @@
 
 @implementation GiftShopListInfo
 
-/*
+
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+    //获取通知中心单例对象
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
+    [center addObserver:self selector:@selector(showDeleteButton:) name:@"GIFTEDIT_ORDR" object:nil];
 }
-*/
+
 - (IBAction)shopNameTextFieldDidEnd:(UITextField *)sender {
     [_myData setObject:sender.text forKey:@"shopName"];
 
@@ -28,12 +31,9 @@
 }
 
 - (IBAction)priceTextFieldDidEnd:(UITextField *)sender {
-    if ([sender.text  isEqual: @""]) {
-        [_myData setObject:_autoPrice.text forKey:@"price"];
-    }
-    else{
-        [_myData setObject:sender.text forKey:@"price"];
-    }
+    [_myData setObject:sender.text forKey:@"price"];
+
+ 
 }
 
 - (IBAction)shopNameDidChange:(UITextField *)sender {
@@ -46,12 +46,26 @@
 }
 
 - (IBAction)priceDidChange:(UITextField *)sender {
-    if ([sender.text  isEqual: @""]) {
-        [_myData setObject:_autoPrice.text forKey:@"price"];
-    }
-    else{
-        [_myData setObject:sender.text forKey:@"price"];
-    }
+    [_myData setObject:sender.text forKey:@"price"];
+
+ 
+}
+
+- (IBAction)shopUrlDidEndOnExit:(UITextField*)sender {
+    [_myData setObject:sender.text forKey:@"url"];
+    [sender resignFirstResponder];
+}
+
+- (IBAction)shopNameDidEndOnExit:(UITextField *)sender {
+    [_myData setObject:sender.text forKey:@"shopName"];
+    [sender resignFirstResponder];
+
+}
+
+- (IBAction)priceDidEnd:(UITextField *)sender {
+    [_myData setObject:sender.text forKey:@"price"];
+    [sender resignFirstResponder];
+
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -60,5 +74,19 @@
     return  YES;
 }
 
- 
+- (IBAction)deleteMeAct:(UIButton *)sender {
+    if (_delegate && [_delegate conformsToProtocol:@protocol(giftShopListInfoProtocol)]) {
+        [_delegate giftShopListInfoProtocoldeleteMe:_myNum];
+    }
+}
+
+-(void)showDeleteButton:(id)sender{
+    NSDictionary* sendInfo = [sender userInfo];
+    if ([sendInfo[@"isShow"] isEqualToString:@"NO"]) {
+        _deleteMe.hidden = YES;
+    }else{
+        _deleteMe.hidden = NO;
+        
+    }
+}
 @end

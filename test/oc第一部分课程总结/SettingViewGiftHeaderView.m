@@ -17,6 +17,10 @@
     // Drawing code
 }
 */
+-(void)awakeFromNib{
+    [super awakeFromNib];
+ 
+}
 
 - (IBAction)addGiftButtonAct:(id)sender {
     if (_delegate &&[_delegate conformsToProtocol:@protocol(SettingViewGiftHeaderProtocol)]) {
@@ -25,8 +29,23 @@
 }
 
 - (IBAction)editButtonAct:(id)sender {
-    if (_delegate &&[_delegate conformsToProtocol:@protocol(SettingViewGiftHeaderProtocol)]) {
-        [_delegate SettingViewGiftHeaderPressAction:1];
-    }
+//    if (_delegate &&[_delegate conformsToProtocol:@protocol(SettingViewGiftHeaderProtocol)]) {
+//        [_delegate SettingViewGiftHeaderPressAction:1];
+    //创建一个消息对象
+    [self sendInfoForDeleteButtonIsShow];
+    
 }
+-(void)sendInfoForDeleteButtonIsShow{
+    if ([deleteButtonIsShow isEqualToString:@"NO"]) {
+        deleteButtonIsShow = @"YES";
+        
+    }else{
+        deleteButtonIsShow = @"NO";
+        
+    }
+    NSNotification * notice = [NSNotification notificationWithName:@"GIFTEDIT_ORDR" object: nil userInfo:@{@"isShow":deleteButtonIsShow}];
+    //发送消息
+    [[NSNotificationCenter defaultCenter]postNotification:notice];
+}
+
 @end

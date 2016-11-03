@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TargetModel.h"
-
+#import "SettingViewGiftHeaderFooterView.h"
 
 #import "TargetViewDelegates.h"
 
@@ -26,10 +26,10 @@
 <
 UITableViewDataSource,
 UITableViewDelegate,
-TargetSettingViewAddGiftTableViewCellUpdataProtocol
+TargetSettingViewAddGiftTableViewCellUpdataProtocol,
+SettingViewGiftHeaderProtocol
 >
 
-@property (nonatomic, strong) TargetModel *model;
 
 @property(nonatomic,strong) UITableView* tableView;
 @property(nonatomic,strong) TargetModel* targetModel;

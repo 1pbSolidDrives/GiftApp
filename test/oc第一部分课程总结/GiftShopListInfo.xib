@@ -22,6 +22,7 @@
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="shopNameDidChange:" destination="iN0-l3-epB" eventType="editingChanged" id="UMk-6R-nK5"/>
+                        <action selector="shopNameDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="edP-XE-v6V"/>
                         <action selector="shopNameTextFieldDidEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="Gro-oB-5Qk"/>
                     </connections>
                 </textField>
@@ -32,6 +33,7 @@
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="shopUrlDidChange:" destination="iN0-l3-epB" eventType="editingDidEnd" id="raU-ge-f7Q"/>
+                        <action selector="shopUrlDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEnd" id="fLz-b8-vhL"/>
                         <action selector="urlTextFieldDidEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="UMR-L8-1M8"/>
                     </connections>
                 </textField>
@@ -42,6 +44,7 @@
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="priceDidChange:" destination="iN0-l3-epB" eventType="editingDidEnd" id="rle-J4-LMQ"/>
+                        <action selector="priceDidEnd:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="jbn-9y-6yC"/>
                         <action selector="priceTextFieldDidEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="W3h-tC-YM2"/>
                     </connections>
                 </textField>
@@ -69,6 +72,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-1g-73W">
+                    <rect key="frame" x="2" y="67" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button" image="删除的副本 2.png"/>
+                    <connections>
+                        <action selector="deleteMeAct:" destination="iN0-l3-epB" eventType="touchUpInside" id="5cK-m6-4QM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -98,11 +109,15 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="autoPrice" destination="rBa-u4-NBZ" id="Fhg-9l-kpG"/>
+                <outlet property="deleteMe" destination="G7S-1g-73W" id="GWI-wc-j50"/>
                 <outlet property="manualPrice" destination="SkP-cs-oqd" id="gOY-g6-AJX"/>
                 <outlet property="shopName" destination="dSV-4k-Awb" id="QAV-6m-eSb"/>
                 <outlet property="shopUrl" destination="ooV-fx-rCT" id="Cq0-f4-GPM"/>
             </connections>
-            <point key="canvasLocation" x="40.5" y="33"/>
+            <point key="canvasLocation" x="23.5" y="0.0"/>
         </view>
     </objects>
+    <resources>
+        <image name="删除的副本 2.png" width="50" height="50"/>
+    </resources>
 </document>

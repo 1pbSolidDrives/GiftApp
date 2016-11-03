@@ -7,10 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GiftShopListInfo;
+
+@protocol giftShopListInfoProtocol <NSObject>
+
+-(void)giftShopListInfoProtocoldeleteMe:(NSInteger)myName;
+
+@end
 
 @interface GiftShopListInfo : UIView
  <UIApplicationDelegate,UITextFieldDelegate>
+
 @property (weak, nonatomic) NSMutableDictionary* myData;
+@property (nonatomic) NSInteger myNum;
+@property (strong, nonatomic)id<giftShopListInfoProtocol> delegate;
+
 @property (weak, nonatomic) IBOutlet UITextField *shopName;
 @property (weak, nonatomic) IBOutlet UITextField *shopUrl;
 @property (weak, nonatomic) IBOutlet UITextField *manualPrice;
@@ -21,6 +32,13 @@
 - (IBAction)shopNameDidChange:(UITextField *)sender;
 - (IBAction)shopUrlDidChange:(UITextField *)sender;
 - (IBAction)priceDidChange:(UITextField *)sender;
+- (IBAction)shopUrlDidEndOnExit:(UITextField *)sender;
+
+- (IBAction)shopNameDidEndOnExit:(UITextField *)sender;
+- (IBAction)priceDidEnd:(UITextField *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *deleteMe;
+- (IBAction)deleteMeAct:(UIButton *)sender;
+
 
 
 @end

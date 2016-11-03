@@ -19,6 +19,7 @@
 @end
 
 @interface TargetSettingViewAddGiftTableViewCell : UITableViewCell
+
 //shopListView
 @property(strong,nonatomic)NSMutableArray* shopListViews;
 @property(strong,nonatomic)GiftModel* myData;
@@ -27,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *giftName;
 
 - (IBAction)addShopInfo:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *deleteMeButton;
+- (IBAction)deleteMeButtonAct:(UIButton *)sender;
 
 -(void)initAllView:(GiftModel*)giftData;
 

@@ -16,8 +16,6 @@
         _SettingViewGiftHeaderview = [[[NSBundle mainBundle]loadNibNamed:@"SettingViewGiftHeader" owner:nil options:nil]firstObject];
         [self.contentView addSubview:_SettingViewGiftHeaderview];
         _SettingViewGiftHeaderview.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-        
-    
     }
     return self;
 }

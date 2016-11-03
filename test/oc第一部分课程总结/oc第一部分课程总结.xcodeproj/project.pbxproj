@@ -78,6 +78,10 @@
 		006A13EB1DC980810053B54B /* SettingViewGiftHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */; };
 		006A13F31DC98CB40053B54B /* GiftShopListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13F21DC98CB40053B54B /* GiftShopListInfo.m */; };
 		006A13F51DC98CC90053B54B /* GiftShopListInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */; };
+		006A13F91DCAF8DF0053B54B /* 删除.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A13F81DCAF8DF0053B54B /* 删除.jpg */; };
+		006A13FB1DCAF96A0053B54B /* 删除的副本 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 006A13FA1DCAF96A0053B54B /* 删除的副本 2.png */; };
+		006A13FF1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13FD1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.m */; };
+		006A14001DCB2D060053B54B /* TargetSettingViewStepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13FE1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.xib */; };
 		006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 006C0DA81DBCB3C80007ACE5 /* Property List2.plist */; };
 		0073E5851DBD1A9100D4A8F8 /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0073E5841DBD1A9100D4A8F8 /* DataTools.m */; };
 		00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A798D21DBDFBB9008FE3C6 /* DataController.m */; };
@@ -249,6 +253,11 @@
 		006A13F11DC98CB40053B54B /* GiftShopListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftShopListInfo.h; sourceTree = "<group>"; };
 		006A13F21DC98CB40053B54B /* GiftShopListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftShopListInfo.m; sourceTree = "<group>"; };
 		006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftShopListInfo.xib; sourceTree = "<group>"; };
+		006A13F81DCAF8DF0053B54B /* 删除.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "删除.jpg"; sourceTree = "<group>"; };
+		006A13FA1DCAF96A0053B54B /* 删除的副本 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除的副本 2.png"; sourceTree = "<group>"; };
+		006A13FC1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewStepTableViewCell.h; sourceTree = "<group>"; };
+		006A13FD1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewStepTableViewCell.m; sourceTree = "<group>"; };
+		006A13FE1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewStepTableViewCell.xib; sourceTree = "<group>"; };
 		006C0DA81DBCB3C80007ACE5 /* Property List2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List2.plist"; sourceTree = "<group>"; };
 		0073E5831DBD1A9100D4A8F8 /* DataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTools.h; sourceTree = "<group>"; };
 		0073E5841DBD1A9100D4A8F8 /* DataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTools.m; sourceTree = "<group>"; };
@@ -474,6 +483,9 @@
 		0033B7D61DC77137002B5490 /* step */ = {
 			isa = PBXGroup;
 			children = (
+				006A13FC1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.h */,
+				006A13FD1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.m */,
+				006A13FE1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.xib */,
 			);
 			name = step;
 			sourceTree = "<group>";
@@ -766,6 +778,8 @@
 				006A13F11DC98CB40053B54B /* GiftShopListInfo.h */,
 				006A13F21DC98CB40053B54B /* GiftShopListInfo.m */,
 				006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */,
+				006A13F81DCAF8DF0053B54B /* 删除.jpg */,
+				006A13FA1DCAF96A0053B54B /* 删除的副本 2.png */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1081,6 +1095,7 @@
 				004AE0F01DB9EFDD00362D28 /* FriendsList.plist in Resources */,
 				004AE12F1DBA3FA300362D28 /* cell.xib in Resources */,
 				00A799181DBE0806008FE3C6 /* TestDataViewController.xib in Resources */,
+				006A13FB1DCAF96A0053B54B /* 删除的副本 2.png in Resources */,
 				00EDC2E11DB73F2900F700E6 /* myFirstJS.html in Resources */,
 				00CCE60B1DB5D751003CB120 /* LaunchScreen.storyboard in Resources */,
 				00639DBA1DC33EF20082798C /* GiftDetailTableViewCell.xib in Resources */,
@@ -1093,6 +1108,7 @@
 				004AE1161DB9F13400362D28 /* Bill Gates.png in Resources */,
 				004AE1361DBB17BD00362D28 /* TestTableViewCell.xib in Resources */,
 				00CCE6081DB5D751003CB120 /* Assets.xcassets in Resources */,
+				006A13F91DCAF8DF0053B54B /* 删除.jpg in Resources */,
 				0016A2C21DBDD11500765AA9 /* gift.png in Resources */,
 				005DE5741DC07363007DB452 /* FooterView.xib in Resources */,
 				004AE11B1DB9F13400362D28 /* Sun Zhengyi.png in Resources */,
@@ -1116,6 +1132,7 @@
 				004AE11A1DB9F13400362D28 /* Steve Jobs.png in Resources */,
 				0016A2C01DBDD0F500765AA9 /* gift.jpg in Resources */,
 				00639DC21DC340400082798C /* UITableViewHeaderFooterViewUIView.xib in Resources */,
+				006A14001DCB2D060053B54B /* TargetSettingViewStepTableViewCell.xib in Resources */,
 				00CCE6061DB5D751003CB120 /* Main.storyboard in Resources */,
 				00CCE68C1DB65B35003CB120 /* 01.png in Resources */,
 				005DE5621DBF72A6007DB452 /* BodyTableViewCell.xib in Resources */,
@@ -1207,6 +1224,7 @@
 				00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */,
 				00639DBD1DC3400E0082798C /* GiftDetailUITableViewHeaderFooterView.m in Sources */,
 				0016DC5A1DBEFA6A00270F4E /* GiftModel.m in Sources */,
+				006A13FF1DCB2D060053B54B /* TargetSettingViewStepTableViewCell.m in Sources */,
 				00639DD21DC3481D0082798C /* GiftDetailRootModel.m in Sources */,
 				004AE14B1DBB56D400362D28 /* Home2TableViewCell.m in Sources */,
 				004AE1351DBB17BD00362D28 /* TestTableViewCell.m in Sources */,

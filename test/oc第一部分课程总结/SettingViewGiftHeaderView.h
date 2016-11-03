@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+
+static NSString* deleteButtonIsShow = @"NO";
 @class SettingViewGiftHeader;
 
 @protocol SettingViewGiftHeaderProtocol <NSObject>
@@ -18,6 +20,7 @@
 @interface SettingViewGiftHeaderView : UIView
 
 @property(nonatomic,strong)id<SettingViewGiftHeaderProtocol>delegate;
+//@property (strong, nonatomic) NSString* deleteButtonIsShow;
 
 @property (weak, nonatomic) IBOutlet UIButton *addGiftButton;
 @property (weak, nonatomic) IBOutlet UIButton *edit;

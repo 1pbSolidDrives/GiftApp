@@ -12,7 +12,10 @@
 #import "TargetViewController.h"
 
 @interface TargetSettingViewAddGiftTableViewCell()
-<TargetViewControllerProtocol>
+<
+TargetViewControllerProtocol,
+giftShopListInfoProtocol
+>
 
 @end
 
@@ -21,12 +24,19 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    //获取通知中心单例对象
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
+    [center addObserver:self selector:@selector(showDeleteButton:) name:@"GIFTEDIT_ORDR" object:nil];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (IBAction)deleteMeButtonAct:(UIButton *)sender {
 }
 
 -(void)initAllView:(GiftModel *)giftData{
@@ -61,7 +71,9 @@
     shopInfoView.shopUrl        = shopInfo[@"url"];
     shopInfoView.autoPrice      = shopInfo[@"price"];
     shopInfoView.manualPrice    = shopInfo[@"price"];
-    shopInfoView.myData = shopInfo;
+    shopInfoView.myData         = shopInfo;
+    shopInfoView.myNum          = row;
+    shopInfoView.delegate       = self;
     [self.contentView addSubview:shopInfoView];
     //设置位置
     //设置infoView位置
@@ -96,7 +108,7 @@
     [_myData.giftUrl addObject:newData];
 
 }
-
+//保存数据
 -(void)TargetViewControllerProtocolSaveData{
      NSMutableArray* shopListData = [[NSMutableArray alloc]init];
  
@@ -104,5 +116,25 @@
     [_myData updataAll];
 }
 
+-(void)giftShopListInfoProtocoldeleteMe:(NSInteger)myName{
+    [_myData.giftUrl removeObjectAtIndex:myName];
+    //[_myData updataAll];
 
+    //刷新tabelview
+    if (_delegate && [_delegate conformsToProtocol:@protocol(TargetSettingViewAddGiftTableViewCellUpdataProtocol)]) {
+        [_delegate targetSettingViewAddGiftTableViewCellUpdataProtocol:self updataModelAndTabelView:_myData];
+    }
+    
+}
+
+-(void)showDeleteButton:(id)sender{
+    NSDictionary* sendInfo = [sender userInfo];
+    if ([sendInfo[@"isShow"] isEqualToString:@"NO"]) {
+        _deleteMeButton.hidden = YES;
+    }else{
+        _deleteMeButton.hidden = NO;
+        
+    }
+    
+}
 @end

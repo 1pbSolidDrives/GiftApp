@@ -35,6 +35,9 @@
 #define CELLHIEGHT_GIFT_Father 132
 
 #define CELLHIEGHT_GIFT_SHOPLIST 160
+
+ 
+
 @interface TargetViewController ()
 
 
@@ -50,10 +53,12 @@
     self.navigationItem.rightBarButtonItem = liftBar;
     
     [self initTableView];
+    [self registerKeybordNotification];
+ 
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)setModel:(TargetModel *)model
+- (void)setTargetModel:(TargetModel *)model
 {
     _targetModel = model;
     [self initStepData];
@@ -110,7 +115,6 @@
             
             return height;
         }
-
             break;
         case CELLTAYP_STEP:
             return CELLHIEGHT_STEP;
@@ -164,8 +168,32 @@
     return @"";
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    switch (section) {
+        case CELLTAYP_TARGET:
+            return nil;
+            break;
+        case CELLTAYP_GIFT:
+        {
+            static NSString* identify = @"giftHeaderview";
+            SettingViewGiftHeaderFooterView* giftHeaderview = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identify];
+            if (giftHeaderview == nil) {
+                giftHeaderview = [[SettingViewGiftHeaderFooterView alloc]initWithReuseIdentifier:identify];
+                giftHeaderview.SettingViewGiftHeaderview.delegate = self;
+            }
+            return giftHeaderview;
+        }
+            break;
+        case CELLTAYP_STEP:
+            return nil;
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
 
-
+//创建 targetCell
 -(UITableViewCell*)createTargetCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     TargetSettingViewTargetTableViewCell* cell = nil;
@@ -195,7 +223,7 @@
     
     return cell;
 }
-
+//创建stepCell
 -(UITableViewCell*)createStepCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell* cell = nil;
     
@@ -217,8 +245,62 @@
         [self.view addSubview:self.tableView];
     }
 }
+// 键盘弹出时候 tabelview高度适应
+- (void)registerKeybordNotification {
+    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+    [notification removeObserver:self];
+    [notification addObserver:self
+                     selector:@selector(showKeyboard:)
+                         name:UIKeyboardWillShowNotification
+                       object:nil];
+    [notification addObserver:self
+                     selector:@selector(hideKeyboard:)
+                         name:UIKeyboardWillHideNotification
+                       object:nil];
+#ifdef __IPHONE_5_0
+    // 5.0以上系统中文键盘高度与4.0系统不一样
+    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (version >= 5.0) {
+        [notification addObserver:self
+                         selector:@selector(showKeyboard:)
+                             name:UIKeyboardWillChangeFrameNotification
+                           object:nil];
+    }
+#endif
+}
 
-//初始化stepcell用的model
+- (void)showKeyboard:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGFloat keyboardHeight = CGRectGetHeight([aValue CGRectValue]);
+    CGFloat height = CGRectGetHeight(self.view.frame) - 100 - keyboardHeight;
+    
+    /* 使用动画效果，过度更加平滑 */
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.1];
+    {
+        CGRect rect = _tableView.frame;
+        rect.size.height = height;
+        NSLog(@"高是11=%f",height);
+        _tableView.frame = rect;
+    }
+    [UIView commitAnimations];
+}
+
+- (void)hideKeyboard:(NSNotification *)notification {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.1];
+    {
+        CGRect rect = _tableView.frame;
+        rect.size.height = CGRectGetHeight(self.view.frame) - 100;
+        _tableView.frame = rect;
+        NSLog(@"高是22=%f",rect.size.height);
+    }
+    [UIView commitAnimations];
+}
+
+
+ //初始化stepcell用的model
 -(void)initStepData{
     NSMutableArray* cellBuf = [[NSMutableArray alloc]init];
     _cellsModel = [[NSMutableArray alloc]init];
@@ -255,22 +337,49 @@
     }
 }
 
-
+//点击右上角保存按钮时的操作
 -(void)saveData{
+    //收回键盘
+    NSNotification * notice = [NSNotification notificationWithName:UIKeyboardWillHideNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter]postNotification:notice];
+    
     if (_delegate ) {
         [_delegate TargetViewControllerProtocolSaveData];
+        
     }
     NSLog(@"保存完毕");
     //这里手动将数据写入
     [_targetModel upDataAll];
     [self dataTest];
 }
-
+//giftcell内部修改后 在这里刷新
 -(void)targetSettingViewAddGiftTableViewCellUpdataProtocol:(TargetSettingViewAddGiftTableViewCell *)sender updataModelAndTabelView:(GiftModel *)myData{
-    
-    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: 1  ] withRowAnimation:UITableViewRowAnimationNone];
-    
+    //刷新 gift相关cell
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationNone];
+    //这是需要保存么
 }
+
+//代理
+//点击添加gift后的代理 0 addGiftButtonAct 1 editButtonAct
+-(void)SettingViewGiftHeaderPressAction:(NSInteger)tag{
+    switch (tag) {
+        case 0://add
+        {
+            GiftModel* newGiftModel = [[DataController getInstence]getNewGiftModel];
+            [_targetModel.giftsModel addObject:newGiftModel];
+            [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationNone];
+        }
+            break;
+        case 1://edit
+            
+            break;
+        default:
+            break;
+    }
+}
+
+
 
 -(void)dataTest{
     NSMutableArray* targets =[[DataController getInstence]targetMaster];

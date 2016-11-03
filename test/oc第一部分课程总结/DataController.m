@@ -285,6 +285,7 @@ static DataController* myInstence = nil;
     [header setObject:targetHeaderImagePath forKey:@"targetHeaderImagePath"];
     return header;
 }
+
 -(NSMutableArray*)getNewStep{
     NSMutableArray* steps = [[NSMutableArray alloc]init];
     NSMutableDictionary* stepStep = [[NSMutableDictionary alloc]init];
@@ -310,15 +311,14 @@ static DataController* myInstence = nil;
     [steps addObject:stepStep];
     return steps;
 }
+
 -(NSMutableArray*)getNewGift{
     NSMutableArray* gifts = [[NSMutableArray alloc]init];
     NSMutableDictionary* gift = [[NSMutableDictionary alloc]init];
-    NSString* giftName1= @"1";
-    NSString* giftName2= @"2";
+    NSString* giftName1= @"";
     NSString* giftImage= @"";
 //-----------------------------------------------
     NSMutableArray* giftUrl1= [[NSMutableArray alloc]init];
-    NSMutableArray* giftUrl2= [[NSMutableArray alloc]init];
 //-----------------------------------------------
 
     NSMutableArray* setpPath= [[NSMutableArray alloc]init];
@@ -328,18 +328,15 @@ static DataController* myInstence = nil;
     [gift setObject:giftUrl1 forKey:@"giftUrl"];
     [gift setObject:setpPath forKey:@"setpPath"];
     [gifts addObject:gift];
-    //仅仅做测试用
-    NSMutableDictionary* gift2 = [[NSMutableDictionary alloc]init];
- 
-    
-    [gift2 setObject:giftName2 forKey:@"giftName"];
-    [gift2 setObject:giftImage forKey:@"giftImage"];
-    [gift2 setObject:giftUrl2 forKey:@"giftUrl"];
-    [gift2 setObject:setpPath forKey:@"setpPath"];
-    [gifts addObject:gift2];
+
     return gifts;
 }
 
+-(GiftModel*)getNewGiftModel{
+    NSMutableArray* newGift = [self getNewGift];
+    GiftModel* newGiftModel = [[GiftModel alloc]init:newGift[0]];
+    return newGiftModel;
+}
 
 @end
 

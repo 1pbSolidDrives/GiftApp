@@ -46,7 +46,7 @@ static NSInteger stepCellHeight = 56;
     NSLog(@"切换页面啊");
     TargetModel* newTarget = [[DataController getInstence]getNewTarget];
     TargetViewController *fvc = [[TargetViewController alloc] init];
-    [fvc setModel:newTarget];
+    [fvc setTargetModel:newTarget];
     //fvc.view.backgroundColor = [UIColor blueColor];
     [self.navigationController pushViewController:fvc animated:YES];
 }
