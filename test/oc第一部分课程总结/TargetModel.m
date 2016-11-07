@@ -20,9 +20,7 @@
         _myName = myName;
         _headerData = data[@"headerFooter"];
         _stepData = data[@"steps"];
-        //------------------------
         _giftData = data[@"gifts"];
-        //------------------------
         NSLog(@"_headerData%@", _headerData);
         NSLog(@"_stepData%@", _stepData);
         NSLog(@"_giftData%@", _giftData);
@@ -36,15 +34,15 @@
 }
 
 -(void)initSteps{
-     StepModel* sigleStep = nil;
+     StepModel* singleStep = nil;
     for (NSInteger i = 0 ; i<_stepData.count; i++) {
-        sigleStep = [[StepModel alloc]init:_stepData[i]];
-        sigleStep.isOpen = NO;
-        sigleStep.isRoot = YES;
-        sigleStep.isShow = YES;
-        sigleStep.SpaceNum = 0;
-        sigleStep.delegate = self;
-        [_stepsModel addObject:sigleStep];
+        singleStep = [[StepModel alloc]init:_stepData[i] father:(id)self];
+        singleStep.isOpen = NO;
+        singleStep.isRoot = YES;
+        singleStep.isShow = YES;
+        singleStep.SpaceNum = 0;
+        singleStep.delegate = self;
+        [_stepsModel addObject:singleStep];
     }
 }
 -(void)initGift{
@@ -55,6 +53,14 @@
         singleGift.delegate = self;
         [_giftsModel addObject:singleGift];
     }
+}
+
+-(void)addSonStep:(StepModel*)bigBrother{
+    NSInteger sonPosition = [_stepsModel indexOfObject:bigBrother];
+    StepModel* newStep = [[DataController getInstence]getNewStepModel];
+    newStep.isShow = YES;
+    newStep.isRoot = YES;
+    [_stepsModel insertObject:newStep atIndex:sonPosition+1];
 }
 
 -(Boolean)stepModelProtocol:(StepModel *)sender{
@@ -193,7 +199,7 @@
     [stepData setObject:steps forKey:@"steps"];
 
     
-    StepModel* newStepModel = [[StepModel alloc]init:stepData];
+    StepModel* newStepModel = [[StepModel alloc]init:stepData father:(id)self];
     newStepModel.delegate = self;
     newStepModel.stepNumInPlist = _stepsModel.count-1;
     

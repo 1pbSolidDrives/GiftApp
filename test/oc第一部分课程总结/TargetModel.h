@@ -54,6 +54,8 @@ GiftModelProtocol
     giftImage:(NSString*)giftImage
      setpPath:(NSMutableArray*)setpPath;
 
+-(void)addSonStep:(StepModel*)bigBrother;
+
 
 @property(nonatomic)NSInteger myName;
 

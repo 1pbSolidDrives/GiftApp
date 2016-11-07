@@ -11,6 +11,32 @@
 
 @implementation TargetSettingViewTargetTableViewCell
 
+
+
+- (IBAction)targetNameTextChanged:(UITextField *)sender {
+    _myData.targetHeaderName = sender.text;
+}
+
+- (IBAction)targetNameTextDidEnd:(UITextField *)sender {
+    _myData.targetHeaderName = sender.text;
+    [sender resignFirstResponder];
+
+}
+
+- (IBAction)targetEndTimeTextChanged:(UITextField *)sender {
+    _myData.targetExpectTime = sender.text;
+}
+
+- (IBAction)targetEndTimeTextDidEnd:(UITextField *)sender {
+    _myData.targetExpectTime = sender.text;
+    [sender resignFirstResponder];
+
+}
+
+
+
+
+
 -(void)initAllView:(HeaderModel *)myData{
         _myData = myData;
         [self initViews];

@@ -309,6 +309,7 @@ static DataController* myInstence = nil;
     [stepStep setValue:giftPath forKey:@"giftPath"];
     [stepStep setValue:stepStepStep forKey:@"steps"];
     [steps addObject:stepStep];
+    [steps addObject:stepStep];
     return steps;
 }
 
@@ -336,6 +337,17 @@ static DataController* myInstence = nil;
     NSMutableArray* newGift = [self getNewGift];
     GiftModel* newGiftModel = [[GiftModel alloc]init:newGift[0]];
     return newGiftModel;
+}
+
+-(StepModel*)getNewStepModel{
+    NSMutableArray* newStep = [self getNewStep];
+    StepModel* newStepModel = [[StepModel alloc]init:newStep[0] father:nil];
+    return newStepModel;
+}
+
+//刷新数据
+-(void)reloadCellMaster{
+    [self initCellMaster];
 }
 
 @end

@@ -33,8 +33,7 @@
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="shopUrlDidChange:" destination="iN0-l3-epB" eventType="editingDidEnd" id="raU-ge-f7Q"/>
-                        <action selector="shopUrlDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEnd" id="fLz-b8-vhL"/>
-                        <action selector="urlTextFieldDidEnd:" destination="iN0-l3-epB" eventType="editingDidEnd" id="UMR-L8-1M8"/>
+                        <action selector="shopUrlDidEndOnExit:" destination="iN0-l3-epB" eventType="editingDidEndOnExit" id="LBf-b4-yw4"/>
                     </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="没有找到请手动输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SkP-cs-oqd">

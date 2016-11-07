@@ -8,8 +8,10 @@
 
 #import "TargetViewController.h"
 #import "TargetSettingViewTargetTableViewCell.h"
+#import "TargetSettingViewSetpsCellTableViewCell.h"
+#import "TargetSettingViewStepDetailView.h"
 
-
+#import "footerTestViewController.h"
 #define CELLID_TARGET @"Target"
 #define CELLID_GIFT @"Gift"
 #define CELLID_STEP @"step"
@@ -35,10 +37,12 @@
 #define CELLHIEGHT_GIFT_Father 132
 
 #define CELLHIEGHT_GIFT_SHOPLIST 160
-
+#define CELLHIEGHT_STEP_DETAIL 248
+#define CELLHIEGHT_STEP_SUMMAY 76
  
-
+@class targetSettingViewSetpsCellTableViewCellProtocol;
 @interface TargetViewController ()
+<targetSettingViewSetpsCellTableViewCellProtocol>
 
 
 @end
@@ -47,21 +51,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"添加新target";
  
-    UIBarButtonItem *liftBar = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(selectLeftAction:)];
-    self.navigationItem.rightBarButtonItem = liftBar;
+    //添加时间相应
+    UIBarButtonItem *liftBar = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(selectLeftAction:)];
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(selectRightAction:)];
+    self.navigationItem.rightBarButtonItem = rightBar;
+    self.navigationItem.leftBarButtonItem = liftBar;
+
     
     [self initTableView];
     [self registerKeybordNotification];
- 
+    
+    
+    //注册刷新消息中心观察消息
+    
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(reloadCellSender:) name:@"reloadSettingViewTabelViewSender" object:nil ];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)setTargetModel:(TargetModel *)model
 {
     _targetModel = model;
-    [self initStepData];
+    [self initCellData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,10 +84,24 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)selectLeftAction:(UIBarButtonItem*)sender{
+-(void)selectRightAction:(UIBarButtonItem*)sender{
     [self saveData];
+    //回退
+
+    
+    [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] animated:YES];
+    
+    NSNotification * notice = [NSNotification notificationWithName:@"reloadHomeTabelView" object: nil ];
+    //发送消息
+    [[NSNotificationCenter defaultCenter]postNotification:notice];
 }
 
+-(void)selectLeftAction:(UIBarButtonItem*)sender{
+    
+    [self.navigationController popViewControllerAnimated:true];
+    //返回数据
+    
+}
 //tabelView相关
 //行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -98,7 +127,7 @@
 }
 //组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 //行高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -117,7 +146,15 @@
         }
             break;
         case CELLTAYP_STEP:
-            return CELLHIEGHT_STEP;
+        {
+            NSInteger height = 0;
+            StepModel* stepModel = _cellsModel[indexPath.section][indexPath.row];
+            height = CELLHIEGHT_STEP_SUMMAY;
+            if (stepModel.isShowDetail) {
+                height = CELLHIEGHT_STEP_SUMMAY + CELLHIEGHT_STEP_DETAIL;
+            }
+            return height;
+        }
             break;
         default:
             break;
@@ -147,8 +184,12 @@
         default:
             break;
     }
+    //cell被选中的时候不高亮显示
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
  }
+
 //-----------------------------------------设置表头
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
@@ -218,6 +259,7 @@
         GiftModel* giftBuf = _cellsModel[indexPath.section][indexPath.row];
         [cell initAllView:giftBuf];
         cell.delegate = self;
+ 
         [_delegatesMaster addDelegateTargets:cell];
     }
     
@@ -225,8 +267,15 @@
 }
 //创建stepCell
 -(UITableViewCell*)createStepCell:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell* cell = nil;
+     TargetSettingViewSetpsCellTableViewCell* cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"GiftCell"];
     
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"TargetSettingViewSetpsCellTableViewCell" owner:nil options:nil]firstObject];
+        [cell setMyData:_cellsModel[indexPath.section][indexPath.row]];
+        cell.delegate = self;
+        [_delegatesMaster addDelegateTargets:cell];
+    }
     return cell;
 }
 //=----------------------初始化tableView
@@ -301,7 +350,7 @@
 
 
  //初始化stepcell用的model
--(void)initStepData{
+-(void)initCellData{
     NSMutableArray* cellBuf = [[NSMutableArray alloc]init];
     _cellsModel = [[NSMutableArray alloc]init];
      HeaderModel* headerModelBuf = nil;
@@ -317,8 +366,11 @@
     
     NSMutableArray* stepsModelBuf = nil;
     stepsModelBuf = _targetModel.stepsModel;
+    StepModel* singleStepModel = nil;
     for (NSInteger j =0 ; j < stepsModelBuf.count; j++) {
-        [self pushStepForCell:stepsModelBuf[j] in:cellBuf];
+        singleStepModel = stepsModelBuf[j];
+        singleStepModel.SpaceNum = 0;
+        [self pushStepForCell:singleStepModel in:cellBuf];
     }
     [_cellsModel addObject:cellBuf];
 }
@@ -327,10 +379,14 @@
 
 -(void)pushStepForCell:(StepModel*)singleStep in:(NSMutableArray*)cellBuf{
     //遍历每个节点 如果可以显示就显示
+    StepModel* singleStepModel = nil;
+
     if (singleStep.isShow == YES) {
         [cellBuf addObject:singleStep];
         for (NSInteger i =0 ; i < singleStep.stepModels.count; i++) {
-            [self pushStepForCell:singleStep.stepModels[i] in:cellBuf];
+            singleStepModel = singleStep.stepModels[i];
+            singleStepModel.SpaceNum = singleStep.SpaceNum + 1;
+            [self pushStepForCell:singleStepModel in:cellBuf];
         }
     }else{
         //什么也不做
@@ -356,10 +412,35 @@
 //giftcell内部修改后 在这里刷新
 -(void)targetSettingViewAddGiftTableViewCellUpdataProtocol:(TargetSettingViewAddGiftTableViewCell *)sender updataModelAndTabelView:(GiftModel *)myData{
     //刷新 gift相关cell
-    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationNone];
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationAutomatic];
     //这是需要保存么
 }
 
+-(void)reloadStepsCell:(TargetSettingViewSetpsCellTableViewCell *)sender{
+    [self initCellData];
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_STEP  ] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+//通过nsNotifaction 发送消息
+-(void)reloadCellSender:(id)sender{
+    NSDictionary* sendInfo = [sender userInfo];
+    NSString* sectionString = sendInfo[@"seciton"];
+    NSInteger section = [sectionString intValue];
+    switch (section) {
+        case CELLTAYP_STEP:
+        {
+            [self initCellData];
+            [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_STEP  ] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+            break;
+        case CELLTAYP_GIFT:
+        {
+            [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
+            break;
+        default:
+            break;
+    }
+}
 //代理
 //点击添加gift后的代理 0 addGiftButtonAct 1 editButtonAct
 -(void)SettingViewGiftHeaderPressAction:(NSInteger)tag{

@@ -21,7 +21,7 @@
 @interface StepModel : NSObject
 <StepModelProtocol>
 
--(StepModel*)init:(NSMutableDictionary*)stepData;
+-(StepModel*)init:(NSMutableDictionary*)stepData father:(StepModel*)father;
 -(Boolean)updataAll;
 //增加
 -(void)addStep:(NSString*)stepName
@@ -32,7 +32,7 @@
       giftPath:(NSMutableArray*)giftPath;
 //删除
 -(Boolean)deleteMe;
-
+-(void)addSonStep:(id)bigBrother;
 //修改
 //直接改 然后调用 updataall
 //model
@@ -48,7 +48,8 @@
 @property(nonatomic,strong)NSMutableArray* giftPath;
 @property(nonatomic,strong)NSMutableArray* steps;
 
-
+@property(nonatomic,strong)id fatherModel;
+@property(nonatomic)Boolean isShowDetail;
 
 @property(nonatomic)Boolean isOpen;
 @property(nonatomic)Boolean isRoot;//是不是根节点 这个节点不能被关闭

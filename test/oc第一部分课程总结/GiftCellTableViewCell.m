@@ -32,6 +32,7 @@ static const NSInteger otherInfoButtonAct = 2;
 -(void)initView{
     UIImage* giftImage = [UIImage imageNamed:_myModel.giftImage];
     _giftURLImage.image = giftImage;
+    _gitName.text = _myModel.giftName;
     _whereBuy.text = @"京东";
 //    _buyButton.titleLabel.text = @"6000";
     NSLog(@"%@",_buyButton.titleLabel.text);

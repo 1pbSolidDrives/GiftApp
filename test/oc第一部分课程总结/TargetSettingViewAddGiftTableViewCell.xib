@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHG-pq-tTg">
-                        <rect key="frame" x="37" y="78" width="301" height="30"/>
+                        <rect key="frame" x="38" y="78" width="299" height="30"/>
                         <color key="backgroundColor" red="0.64903541684943067" green="0.93964270074960543" blue="0.66146574446734507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" title="添加商城信息"/>
@@ -29,7 +29,10 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="giftName：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIf-Ub-QL1">
-                        <rect key="frame" x="37" y="18" width="88" height="21"/>
+                        <rect key="frame" x="30" y="18" width="88" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6WA-Y8-27l"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,10 +42,13 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="giftNameTextFieldChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="6Mb-sp-hEz"/>
+                            <action selector="giftNameTextFieldEnd:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="h0C-ir-7WD"/>
+                        </connections>
                     </textField>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M3-Z3-xVS">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M3-Z3-xVS">
                         <rect key="frame" x="2" y="19" width="20" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button" image="删除的副本 2.png"/>
                         <connections>
                             <action selector="deleteMeButtonAct:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AmP-qA-VRB"/>
@@ -50,14 +56,18 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="UcD-jx-BcN" firstAttribute="leading" secondItem="UIf-Ub-QL1" secondAttribute="trailing" constant="21" id="3Oi-no-EBM"/>
                     <constraint firstItem="QHG-pq-tTg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="GDv-bk-Zkf"/>
-                    <constraint firstItem="UcD-jx-BcN" firstAttribute="centerY" secondItem="UIf-Ub-QL1" secondAttribute="centerY" id="X11-ct-ciV"/>
-                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="ew2-Ak-gt3"/>
+                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="leading" secondItem="3M3-Z3-xVS" secondAttribute="trailing" constant="8" symbolic="YES" id="Knl-WE-KYB"/>
+                    <constraint firstItem="QHG-pq-tTg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="Nu9-VR-mll"/>
+                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="centerY" secondItem="3M3-Z3-xVS" secondAttribute="centerY" id="VD0-rH-F0X"/>
+                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="W6b-Ml-Bzu"/>
+                    <constraint firstItem="UcD-jx-BcN" firstAttribute="leading" secondItem="UIf-Ub-QL1" secondAttribute="trailing" constant="28" id="aA5-8h-WMn"/>
                     <constraint firstItem="QHG-pq-tTg" firstAttribute="top" secondItem="UcD-jx-BcN" secondAttribute="bottom" constant="34" id="hcK-8N-8HV"/>
-                    <constraint firstItem="QHG-pq-tTg" firstAttribute="leading" secondItem="UIf-Ub-QL1" secondAttribute="leading" id="l14-z4-2Mw"/>
-                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="29" id="mOQ-8a-TD2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QHG-pq-tTg" secondAttribute="trailing" constant="30" id="pZ0-sb-Em3"/>
+                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="centerY" secondItem="UcD-jx-BcN" secondAttribute="centerY" id="sU5-9c-w5s"/>
                     <constraint firstAttribute="trailingMargin" secondItem="UcD-jx-BcN" secondAttribute="trailing" constant="15" id="ttQ-Ac-BwE"/>
+                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="vC5-eZ-OhV"/>
+                    <constraint firstItem="UIf-Ub-QL1" firstAttribute="bottom" secondItem="3M3-Z3-xVS" secondAttribute="bottom" id="zpY-JL-GF0"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

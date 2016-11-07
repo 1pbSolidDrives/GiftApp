@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView*   giftURLImage;
 @property (weak, nonatomic) IBOutlet UILabel*       whereBuy;
 @property (weak, nonatomic) IBOutlet UIButton*      buyButton;
+@property (weak, nonatomic) IBOutlet UILabel *      gitName;
 - (IBAction)buyButtonAct:(UIButton *)sender;
 - (IBAction)otherInfo:(id)sender;
 

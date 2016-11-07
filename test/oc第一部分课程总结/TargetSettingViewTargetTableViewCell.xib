@@ -20,13 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="targetName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laX-qn-VEB">
-                        <rect key="frame" x="8" y="17" width="91" height="21"/>
+                        <rect key="frame" x="30" y="17" width="91" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="targetTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-6H-KYp">
-                        <rect key="frame" x="11" y="60" width="84" height="21"/>
+                        <rect key="frame" x="30" y="60" width="84" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="qqW-kE-yye"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,25 +39,33 @@
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="targetEndTimeTextChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="X2u-yl-93Q"/>
+                        </connections>
                     </textField>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Xk-4K-har">
                         <rect key="frame" x="197" y="12" width="159" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="targetEndTimeTextDidEnd:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="WGa-Kq-uKg"/>
+                            <action selector="targetNameTextChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="P8A-TG-gTt"/>
+                            <action selector="targetNameTextDidEnd:" destination="KGk-i7-Jjw" eventType="editingDidEndOnExit" id="iyk-cG-Phj"/>
+                        </connections>
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="K2F-6H-KYp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="2wq-N5-LRc"/>
                     <constraint firstItem="4Xk-4K-har" firstAttribute="leading" secondItem="VuA-uM-wyD" secondAttribute="leading" id="A9V-1O-2a2"/>
-                    <constraint firstItem="4Xk-4K-har" firstAttribute="leading" secondItem="laX-qn-VEB" secondAttribute="trailing" constant="98" id="CaW-gk-brQ"/>
+                    <constraint firstItem="VuA-uM-wyD" firstAttribute="leading" secondItem="K2F-6H-KYp" secondAttribute="trailing" constant="83" id="Ej4-yK-bIB"/>
+                    <constraint firstItem="laX-qn-VEB" firstAttribute="centerY" secondItem="4Xk-4K-har" secondAttribute="centerY" id="FjX-Lt-BSu"/>
                     <constraint firstAttribute="trailingMargin" secondItem="VuA-uM-wyD" secondAttribute="trailing" constant="11" id="FsB-Le-IpY"/>
-                    <constraint firstItem="VuA-uM-wyD" firstAttribute="baseline" secondItem="K2F-6H-KYp" secondAttribute="baseline" id="JVG-Dd-mho"/>
-                    <constraint firstItem="laX-qn-VEB" firstAttribute="centerX" secondItem="K2F-6H-KYp" secondAttribute="centerX" id="K2J-ym-Ht1"/>
-                    <constraint firstItem="4Xk-4K-har" firstAttribute="centerY" secondItem="laX-qn-VEB" secondAttribute="centerY" id="KX8-5g-Nlj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="K2F-6H-KYp" secondAttribute="bottom" constant="10" id="JIr-Sl-GKz"/>
                     <constraint firstItem="4Xk-4K-har" firstAttribute="trailing" secondItem="VuA-uM-wyD" secondAttribute="trailing" id="Q55-kt-e1E"/>
                     <constraint firstItem="VuA-uM-wyD" firstAttribute="top" secondItem="4Xk-4K-har" secondAttribute="bottom" constant="15" id="RHg-1j-WGT"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="K2F-6H-KYp" secondAttribute="bottom" constant="10" id="caS-vx-HsS"/>
+                    <constraint firstItem="K2F-6H-KYp" firstAttribute="baseline" secondItem="VuA-uM-wyD" secondAttribute="baseline" id="Sqb-qd-XvD"/>
+                    <constraint firstItem="laX-qn-VEB" firstAttribute="leading" secondItem="K2F-6H-KYp" secondAttribute="leading" id="WwO-9Z-gHV"/>
+                    <constraint firstItem="K2F-6H-KYp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="22" id="mFl-vS-Jvy"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

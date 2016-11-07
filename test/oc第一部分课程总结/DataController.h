@@ -36,6 +36,10 @@
 //初始化一个空的target
 -(TargetModel *)getNewTarget;
 -(GiftModel*)getNewGiftModel;
+-(StepModel*)getNewStepModel;
+
+//刷新数据
+-(void)reloadCellMaster;
 //下面的所有set 都是重置
 
 //targetmodel如果做了修改那么需要做的

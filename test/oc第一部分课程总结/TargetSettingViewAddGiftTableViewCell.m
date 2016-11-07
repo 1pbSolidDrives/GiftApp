@@ -39,6 +39,16 @@ giftShopListInfoProtocol
 - (IBAction)deleteMeButtonAct:(UIButton *)sender {
 }
 
+- (IBAction)giftNameTextFieldChanged:(UITextField *)sender {
+    _myData.giftName  = sender.text;
+}
+
+- (IBAction)giftNameTextFieldEnd:(UITextField *)sender {
+    _myData.giftName  = sender.text;
+    [sender resignFirstResponder];
+
+}
+
 -(void)initAllView:(GiftModel *)giftData{
     _myData = giftData;
     //显示数据
@@ -59,13 +69,12 @@ giftShopListInfoProtocol
         [self initSingleShopInfo:shopList[i] row:i allNum:shopList.count];
     }
     //刷新价格
-    NSInteger height  = [[[[NSBundle mainBundle]loadNibNamed:@"GiftShopListInfo" owner:nil options:nil]firstObject]frame].size.height ;
-    NSInteger ndwHeight = self.contentView.frame.size.height;
-    ndwHeight = shopList.count * height;
+
 
 }
 
 -(void)initSingleShopInfo: (NSMutableDictionary*)shopInfo row:(NSInteger)row allNum:(NSInteger)allNum{
+    
     GiftShopListInfo* shopInfoView = [[[NSBundle mainBundle]loadNibNamed:@"GiftShopListInfo" owner:nil options:nil]firstObject];
     shopInfoView.shopName       = shopInfo[@"shopName"];
     shopInfoView.shopUrl        = shopInfo[@"url"];
@@ -79,6 +88,8 @@ giftShopListInfoProtocol
     //设置infoView位置
     [shopInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.contentView);//宽度跟随父视图
+        make.height.mas_equalTo(160);
+
         make.left.equalTo(self.contentView.mas_left).offset(0);
         make.right.equalTo(self.contentView.mas_right).offset(0);
         NSInteger height = (allNum - row) * shopInfoView.frame.size.height;
@@ -110,9 +121,9 @@ giftShopListInfoProtocol
 }
 //保存数据
 -(void)TargetViewControllerProtocolSaveData{
-     NSMutableArray* shopListData = [[NSMutableArray alloc]init];
- 
-    _myData.giftUrl = shopListData;
+    //NSMutableArray* shopListData = [[NSMutableArray alloc]init];
+    //_myData.giftUrl = shopListData;
+    
     [_myData updataAll];
 }
 

@@ -7,9 +7,9 @@
 //
 
 #import "StepModel.h"
-
+#import "DataController.h"
 @implementation StepModel
--(StepModel *)init:(NSMutableDictionary *)stepData{
+-(StepModel *)init:(NSMutableDictionary *)stepData father:(id)father{
     self = [super init];
     if (self) {
         _stepModels = [[NSMutableArray alloc]init];
@@ -23,10 +23,12 @@
         _stepBuildTime  = stepData[@"stepBuildTime"];
         _giftPath       = stepData[@"giftPath"];
         _steps          = stepData[@"steps"];
+        _fatherModel    = father;
         [self initAllStepModle];
         _isOpen         = NO;
         _isRoot         = NO;
         _isShow         = NO;
+        _isShowDetail   = NO;
         _SpaceNum       = 100;//缩进错误会比较明显的被看到
     }
     return self;
@@ -49,7 +51,7 @@
     StepModel* singleStep = nil;
     for (NSInteger i =0; i<_steps.count; i++) {
         //这个时候 steps 就已经添加了新的项了 所以不用再加add方法
-        singleStep = [[StepModel alloc]init:_steps[i]];
+        singleStep = [[StepModel alloc]init:_steps[i] father:self];
         singleStep.delegate = self;
         singleStep.stepNumInPlist = i;
         [_stepModels addObject:singleStep];
@@ -109,7 +111,7 @@
 
     [_myDataplist[@"steps"] addObject:stepData];
     
-    StepModel* newStepModel = [[StepModel alloc]init:stepData];
+    StepModel* newStepModel = [[StepModel alloc]init:stepData father:self];
     newStepModel.delegate = self;
     //将新的step 放入modellist  plistlist
     [_stepModels addObject:newStepModel];
@@ -152,6 +154,14 @@
         return [_delegate stepModelProtocolDeleteMe:self];
     }
     return NO;
+}
+
+-(void)addSonStep:(StepModel*)bigBrother{
+    NSInteger sonPosition = [_stepModels indexOfObject:bigBrother];
+    StepModel* newStep = [[DataController getInstence]getNewStepModel];
+    newStep.isShow = YES;
+    newStep.isRoot = NO;
+    [_stepModels insertObject:newStep atIndex:sonPosition+1];
 }
 
 @end

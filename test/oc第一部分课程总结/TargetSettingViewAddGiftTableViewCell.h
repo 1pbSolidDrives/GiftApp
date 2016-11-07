@@ -30,6 +30,8 @@
 - (IBAction)addShopInfo:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *deleteMeButton;
 - (IBAction)deleteMeButtonAct:(UIButton *)sender;
+- (IBAction)giftNameTextFieldChanged:(UITextField *)sender;
+- (IBAction)giftNameTextFieldEnd:(UITextField *)sender;
 
 -(void)initAllView:(GiftModel*)giftData;
 

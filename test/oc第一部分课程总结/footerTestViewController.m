@@ -14,7 +14,7 @@
 static NSString* headerFooterIdentify = @"targetHeaderFooter";
 static NSString* cellIdentify = @"cell";
 
-static NSInteger giftCellHeight = 102;
+static NSInteger giftCellHeight = 149;
 static NSInteger stepCellHeight = 56;
 
 @interface footerTestViewController ()
@@ -32,6 +32,9 @@ static NSInteger stepCellHeight = 56;
     
     [self initMyself];
     [self initTableView];
+    
+    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(reloadView) name:@"reloadHomeTabelView" object:nil ];
     // Do any additional setup after loading the view.
 }
 
@@ -88,9 +91,9 @@ static NSInteger stepCellHeight = 56;
     DataController* dataBuf = [DataController getInstence] ;
     
     //gift数量
-    NSInteger giftNum = dataBuf.giftMaster.count;
-    
-    if (giftNum >= indexPath.row +1) {
+     TargetModel* targetBuf = dataBuf.targetMaster[indexPath.section];
+    NSInteger giftNum = targetBuf.giftsModel.count;
+    if (indexPath.row < giftNum) {
        return  giftCellHeight;
         
     }
@@ -135,13 +138,15 @@ static NSInteger stepCellHeight = 56;
     NSMutableArray* stepCellMaster = dataBuf.stepCellMaster;
 
     //gift数量
-    NSInteger giftNum = dataBuf.giftMaster.count;
-    if (giftNum >= indexPath.row +1) {
+    TargetModel* targetBuf = dataBuf.targetMaster[indexPath.section];
+    NSInteger giftNum = targetBuf.giftsModel.count;
+    if (indexPath.row  < giftNum) {
         //初始化giftcell 报错可能是因为 这个id的问题
         GiftCellTableViewCell* giftCell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
         if (giftCell == nil) {
             giftCell = [[[NSBundle mainBundle] loadNibNamed:@"GiftCellTableViewCell" owner:nil options:nil] firstObject];
         }
+        NSLog(@"%@",indexPath);
         GiftModel* stepBuf = stepCellMaster[indexPath.section][indexPath.row];
 
         [giftCell initGiftCell:stepBuf];
@@ -195,6 +200,12 @@ static NSInteger stepCellHeight = 56;
         [self.view addSubview:self.tableView];
     }
 }
+
+-(void)reloadView{
+    [[DataController getInstence]reloadCellMaster];
+    [_tableView reloadData];
+}
+
 
 
 @end

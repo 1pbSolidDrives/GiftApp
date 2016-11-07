@@ -18,6 +18,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *targetName;
 @property (weak, nonatomic) IBOutlet UITextField *targetTime;
 @property (nonatomic,strong)HeaderModel* myData;
+- (IBAction)targetNameTextChanged:(UITextField *)sender;
+- (IBAction)targetNameTextDidEnd:(UITextField *)sender;
+
+- (IBAction)targetEndTimeTextChanged:(UITextField *)sender;
+- (IBAction)targetEndTimeTextDidEnd:(UITextField *)sender;
+
 
 
 -(void)initAllView:(HeaderModel*)myData;
