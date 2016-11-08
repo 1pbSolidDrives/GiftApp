@@ -25,6 +25,8 @@
 		0016DC5D1DBEFA7600270F4E /* TargetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0016DC5C1DBEFA7600270F4E /* TargetModel.m */; };
 		00174A741DC2F0A000CA982E /* GiftSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00174A721DC2F0A000CA982E /* GiftSettingViewController.m */; };
 		00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */; };
+		001C01C91DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 001C01C81DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m */; };
+		001C01CD1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 001C01CC1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m */; };
 		0044707F1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044707D1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m */; };
 		004470801DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0044707E1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib */; };
 		004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AE0D61DB8F5C300362D28 /* TableViewController.m */; };
@@ -77,13 +79,8 @@
 		00639DD91DC34A600082798C /* GiftDetailMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00639DD81DC34A600082798C /* GiftDetailMessage.m */; };
 		006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 006627D21DC21129002970B1 /* GiftCellTableViewCell.m */; };
 		006627D51DC21129002970B1 /* GiftCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */; };
-		006A13E01DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13DF1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m */; };
-		006A13E91DC980780053B54B /* SettingViewGiftHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13E81DC980780053B54B /* SettingViewGiftHeaderView.m */; };
-		006A13EB1DC980810053B54B /* SettingViewGiftHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */; };
 		006A13F31DC98CB40053B54B /* GiftShopListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 006A13F21DC98CB40053B54B /* GiftShopListInfo.m */; };
 		006A13F51DC98CC90053B54B /* GiftShopListInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */; };
-		006A13F91DCAF8DF0053B54B /* 删除.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 006A13F81DCAF8DF0053B54B /* 删除.jpg */; };
-		006A13FB1DCAF96A0053B54B /* 删除的副本 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 006A13FA1DCAF96A0053B54B /* 删除的副本 2.png */; };
 		006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 006C0DA81DBCB3C80007ACE5 /* Property List2.plist */; };
 		0073E5851DBD1A9100D4A8F8 /* DataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0073E5841DBD1A9100D4A8F8 /* DataTools.m */; };
 		00A798D31DBDFBB9008FE3C6 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A798D21DBDFBB9008FE3C6 /* DataController.m */; };
@@ -175,6 +172,10 @@
 		00174A711DC2F0A000CA982E /* GiftSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftSettingViewController.h; sourceTree = "<group>"; };
 		00174A721DC2F0A000CA982E /* GiftSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftSettingViewController.m; sourceTree = "<group>"; };
 		00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftSettingViewController.xib; sourceTree = "<group>"; };
+		001C01C71DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewGiftHeaderFooterView.h; sourceTree = "<group>"; };
+		001C01C81DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewGiftHeaderFooterView.m; sourceTree = "<group>"; };
+		001C01CB1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewStepHeaderFooterView.h; sourceTree = "<group>"; };
+		001C01CC1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewStepHeaderFooterView.m; sourceTree = "<group>"; };
 		0044707C1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewSetpsCellTableViewCell.h; sourceTree = "<group>"; };
 		0044707D1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewSetpsCellTableViewCell.m; sourceTree = "<group>"; };
 		0044707E1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewSetpsCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -253,16 +254,9 @@
 		006627D11DC21129002970B1 /* GiftCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCellTableViewCell.h; sourceTree = "<group>"; };
 		006627D21DC21129002970B1 /* GiftCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCellTableViewCell.m; sourceTree = "<group>"; };
 		006627D31DC21129002970B1 /* GiftCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftCellTableViewCell.xib; sourceTree = "<group>"; };
-		006A13DE1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewGiftHeaderFooterView.h; sourceTree = "<group>"; };
-		006A13DF1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewGiftHeaderFooterView.m; sourceTree = "<group>"; };
-		006A13E71DC980780053B54B /* SettingViewGiftHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewGiftHeaderView.h; sourceTree = "<group>"; };
-		006A13E81DC980780053B54B /* SettingViewGiftHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewGiftHeaderView.m; sourceTree = "<group>"; };
-		006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewGiftHeader.xib; sourceTree = "<group>"; };
 		006A13F11DC98CB40053B54B /* GiftShopListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftShopListInfo.h; sourceTree = "<group>"; };
 		006A13F21DC98CB40053B54B /* GiftShopListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftShopListInfo.m; sourceTree = "<group>"; };
 		006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GiftShopListInfo.xib; sourceTree = "<group>"; };
-		006A13F81DCAF8DF0053B54B /* 删除.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "删除.jpg"; sourceTree = "<group>"; };
-		006A13FA1DCAF96A0053B54B /* 删除的副本 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "删除的副本 2.png"; sourceTree = "<group>"; };
 		006C0DA81DBCB3C80007ACE5 /* Property List2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List2.plist"; sourceTree = "<group>"; };
 		0073E5831DBD1A9100D4A8F8 /* DataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTools.h; sourceTree = "<group>"; };
 		0073E5841DBD1A9100D4A8F8 /* DataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTools.m; sourceTree = "<group>"; };
@@ -476,9 +470,28 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
+		001C01C61DD0E863005D90BE /* header */ = {
+			isa = PBXGroup;
+			children = (
+				001C01C71DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.h */,
+				001C01C81DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		001C01CA1DD0E8FC005D90BE /* header */ = {
+			isa = PBXGroup;
+			children = (
+				001C01CB1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.h */,
+				001C01CC1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
 		0033B7D51DC76D84002B5490 /* gift */ = {
 			isa = PBXGroup;
 			children = (
+				001C01C61DD0E863005D90BE /* header */,
 				006A13F71DC9E5DE0053B54B /* view */,
 				006A13F61DC9E5D10053B54B /* cell */,
 			);
@@ -488,6 +501,7 @@
 		0033B7D61DC77137002B5490 /* step */ = {
 			isa = PBXGroup;
 			children = (
+				001C01CA1DD0E8FC005D90BE /* header */,
 				004AEB2D1DCB976B00C29908 /* view */,
 				004AEB2C1DCB975A00C29908 /* cell */,
 			);
@@ -794,16 +808,9 @@
 		006A13F71DC9E5DE0053B54B /* view */ = {
 			isa = PBXGroup;
 			children = (
-				006A13DE1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.h */,
-				006A13DF1DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m */,
-				006A13E71DC980780053B54B /* SettingViewGiftHeaderView.h */,
-				006A13E81DC980780053B54B /* SettingViewGiftHeaderView.m */,
-				006A13EA1DC980810053B54B /* SettingViewGiftHeader.xib */,
 				006A13F11DC98CB40053B54B /* GiftShopListInfo.h */,
 				006A13F21DC98CB40053B54B /* GiftShopListInfo.m */,
 				006A13F41DC98CC90053B54B /* GiftShopListInfo.xib */,
-				006A13F81DCAF8DF0053B54B /* 删除.jpg */,
-				006A13FA1DCAF96A0053B54B /* 删除的副本 2.png */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1119,7 +1126,6 @@
 				004AE0F01DB9EFDD00362D28 /* FriendsList.plist in Resources */,
 				004AE12F1DBA3FA300362D28 /* cell.xib in Resources */,
 				00A799181DBE0806008FE3C6 /* TestDataViewController.xib in Resources */,
-				006A13FB1DCAF96A0053B54B /* 删除的副本 2.png in Resources */,
 				00EDC2E11DB73F2900F700E6 /* myFirstJS.html in Resources */,
 				00CCE60B1DB5D751003CB120 /* LaunchScreen.storyboard in Resources */,
 				00639DBA1DC33EF20082798C /* GiftDetailTableViewCell.xib in Resources */,
@@ -1133,7 +1139,6 @@
 				004AE1161DB9F13400362D28 /* Bill Gates.png in Resources */,
 				004AE1361DBB17BD00362D28 /* TestTableViewCell.xib in Resources */,
 				00CCE6081DB5D751003CB120 /* Assets.xcassets in Resources */,
-				006A13F91DCAF8DF0053B54B /* 删除.jpg in Resources */,
 				0016A2C21DBDD11500765AA9 /* gift.png in Resources */,
 				005DE5741DC07363007DB452 /* FooterView.xib in Resources */,
 				004AE11B1DB9F13400362D28 /* Sun Zhengyi.png in Resources */,
@@ -1151,7 +1156,6 @@
 				006C0DA91DBCB3C80007ACE5 /* Property List2.plist in Resources */,
 				00CCE6961DB71353003CB120 /* ocToJs.xib in Resources */,
 				006A13F51DC98CC90053B54B /* GiftShopListInfo.xib in Resources */,
-				006A13EB1DC980810053B54B /* SettingViewGiftHeader.xib in Resources */,
 				004AE1211DBA069E00362D28 /* Property List.plist in Resources */,
 				004AE1171DB9F13400362D28 /* flag.png in Resources */,
 				004AE11A1DB9F13400362D28 /* Steve Jobs.png in Resources */,
@@ -1191,9 +1195,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00161F271DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m in Sources */,
+				001C01C91DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m in Sources */,
 				00CCE6781DB6041B003CB120 /* MASConstraintMaker.m in Sources */,
 				0016DC571DBEFA5100270F4E /* HeaderModel.m in Sources */,
 				006627D41DC21129002970B1 /* GiftCellTableViewCell.m in Sources */,
+				001C01CD1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m in Sources */,
 				00161F221DC44D2200AC0552 /* TargetSettingViewTargetTableViewCell.m in Sources */,
 				00CCE6031DB5D751003CB120 /* ViewController.m in Sources */,
 				00CCE68A1DB61DBB003CB120 /* DetailViewController.m in Sources */,
@@ -1220,7 +1226,6 @@
 				00CCE67B1DB6041B003CB120 /* MASViewConstraint.m in Sources */,
 				00CCE67A1DB6041B003CB120 /* MASViewAttribute.m in Sources */,
 				005DE5611DBF72A6007DB452 /* BodyTableViewCell.m in Sources */,
-				006A13E91DC980780053B54B /* SettingViewGiftHeaderView.m in Sources */,
 				00639DCF1DC3460A0082798C /* GiftDetailHeaderModel.m in Sources */,
 				00639DB91DC33EF20082798C /* GiftDetailTableViewCell.m in Sources */,
 				0016A2BD1DBDA0A500765AA9 /* Home3TableViewCell.m in Sources */,
@@ -1243,7 +1248,6 @@
 				00CCE6761DB6041B003CB120 /* MASCompositeConstraint.m in Sources */,
 				004AE13A1DBB1DE000362D28 /* Home2ViewController.m in Sources */,
 				00CCE6871DB61D55003CB120 /* TableViewTest2FormHierarch_Lee.m in Sources */,
-				006A13E01DC8CD990053B54B /* SettingViewGiftHeaderFooterView.m in Sources */,
 				005DE5771DC0829C007DB452 /* footerTestViewController.m in Sources */,
 				00F1CC5E1DC8819E0072D87B /* ScrollDelegate.m in Sources */,
 				004AE0E61DB9EFAE00362D28 /* LHY_HomeViewController.m in Sources */,

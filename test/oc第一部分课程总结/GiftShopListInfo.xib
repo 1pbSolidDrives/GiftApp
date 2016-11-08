@@ -71,14 +71,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-1g-73W">
-                    <rect key="frame" x="2" y="67" width="20" height="20"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button" image="删除的副本 2.png"/>
-                    <connections>
-                        <action selector="deleteMeAct:" destination="iN0-l3-epB" eventType="touchUpInside" id="5cK-m6-4QM"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -108,7 +100,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="autoPrice" destination="rBa-u4-NBZ" id="Fhg-9l-kpG"/>
-                <outlet property="deleteMe" destination="G7S-1g-73W" id="GWI-wc-j50"/>
                 <outlet property="manualPrice" destination="SkP-cs-oqd" id="gOY-g6-AJX"/>
                 <outlet property="shopName" destination="dSV-4k-Awb" id="QAV-6m-eSb"/>
                 <outlet property="shopUrl" destination="ooV-fx-rCT" id="Cq0-f4-GPM"/>
@@ -116,7 +107,4 @@
             <point key="canvasLocation" x="23.5" y="0.0"/>
         </view>
     </objects>
-    <resources>
-        <image name="删除的副本 2.png" width="50" height="50"/>
-    </resources>
 </document>

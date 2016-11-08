@@ -57,7 +57,6 @@
 
 -(void)initDetailView{
     _detailView = [[[NSBundle mainBundle]loadNibNamed:@"TargetSettingViewStepDetailView" owner:nil options:nil]firstObject];
-    Boolean isShowDetail = _myData.isShowDetail;
     _detailView.hidden = _myData.isShowDetail;
     
     _detailView.clipsToBounds = YES;
@@ -142,6 +141,16 @@
 - (IBAction)showDetailVuew:(id)sender {
     [self updataShowDetailView];
 }
+
+- (IBAction)stepNameDidEnd:(UITextField *)sender {
+    _myData.stepName = sender.text;
+}
+
+- (IBAction)stepNameChanged:(UITextField *)sender {
+    _myData.stepName = sender.text;
+
+
+ }
 
 -(void)updataShowDetailView{
     if (!_myData.isShowDetail) {

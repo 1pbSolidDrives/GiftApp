@@ -37,5 +37,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 - (IBAction)addButtonAct:(UIButton *)sender;
 - (IBAction)showDetailVuew:(id)sender;
+- (IBAction)stepNameDidEnd:(UITextField *)sender;
+
+- (IBAction)stepNameChanged:(UITextField *)sender;
+
 
 @end

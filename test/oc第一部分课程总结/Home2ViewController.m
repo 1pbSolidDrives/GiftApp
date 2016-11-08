@@ -25,6 +25,7 @@
     [self initData];
     [self initAllView];
     UITableView *table;
+    
        // Do any additional setup after loading the view.
 }
 
@@ -46,7 +47,7 @@
     
     _tableview.delegate = self;
     _tableview.dataSource = self;
-    
+    [_tableview setEditing:YES animated:YES];
     // 这样做没有单元格的表 就不会有分割线了
     _tableview.tableFooterView = [[UIView alloc]init];
     

@@ -19,7 +19,10 @@
 */
 -(void)awakeFromNib{
     [super awakeFromNib];
- 
+    
+//
+//    [self barite];
+    
 }
 
 - (IBAction)addGiftButtonAct:(id)sender {
@@ -29,23 +32,22 @@
 }
 
 - (IBAction)editButtonAct:(id)sender {
-//    if (_delegate &&[_delegate conformsToProtocol:@protocol(SettingViewGiftHeaderProtocol)]) {
-//        [_delegate SettingViewGiftHeaderPressAction:1];
-    //创建一个消息对象
-    [self sendInfoForDeleteButtonIsShow];
+    //修改显示文字
+    UIButton* edit = (UIButton*)sender;
+    if ([edit.titleLabel.text isEqualToString:@"编辑"]) {
+        
+        [edit.titleLabel setText: @"完成"];
+        //发送编辑消息
+        NSNotification* noticeForEditGift = [NSNotification notificationWithName:@"editCellS" object:nil userInfo:@{@"sender":@"giftEdit_ON"}];
+        [[NSNotificationCenter defaultCenter]postNotification:noticeForEditGift];
+    }
+    else if ([((UIButton*)sender).titleLabel.text isEqualToString:@"完成"]){
+        ((UIButton*)sender).titleLabel.text = @"编辑";
+        NSNotification* noticeForEditGift = [NSNotification notificationWithName:@"editCellS" object:nil userInfo:@{@"sender":@"giftEdit_OFF"}];
+        [[NSNotificationCenter defaultCenter]postNotification:noticeForEditGift];
+    }
     
 }
--(void)sendInfoForDeleteButtonIsShow{
-    if ([deleteButtonIsShow isEqualToString:@"NO"]) {
-        deleteButtonIsShow = @"YES";
-        
-    }else{
-        deleteButtonIsShow = @"NO";
-        
-    }
-    NSNotification * notice = [NSNotification notificationWithName:@"GIFTEDIT_ORDR" object: nil userInfo:@{@"isShow":deleteButtonIsShow}];
-    //发送消息
-    [[NSNotificationCenter defaultCenter]postNotification:notice];
-}
+
 
 @end

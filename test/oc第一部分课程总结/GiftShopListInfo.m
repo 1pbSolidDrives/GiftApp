@@ -74,19 +74,5 @@
     return  YES;
 }
 
-- (IBAction)deleteMeAct:(UIButton *)sender {
-    if (_delegate && [_delegate conformsToProtocol:@protocol(giftShopListInfoProtocol)]) {
-        [_delegate giftShopListInfoProtocoldeleteMe:_myNum];
-    }
-}
 
--(void)showDeleteButton:(id)sender{
-    NSDictionary* sendInfo = [sender userInfo];
-    if ([sendInfo[@"isShow"] isEqualToString:@"NO"]) {
-        _deleteMe.hidden = YES;
-    }else{
-        _deleteMe.hidden = NO;
-        
-    }
-}
 @end

@@ -36,8 +36,6 @@
 
 - (IBAction)shopNameDidEndOnExit:(UITextField *)sender;
 - (IBAction)priceDidEnd:(UITextField *)sender;
-@property (weak, nonatomic) IBOutlet UIButton *deleteMe;
-- (IBAction)deleteMeAct:(UIButton *)sender;
 
 
 

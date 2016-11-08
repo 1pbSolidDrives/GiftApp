@@ -24,7 +24,7 @@
     [_myData.giftPath addObject:_gift.text ];
     _myData.stepDetails = _detailTextView.text;
     _myData.isShowDetail = NO;
-    NSNotification * notice = [NSNotification notificationWithName:@"reloadSettingViewTabelViewSender" object: nil userInfo:@{@"seciton":@"2"}];
+    NSNotification * notice = [NSNotification notificationWithName:@"upDataStepCells" object: nil userInfo:@{@"seciton":@"2"}];
     //发送消息
     [[NSNotificationCenter defaultCenter]postNotification:notice];
 }

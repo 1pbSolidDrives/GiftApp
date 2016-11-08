@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TargetModel.h"
 #import "SettingViewGiftHeaderFooterView.h"
-
+#import "TargetSettingViewStepHeaderFooterView.h"
 #import "TargetViewDelegates.h"
 
 #import "TargetSettingViewAddGiftTableViewCell.h"
@@ -19,7 +19,6 @@
 @protocol TargetViewControllerProtocol <NSObject>
 
 -(void)TargetViewControllerProtocolSaveData;
-
 @end
 
 @interface TargetViewController : UIViewController
@@ -27,9 +26,11 @@
 UITableViewDataSource,
 UITableViewDelegate,
 TargetSettingViewAddGiftTableViewCellUpdataProtocol,
-SettingViewGiftHeaderProtocol
+SettingViewGiftHeaderFooterViewProtocol,
+TargetSettingViewStepHeaderFooterViewProtocol
 >
 
+@property(nonatomic,strong) UIView* keyBoardView;
 
 @property(nonatomic,strong) UITableView* tableView;
 @property(nonatomic,strong) TargetModel* targetModel;
@@ -41,4 +42,6 @@ SettingViewGiftHeaderProtocol
 @property(nonatomic,strong)TargetViewDelegates* delegatesMaster;
 
 @property(nonatomic,strong)id<TargetViewControllerProtocol> delegate;
+
+
 @end

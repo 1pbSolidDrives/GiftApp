@@ -12,6 +12,9 @@
 #import "TargetSettingViewStepDetailView.h"
 
 #import "footerTestViewController.h"
+#import "Masonry.h"
+
+
 #define CELLID_TARGET @"Target"
 #define CELLID_GIFT @"Gift"
 #define CELLID_STEP @"step"
@@ -39,38 +42,44 @@
 #define CELLHIEGHT_GIFT_SHOPLIST 160
 #define CELLHIEGHT_STEP_DETAIL 248
 #define CELLHIEGHT_STEP_SUMMAY 76
- 
+
 @class targetSettingViewSetpsCellTableViewCellProtocol;
+
 @interface TargetViewController ()
 <targetSettingViewSetpsCellTableViewCellProtocol>
-
-
+//当前设置的是谁
+@property(nonatomic)NSInteger whoEdit; // 0 谁也没编辑 1 gift 2 step
 @end
 
 @implementation TargetViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"添加新target";
- 
-    //添加时间相应
-    UIBarButtonItem *liftBar = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(selectLeftAction:)];
-    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(selectRightAction:)];
-    self.navigationItem.rightBarButtonItem = rightBar;
-    self.navigationItem.leftBarButtonItem = liftBar;
+    //刷新tableView消息
 
-    
+    [self initMyViewInfo];
+    [self registeNotificatinCenters];
     [self initTableView];
     [self registerKeybordNotification];
+    [self initKeyboardViewTool];
     
-    
-    //注册刷新消息中心观察消息
-    
+}
+
+-(void)initMyViewInfo{
+    self.title = @"添加新target";
+    //添加
+    UIBarButtonItem *liftBar = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(selectLeftAction:)];
+    self.navigationItem.leftBarButtonItem = liftBar;
+
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(selectRightAction:)];
+    self.navigationItem.rightBarButtonItem = rightBar;
+    _whoEdit = 0;
+}
+
+-(void)registeNotificatinCenters{
     NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(reloadCellSender:) name:@"reloadSettingViewTabelViewSender" object:nil ];
-    
-    
-    // Do any additional setup after loading the view from its nib.
+    [center addObserver:self selector:@selector(reloadCellSender:) name:@"upDataStepCells" object:nil ];
+
 }
 
 - (void)setTargetModel:(TargetModel *)model
@@ -87,8 +96,6 @@
 -(void)selectRightAction:(UIBarButtonItem*)sender{
     [self saveData];
     //回退
-
-    
     [self.navigationController popToViewController:self.navigationController.viewControllers[self.navigationController.viewControllers.count-2] animated:YES];
     
     NSNotification * notice = [NSNotification notificationWithName:@"reloadHomeTabelView" object: nil ];
@@ -198,7 +205,7 @@
             return @"Target";
             break;
         case CELLTAYP_GIFT:
-            return @"";
+            return @"Gift";
             break;
         case CELLTAYP_STEP:
             return @"Step";
@@ -220,13 +227,21 @@
             SettingViewGiftHeaderFooterView* giftHeaderview = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identify];
             if (giftHeaderview == nil) {
                 giftHeaderview = [[SettingViewGiftHeaderFooterView alloc]initWithReuseIdentifier:identify];
-                giftHeaderview.SettingViewGiftHeaderview.delegate = self;
+                giftHeaderview.delegate = self;
             }
             return giftHeaderview;
         }
             break;
         case CELLTAYP_STEP:
-            return nil;
+        {
+            static NSString* identify = @"stepHeaderview";
+            TargetSettingViewStepHeaderFooterView* stepHeaderview = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identify];
+            if (stepHeaderview == nil) {
+                stepHeaderview = [[TargetSettingViewStepHeaderFooterView alloc]initWithReuseIdentifier:identify];
+                stepHeaderview.delegate = self;
+            }
+            return stepHeaderview;
+        }
             break;
         default:
             break;
@@ -280,6 +295,7 @@
 }
 //=----------------------初始化tableView
 -(void)initTableView{
+    
     if (self.tableView == nil) {
         NSInteger width =CGRectGetWidth(self.view.frame);
         width = [UIScreen mainScreen].bounds.size.width;
@@ -294,6 +310,42 @@
         [self.view addSubview:self.tableView];
     }
 }
+//键盘上边的toolView
+-(void)initKeyboardViewTool{
+
+    _keyBoardView = [[UIView alloc]init];
+    _keyBoardView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:_keyBoardView];
+    
+    UIButton* done = [[UIButton alloc]init];
+    [_keyBoardView addSubview:done];
+    [done setTag:1];
+    [done setTitle:@"done" forState:UIControlStateNormal];
+    done.titleLabel.font = [UIFont systemFontOfSize:16];
+    done.titleLabel.textAlignment = NSTextAlignmentCenter;//设置title的字体居中
+    [done setTitleColor:[UIColor blackColor] forState:UIControlStateSelected];
+
+    
+    [done mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_keyBoardView.mas_right).offset(-20 -50);
+        make.right.equalTo(_keyBoardView.mas_right).offset(-20);
+        make.top.bottom.equalTo(_keyBoardView);
+
+
+    }];
+//    done.backgroundColor = [UIColor blueColor];
+    [done addTarget:self action:@selector(keyboardViewButton) forControlEvents:UIControlEventTouchUpInside];
+    _keyBoardView.hidden = YES;
+
+}
+//点击done 后的相应
+-(void)keyboardViewButton{
+    NSLog(@"ssss");
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+
+}
+
+
 // 键盘弹出时候 tabelview高度适应
 - (void)registerKeybordNotification {
     NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
@@ -330,7 +382,15 @@
     {
         CGRect rect = _tableView.frame;
         rect.size.height = height;
-        NSLog(@"高是11=%f",height);
+        
+        [_keyBoardView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.view);
+            make.top.equalTo(self.view.mas_bottom).offset(-keyboardHeight - 40);
+            make.height.mas_equalTo(40);
+        }];
+        _keyBoardView.hidden = NO;
+        
+        //NSLog(@"高是11=%f",height);
         _tableView.frame = rect;
     }
     [UIView commitAnimations];
@@ -342,8 +402,9 @@
     {
         CGRect rect = _tableView.frame;
         rect.size.height = CGRectGetHeight(self.view.frame) - 100;
+        _keyBoardView.hidden = YES;
         _tableView.frame = rect;
-        NSLog(@"高是22=%f",rect.size.height);
+        //NSLog(@"高是22=%f",rect.size.height);
     }
     [UIView commitAnimations];
 }
@@ -409,6 +470,95 @@
     [_targetModel upDataAll];
     [self dataTest];
 }
+//添加gift时
+-(void)settingViewGiftHeaderFooterViewProtocolAddGift:(UIButton *)sender{
+    GiftModel* newGiftModel = [[DataController getInstence]getNewGiftModel];
+    [_targetModel.giftsModel addObject:newGiftModel];
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+//gift点击编辑
+-(void)settingViewGiftHeaderFooterViewProtocolGiftEditButtonAct:(UIButton *)sender{
+    if ([sender.titleLabel.text isEqualToString:@"完成"]) {
+        _whoEdit = 1;
+        [_tableView setEditing:YES animated:YES];
+    }
+    else if ([sender.titleLabel.text isEqualToString:@"编辑"]){
+        _whoEdit = 0;
+        [_tableView setEditing:NO animated:YES];
+    }
+}
+//step点击编辑
+-(void)stepCellEditAct:(UIButton *)sender{
+    if ([sender.titleLabel.text isEqualToString:@"完成"]) {
+        _whoEdit = 2;
+        [_tableView setEditing:YES animated:YES];
+
+    }
+    else if ([sender.titleLabel.text isEqualToString:@"编辑"]){
+        _whoEdit = 0;
+        [_tableView setEditing:NO animated:YES];
+    }
+}
+//决定这个cell 是否可以被移动
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+//编辑样式
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 2 ){
+        return UITableViewCellEditingStyleDelete;
+    }
+    if(indexPath.section == 1 ){
+        return UITableViewCellEditingStyleDelete;
+    }
+    return UITableViewCellEditingStyleDelete;
+}
+//当触发编辑状态还没有结束时，调用该协议
+- (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"willBeginEditingRowAtIndexPath %li",indexPath.section);
+}
+//当触发编辑状态结束后，调用该协议
+- (void)tableView:(UITableView*)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"didEndEditingRowAtIndexPath %li",indexPath.section);
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    NSLog(@"  moveRowAtIndexPath indexPath.section %li  indexPath.row %li",sourceIndexPath.section,sourceIndexPath.row);
+}
+/*删除用到的函数*/
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == CELLTAYP_GIFT) {
+        NSMutableArray* giftCellModels =   _cellsModel[indexPath.section];
+        GiftModel* giftModel =  giftCellModels[indexPath.row];
+        [_targetModel.giftsModel removeObject:giftModel];
+        [_targetModel upDataAll];
+        [self initCellData];
+        
+    }
+    else if(indexPath.section == CELLTAYP_STEP){
+        NSMutableArray* stepCellModels =   _cellsModel[indexPath.section];
+        StepModel* stepModel = stepCellModels[indexPath.row];
+        [stepModel deleteMe];
+        [self initCellData];
+
+    }
+    [_tableView reloadSections:[NSIndexSet indexSetWithIndex: indexPath.section  ] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    NSLog(@"%ld  indexPath.section %li  indexPath.row %li",(long)editingStyle,indexPath.section,indexPath.row);
+}
+//决定这个cell 是否可以被编辑
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section ==0) {
+        return NO;
+    }
+    NSLog(@"indexPath.section %li  _whoEdit %li",indexPath.section,_whoEdit);
+    if(_whoEdit == indexPath.section ){
+        return YES;
+    }
+    return NO;
+}
 //giftcell内部修改后 在这里刷新
 -(void)targetSettingViewAddGiftTableViewCellUpdataProtocol:(TargetSettingViewAddGiftTableViewCell *)sender updataModelAndTabelView:(GiftModel *)myData{
     //刷新 gift相关cell
@@ -441,24 +591,7 @@
             break;
     }
 }
-//代理
-//点击添加gift后的代理 0 addGiftButtonAct 1 editButtonAct
--(void)SettingViewGiftHeaderPressAction:(NSInteger)tag{
-    switch (tag) {
-        case 0://add
-        {
-            GiftModel* newGiftModel = [[DataController getInstence]getNewGiftModel];
-            [_targetModel.giftsModel addObject:newGiftModel];
-            [_tableView reloadSections:[NSIndexSet indexSetWithIndex: CELLTAYP_GIFT  ] withRowAnimation:UITableViewRowAnimationNone];
-        }
-            break;
-        case 1://edit
-            
-            break;
-        default:
-            break;
-    }
-}
+
 
 
 

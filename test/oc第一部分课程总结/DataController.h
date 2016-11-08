@@ -30,6 +30,8 @@
 
 //是否开启每个子节点修改之后自动写入 默认开启
 @property(nonatomic)Boolean sonIsModifiedToWriteImmediately;
+//当前弹出键盘的view
+@property(nonatomic,strong)id haveKeyboardView;
 
 
 +(DataController*)getInstence;

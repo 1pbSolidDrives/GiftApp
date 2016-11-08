@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SettingViewGiftHeaderView.h"
+//#import "SettingViewGiftHeaderView.h"
+
+@class SettingViewGiftHeaderFooterView;
+
+@protocol SettingViewGiftHeaderFooterViewProtocol <NSObject>
+
+-(void)settingViewGiftHeaderFooterViewProtocolGiftEditButtonAct:(UIButton*)sender;
+-(void)settingViewGiftHeaderFooterViewProtocolAddGift:(UIButton*)sender;
+
+@end
+
 @interface SettingViewGiftHeaderFooterView : UITableViewHeaderFooterView
 
-@property(nonatomic,strong)SettingViewGiftHeaderView* SettingViewGiftHeaderview;
-
+//@property(nonatomic,strong)SettingViewGiftHeaderView* SettingViewGiftHeaderview;
+@property(nonatomic,strong)id<SettingViewGiftHeaderFooterViewProtocol>delegate;
 
 @end

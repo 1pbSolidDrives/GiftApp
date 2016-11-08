@@ -290,8 +290,6 @@ static DataController* myInstence = nil;
     NSMutableArray* steps = [[NSMutableArray alloc]init];
     NSMutableDictionary* stepStep = [[NSMutableDictionary alloc]init];
     NSMutableArray* stepStepStep = [[NSMutableArray alloc]init];
-
-    
     NSNumber* stepIsComplet = [[NSNumber alloc]init];
     NSString* stepDetails= @"";
     NSString* setpName= @"";
@@ -308,7 +306,6 @@ static DataController* myInstence = nil;
     [stepStep setValue:stepBuildTime forKey:@"stepBuildTime"];
     [stepStep setValue:giftPath forKey:@"giftPath"];
     [stepStep setValue:stepStepStep forKey:@"steps"];
-    [steps addObject:stepStep];
     [steps addObject:stepStep];
     return steps;
 }
