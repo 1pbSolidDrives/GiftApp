@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>shopName</key>
+		<string>京东</string>
+		<key>searchURL</key>
+		<string>http://so.m.jd.com/ware/search.action?keyword={gift}</string>
+	</dict>
+	<dict>
+		<key>shopName</key>
+		<string>苏宁</string>
+		<key>searchURL</key>
+		<string>http://search.suning.com/{gift}/</string>
+	</dict>
+	<dict>
+		<key>shopName</key>
+		<string>淘宝</string>
+		<key>searchURL</key>
+		<string>https://list.tmall.com/search_product.htm?q={gift}</string>
+	</dict>
+	<dict>
+		<key>shopName</key>
+		<string>亚马逊</string>
+		<key>searchURL</key>
+		<string>https://www.amazon.cn/s/ref=nb_sb_noss_2?__mk_zh_CN=亚马逊网站&amp;url=search-alias&amp;field-keywords={gift}</string>
+	</dict>
+	<dict>
+		<key>shopName</key>
+		<string>淘宝</string>
+		<key>searchURL</key>
+		<string>https://s.taobao.com/search?q={gift}</string>
+	</dict>
+	<dict>
+		<key>shopName</key>
+		<string>国美</string>
+		<key>searchURL</key>
+		<string>http://search.gome.com.cn/search?question={gift}</string>
+	</dict>
+</array>
+</plist>

@@ -197,10 +197,20 @@
 					<dict>
 						<key>shopName</key>
 						<string>京东</string>
-						<key>url</key>
-						<string></string>
-						<key>price</key>
-						<string></string>
+						<key>shopSearchList</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>京东1</string>
+								<key>price</key>
+								<dict>
+									<key>日期</key>
+									<string>6000</string>
+								</dict>
+								<key>url</key>
+								<string>搜索地址1</string>
+							</dict>
+						</array>
 					</dict>
 				</array>
 				<key>setpPath</key>

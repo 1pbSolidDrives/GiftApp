@@ -27,6 +27,11 @@
 		00174A751DC2F0A000CA982E /* GiftSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */; };
 		001C01C91DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 001C01C81DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m */; };
 		001C01CD1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 001C01CC1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m */; };
+		00304AED1DE192B8000E8954 /* shopListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00304AEC1DE192B8000E8954 /* shopListModel.m */; };
+		00304AEF1DE1971C000E8954 /* shopSearchPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00304AEE1DE1971C000E8954 /* shopSearchPlist.plist */; };
+		00304B031DE1F0B3000E8954 /* shopListheaserFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00304B021DE1F0B3000E8954 /* shopListheaserFooterView.m */; };
+		00304B071DE1FD00000E8954 /* shopListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00304B051DE1FD00000E8954 /* shopListTableViewCell.m */; };
+		00304B081DE1FD00000E8954 /* shopListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00304B061DE1FD00000E8954 /* shopListTableViewCell.xib */; };
 		0044707F1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044707D1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m */; };
 		004470801DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0044707E1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib */; };
 		004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 004AE0D61DB8F5C300362D28 /* TableViewController.m */; };
@@ -176,6 +181,14 @@
 		001C01C81DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewGiftHeaderFooterView.m; sourceTree = "<group>"; };
 		001C01CB1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewStepHeaderFooterView.h; sourceTree = "<group>"; };
 		001C01CC1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewStepHeaderFooterView.m; sourceTree = "<group>"; };
+		00304AEB1DE192B8000E8954 /* shopListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopListModel.h; sourceTree = "<group>"; };
+		00304AEC1DE192B8000E8954 /* shopListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopListModel.m; sourceTree = "<group>"; };
+		00304AEE1DE1971C000E8954 /* shopSearchPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shopSearchPlist.plist; sourceTree = "<group>"; };
+		00304B011DE1F0B3000E8954 /* shopListheaserFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shopListheaserFooterView.h; path = images/shopListheaserFooterView.h; sourceTree = "<group>"; };
+		00304B021DE1F0B3000E8954 /* shopListheaserFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shopListheaserFooterView.m; path = images/shopListheaserFooterView.m; sourceTree = "<group>"; };
+		00304B041DE1FD00000E8954 /* shopListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shopListTableViewCell.h; sourceTree = "<group>"; };
+		00304B051DE1FD00000E8954 /* shopListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shopListTableViewCell.m; sourceTree = "<group>"; };
+		00304B061DE1FD00000E8954 /* shopListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shopListTableViewCell.xib; sourceTree = "<group>"; };
 		0044707C1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetSettingViewSetpsCellTableViewCell.h; sourceTree = "<group>"; };
 		0044707D1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetSettingViewSetpsCellTableViewCell.m; sourceTree = "<group>"; };
 		0044707E1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetSettingViewSetpsCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -447,6 +460,7 @@
 				00A799141DBE0806008FE3C6 /* TestDataViewController.h */,
 				00A799151DBE0806008FE3C6 /* TestDataViewController.m */,
 				00A799161DBE0806008FE3C6 /* TestDataViewController.xib */,
+				00304AEE1DE1971C000E8954 /* shopSearchPlist.plist */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -486,6 +500,31 @@
 				001C01CC1DD0E930005D90BE /* TargetSettingViewStepHeaderFooterView.m */,
 			);
 			name = header;
+			sourceTree = "<group>";
+		};
+		00304AEA1DE191BF000E8954 /* shopList */ = {
+			isa = PBXGroup;
+			children = (
+				00304AF31DE1E492000E8954 /* shopListView */,
+				00174A711DC2F0A000CA982E /* GiftSettingViewController.h */,
+				00174A721DC2F0A000CA982E /* GiftSettingViewController.m */,
+				00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */,
+				00304AEB1DE192B8000E8954 /* shopListModel.h */,
+				00304AEC1DE192B8000E8954 /* shopListModel.m */,
+			);
+			name = shopList;
+			sourceTree = "<group>";
+		};
+		00304AF31DE1E492000E8954 /* shopListView */ = {
+			isa = PBXGroup;
+			children = (
+				00304B041DE1FD00000E8954 /* shopListTableViewCell.h */,
+				00304B051DE1FD00000E8954 /* shopListTableViewCell.m */,
+				00304B061DE1FD00000E8954 /* shopListTableViewCell.xib */,
+				00304B011DE1F0B3000E8954 /* shopListheaserFooterView.h */,
+				00304B021DE1F0B3000E8954 /* shopListheaserFooterView.m */,
+			);
+			name = shopListView;
 			sourceTree = "<group>";
 		};
 		0033B7D51DC76D84002B5490 /* gift */ = {
@@ -786,11 +825,9 @@
 		006627D01DC21104002970B1 /* gift */ = {
 			isa = PBXGroup;
 			children = (
+				00304AEA1DE191BF000E8954 /* shopList */,
 				00639E1D1DC356D20082798C /* homeView */,
 				00639DB51DC33E790082798C /* giftDetail */,
-				00174A711DC2F0A000CA982E /* GiftSettingViewController.h */,
-				00174A721DC2F0A000CA982E /* GiftSettingViewController.m */,
-				00174A731DC2F0A000CA982E /* GiftSettingViewController.xib */,
 			);
 			name = gift;
 			sourceTree = "<group>";
@@ -1147,6 +1184,7 @@
 				00F1CC581DC881670072D87B /* DelegateSViewController.xib in Resources */,
 				006627D51DC21129002970B1 /* GiftCellTableViewCell.xib in Resources */,
 				004AE0D91DB8F5C300362D28 /* TableViewController.xib in Resources */,
+				00304AEF1DE1971C000E8954 /* shopSearchPlist.plist in Resources */,
 				0016A2CF1DBDF6CE00765AA9 /* targetApp.plist in Resources */,
 				004AE14C1DBB56D400362D28 /* Home2TableViewCell.xib in Resources */,
 				004AE1191DB9F13400362D28 /* Ma Yun.png in Resources */,
@@ -1168,6 +1206,7 @@
 				0016A2BE1DBDA0A500765AA9 /* Home3TableViewCell.xib in Resources */,
 				004470801DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.xib in Resources */,
 				00CCE6911DB71159003CB120 /* oc与js交互.xib in Resources */,
+				00304B081DE1FD00000E8954 /* shopListTableViewCell.xib in Resources */,
 				005DE56E1DBF858F007DB452 /* TestView.xib in Resources */,
 				005DE5681DBF751D007DB452 /* TargetViewController.xib in Resources */,
 			);
@@ -1195,6 +1234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00161F271DC44E8300AC0552 /* TargetSettingViewAddGiftTableViewCell.m in Sources */,
+				00304AED1DE192B8000E8954 /* shopListModel.m in Sources */,
 				001C01C91DD0E8D9005D90BE /* SettingViewGiftHeaderFooterView.m in Sources */,
 				00CCE6781DB6041B003CB120 /* MASConstraintMaker.m in Sources */,
 				0016DC571DBEFA5100270F4E /* HeaderModel.m in Sources */,
@@ -1204,6 +1244,7 @@
 				00CCE6031DB5D751003CB120 /* ViewController.m in Sources */,
 				00CCE68A1DB61DBB003CB120 /* DetailViewController.m in Sources */,
 				0016DC541DBEF28E00270F4E /* StepModel.m in Sources */,
+				00304B071DE1FD00000E8954 /* shopListTableViewCell.m in Sources */,
 				004AE0D81DB8F5C300362D28 /* TableViewController.m in Sources */,
 				00161F3E1DC455EE00AC0552 /* TargetSettingViewModel.m in Sources */,
 				00CCE6001DB5D751003CB120 /* AppDelegate.m in Sources */,
@@ -1245,6 +1286,7 @@
 				0044707F1DCB905600879779 /* TargetSettingViewSetpsCellTableViewCell.m in Sources */,
 				0016A2C81DBDE98F00765AA9 /* NestingViewController.m in Sources */,
 				0073E5851DBD1A9100D4A8F8 /* DataTools.m in Sources */,
+				00304B031DE1F0B3000E8954 /* shopListheaserFooterView.m in Sources */,
 				00CCE6761DB6041B003CB120 /* MASCompositeConstraint.m in Sources */,
 				004AE13A1DBB1DE000362D28 /* Home2ViewController.m in Sources */,
 				00CCE6871DB61D55003CB120 /* TableViewTest2FormHierarch_Lee.m in Sources */,

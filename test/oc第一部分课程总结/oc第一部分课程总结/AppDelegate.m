@@ -24,6 +24,8 @@
 #import "footerTestViewController.h"
 
 #import "DelegateSViewController.h"
+
+#import "GiftSettingViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -36,7 +38,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     //self.window.rootViewController = [[TableViewController alloc]initWithNibName:nil bundle:nil];
     
-    UINavigationController* nav = [[UINavigationController alloc]initWithRootViewController:[[footerTestViewController alloc]init]];
+    UINavigationController* nav = [[UINavigationController alloc]initWithRootViewController:[[GiftSettingViewController alloc]init]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     

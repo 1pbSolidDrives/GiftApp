@@ -8,6 +8,7 @@
 
 #import "DataController.h"
 #define PLISTNAME @"targetApp"
+#define SHOPSEARCHPLISTNAME @"shopSearchPlist"
 
 @implementation DataController
 
@@ -36,7 +37,9 @@ static DataController* myInstence = nil;
     _headerFooterMaster = [[NSMutableArray alloc]init];
     _giftMaster = [[NSMutableArray alloc]init];
     _plistPath = [[NSBundle mainBundle] pathForResource:PLISTNAME ofType:@"plist"];
+    _shopSearchListPlistPath =[[NSBundle mainBundle] pathForResource:SHOPSEARCHPLISTNAME ofType:@"plist"];
     _dataMaster = [NSMutableArray arrayWithContentsOfFile:_plistPath];
+    _shopSearchList =[NSMutableArray arrayWithContentsOfFile:_shopSearchListPlistPath];
     //NSLog(@"初始化数据----- plist = %@",_dataMaster);
     _sonIsModifiedToWriteImmediately = YES;
 }

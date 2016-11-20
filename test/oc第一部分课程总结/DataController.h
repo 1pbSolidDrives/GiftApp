@@ -14,7 +14,8 @@
 //plist文件数据
 @property(nonatomic,strong)NSMutableArray* dataMaster;
 @property(nonatomic,strong)NSString* plistPath;
-
+@property(nonatomic,strong)NSMutableArray* shopSearchList;
+@property(nonatomic,strong)NSString* shopSearchListPlistPath;
 
 //装所有model的容器
 @property(nonatomic,strong)NSMutableArray* targetMaster;
